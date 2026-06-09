@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* 
+  Ensures Next.js dev watermarks, feedback buttons, portals, or fast-refresh error badges
+  do not collide, overlap, or display on top of the clinical floating WhatsApp action button.
+*/
+#nextjs-dev-indicator,
+.__next-feedback,
+.nextjs-toast-errors-parent,
+[id^="__next-indicator"],
+[class^="nextjs-dev"],
+[data-nextjs-dialog-overlay] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
