@@ -17,6 +17,9 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: 'Centre For Skin — Dr. Gaurav Nakra',
   description: 'Advanced Dermatology & Hair Restoration in East Delhi by Dr. Gaurav Nakra, Gold Medalist Dermatologist & Cosmetologist.',
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
