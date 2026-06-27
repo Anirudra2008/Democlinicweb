@@ -1002,7 +1002,7 @@ export default function HomePageClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             {/* Why Choose Us */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 flex flex-col">
               <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase mb-3 block">
                 {isHindi ? 'मरीजों की पसंद' : 'Clinic Differentiators'}
               </span>
@@ -1010,7 +1010,7 @@ export default function HomePageClient() {
                 {isHindi ? 'मरीज हमें क्यों चुनते हैं?' : 'Why Patients Choose Centre For Skin'}
               </h3>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1 auto-rows-fr">
                 {[
                   {
                     title: isHindi ? 'स्वर्ण पदक विजेता चिकित्सक' : 'Gold Medalist Specialist',
@@ -1029,7 +1029,7 @@ export default function HomePageClient() {
                     desc: isHindi ? 'हम स्थायी बालों की कमी और मुहांसों के इलाज के लिए दुनिया की बेहतरीन मशीनों का उपयोग करते हैं।' : 'Equipped with triple-wavelength diode lasers, fractional CO2, and Q-Switched ND-YAG systems for absolute safety.'
                   }
                 ].map((item, idx) => (
-                  <div key={idx} className="bg-white/85 backdrop-blur-sm border border-[#7DA0CA]/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                  <div key={idx} className="bg-white/85 backdrop-blur-sm border border-[#7DA0CA]/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all h-full">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-8 h-8 rounded-lg bg-[#052659] text-white flex items-center justify-center shrink-0">
                         <Check className="w-4 h-4" />
