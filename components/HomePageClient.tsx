@@ -25,7 +25,8 @@ import {
   Eye,
   ShieldCheck,
   Zap,
-  X
+  X,
+  Building
 } from 'lucide-react';
 
 import Navbar from './Navbar';
@@ -820,40 +821,93 @@ export default function HomePageClient() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative flex justify-center items-center min-h-[350px] md:min-h-[450px]">
-            <div className="w-full h-full absolute inset-0 bg-[#C1E8FF]/30 border border-white rounded-[40px] overflow-hidden shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#021024] to-[#052659]/90 opacity-95 rounded-[40px] -z-10" />
-              <div className="absolute w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(193,232,255,0.08)_0%,transparent_70%)] opacity-50 pointer-events-none" />
-              <canvas ref={heroCanvasRef} className="w-full h-full opacity-60 mix-blend-screen" />
+          <div className="lg:col-span-5 relative flex justify-center items-center">
+            <div className="w-full max-w-[380px] aspect-[3/4] md:aspect-[4/5] rounded-[24px] overflow-hidden shadow-[0_20px_40px_rgba(15,31,56,0.25)] relative border border-white/20 hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(15,31,56,0.35)] transition-all duration-300 group z-10 flex flex-col justify-end">
               
-              <div className="absolute top-4 left-4 flex gap-2 z-20 pointer-events-none select-none">
-                <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-white text-[9px] font-bold tracking-widest">CLINICAL</div>
-                <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-white text-[9px] font-bold tracking-widest font-mono">PRECISE</div>
+              {/* Full-bleed cover photo */}
+              <img 
+                src="/clinic-hero-card.jpg" 
+                alt="Centre For Skin clinic interior" 
+                className="absolute inset-0 w-full h-full object-cover object-center -z-20 transition-transform duration-500 group-hover:scale-105"
+                loading="eager"
+              />
+
+              {/* Dynamic canvas on top of image but behind text */}
+              <canvas 
+                ref={heroCanvasRef} 
+                className="absolute inset-0 w-full h-full opacity-20 mix-blend-screen pointer-events-none -z-10" 
+              />
+
+              {/* Top-left combined absolute badge */}
+              <div className="absolute top-5 left-5 bg-[#F5F1E8] text-[#021024] text-[11px] font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-md z-20 pointer-events-none select-none flex items-center gap-1 border border-white/20">
+                <span className="text-[#052659] text-xs">★</span> CLINICAL &bull; PRECISE
               </div>
 
-              <div className="absolute bottom-24 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-[20px] border border-white shadow-xl flex items-center gap-3 z-10">
-                <Clock className="w-5 h-5 text-[#052659]" />
-                <div className="text-left">
-                  <div className="font-serif text-xs font-bold text-[#021024]">
-                    {isHindi ? 'कार्य समय विवरण' : 'Operational Timings'}
+              {/* Bottom gradient overlay covering ~65% */}
+              <div 
+                className="absolute inset-0 z-10 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to top, rgba(2, 16, 36, 0.98) 0%, rgba(2, 16, 36, 0.65) 45%, rgba(2, 16, 36, 0) 100%)'
+                }}
+              />
+
+              {/* Content block */}
+              <div className="relative z-20 p-6 md:p-8 flex flex-col w-full mt-auto">
+                <div className="flex justify-between items-end gap-4 w-full">
+                  {/* Left block: Operational Timings */}
+                  <div className="text-left flex-1">
+                    <span className="font-sans text-[10px] sm:text-[11px] font-black text-white/70 tracking-[0.15em] uppercase block mb-1">
+                      {isHindi ? 'कार्य समय विवरण' : 'OPERATIONAL TIMINGS'}
+                    </span>
+                    <h4 className="text-xl sm:text-[24px] lg:text-[26px] font-serif font-black text-white leading-tight">
+                      12:30 PM – 7:30 PM
+                    </h4>
+                    <span className="font-sans text-xs sm:text-sm text-white/80 font-semibold mt-1 block">
+                      {isHindi ? 'सोमवार - शनिवार · रविवार बंद' : 'Monday – Saturday · Sunday Closed'}
+                    </span>
                   </div>
-                  <div className="font-sans text-[11px] text-[#5483B3] font-semibold mt-0.5">
-                    Monday – Saturday: 12:30 PM — 7:30 PM (Sun Closed)
+
+                  {/* Right block: Stat Columns */}
+                  <div className="flex flex-col gap-4 text-right border-l border-white/20 pl-4 sm:pl-6 shrink-0">
+                    <div className="flex flex-col items-end">
+                      <MapPin className="w-4 h-4 text-[#FACC15] mb-0.5" />
+                      <span className="font-serif text-[11px] sm:text-xs font-black text-white block leading-none">
+                        {isHindi ? 'कड़कड़डूमा' : 'Karkardooma'}
+                      </span>
+                      <span className="font-sans text-[9px] text-white/70 font-bold uppercase tracking-wider mt-0.5 block leading-none">
+                        {isHindi ? 'मेट्रो स्टेशन' : 'Metro Station'}
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-end">
+                      <Building className="w-4 h-4 text-[#FACC15] mb-0.5" />
+                      <span className="font-serif text-[11px] sm:text-xs font-black text-white block leading-none">
+                        {isHindi ? 'सैनी एन्क्लेव' : 'Saini Enclave'}
+                      </span>
+                      <span className="font-sans text-[9px] text-white/70 font-bold uppercase tracking-wider mt-0.5 block leading-none">
+                        {isHindi ? '178, बेसमेंट' : '178, Basement'}
+                      </span>
+                    </div>
                   </div>
                 </div>
+
+                {/* Divider */}
+                <div className="w-full h-[1px] bg-white/20 my-4" />
+
+                {/* Footer Byline */}
+                <div className="flex items-center gap-3 w-full text-left">
+                  <div className="w-8 h-8 rounded-full bg-[#052659] border border-white/20 flex items-center justify-center font-serif text-xs font-black text-white shrink-0">
+                    GN
+                  </div>
+                  <div>
+                    <div className="font-serif text-xs font-bold text-white leading-tight">Dr. Gaurav Nakra</div>
+                    <div className="font-sans text-[10px] text-white/75 font-semibold mt-0.5">
+                      {isHindi ? 'एमडी गोल्ड मेडलिस्ट · 18+ वर्ष अनुभव' : 'MD Gold Medalist · 18+ Yrs Exp'}
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-[20px] border border-white shadow-xl flex items-center gap-3 z-10">
-                <MapPin className="w-5 h-5 text-red-500 animate-bounce" />
-                <div className="text-left">
-                  <div className="font-serif text-xs font-bold text-[#021024]">
-                    {isHindi ? 'मुख्य मेट्रो स्टेशन' : 'Principal Landmark Location'}
-                  </div>
-                  <div className="font-sans text-[11px] text-[#5483B3] font-semibold mt-0.5">
-                    178, Basement, Saini Enclave — Near Karkardooma Metro
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
