@@ -1397,6 +1397,32 @@ export default function HomePageClient() {
                   </span>
                 ))}
               </div>
+
+              {/* Current & Past Medical Associations moved to Left Column */}
+              <div className="bg-gradient-to-br from-[#C1E8FF]/40 to-white/80 border border-white rounded-[28px] p-6 shadow-2xl shadow-[#021024]/3 text-left backdrop-blur-md">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-4">
+                  {isHindi ? 'वर्तमान और पूर्व चिकित्सा संघ:' : 'Current & Past Medical Associations:'}
+                </span>
+                <div className="flex flex-col gap-3.5 text-xs text-[#052659]/90 font-bold leading-normal font-sans">
+                  <div className="flex items-start gap-3">
+                    <Award className="w-4 h-4 text-[#052659] shrink-0 mt-0.5" />
+                    <span>Founder & Senior Consultant — Centre For Skin, Saini Enclave</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Consultant Dermatologist — Dr. BSA Hospital, Rohini</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Consultant — DHI Hair Transplant Safdarjung Enclave</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Consultant — New Look Laser Clinics & GM Hospital</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <div className="lg:col-span-7 flex flex-col justify-start">
@@ -1435,39 +1461,22 @@ export default function HomePageClient() {
                 ))}
               </div>
 
-              <div className="bg-[#C1E8FF]/50 border border-[#7DA0CA]/10 rounded-[24px] p-6 mb-8 backdrop-blur-md shadow-lg shadow-[#021024]/2">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-3">
-                  Current & Past Medical Associations:
+              {/* Timeline Moved Upwards */}
+              <div className="mt-2 pt-6 border-t border-[#7DA0CA]/20">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-6">
+                  {isHindi ? 'व्यावसायिक यात्रा और मील के पत्थर:' : 'Professional Journey & Milestones:'}
                 </span>
-                <div className="flex flex-col gap-2.5 text-xs text-[#052659]/90 font-bold leading-normal font-sans">
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#5483B3] rounded-full" />
-                    <span>Founder & Senior Consultant — Centre For Skin, Saini Enclave</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#5483B3] rounded-full" />
-                    <span>Consultant Dermatologist — Dr. BSA Hospital, Rohini</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#5483B3] rounded-full" />
-                    <span>Consultant — DHI Hair Transplant Safdarjung Enclave</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#5483B3] rounded-full" />
-                    <span>Consultant — New Look Laser Clinics & GM Hospital</span>
-                  </div>
+                
+                <div className="border-l-2 border-[#7DA0CA]/30 pl-5 flex flex-col gap-6 text-left">
+                  {TIMELINE.map((t, idx) => (
+                    <div key={idx} className="relative group">
+                      <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#052659] border-2 border-[#C1E8FF] group-hover:scale-125 transition-transform" />
+                      <div className="font-mono text-xs font-bold text-[#5483B3]">{t.year}</div>
+                      <div className="font-serif text-sm font-bold text-[#021024] mt-0.5">{t.title}</div>
+                      <p className="font-sans text-xs text-[#052659]/75 mt-1 leading-relaxed">{t.desc}</p>
+                    </div>
+                  ))}
                 </div>
-              </div>
-
-              <div className="border-l-2 border-[#7DA0CA]/30 pl-5 flex flex-col gap-6 text-left">
-                {TIMELINE.map((t, idx) => (
-                  <div key={idx} className="relative group">
-                    <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#052659] border-2 border-[#C1E8FF] group-hover:scale-125 transition-transform" />
-                    <div className="font-mono text-xs font-bold text-[#5483B3]">{t.year}</div>
-                    <div className="font-serif text-sm font-bold text-[#021024] mt-0.5">{t.title}</div>
-                    <p className="font-sans text-xs text-[#052659]/75 mt-1 leading-relaxed">{t.desc}</p>
-                  </div>
-                ))}
               </div>
 
             </div>
