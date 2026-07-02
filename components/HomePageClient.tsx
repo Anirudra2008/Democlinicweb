@@ -1591,11 +1591,11 @@ export default function HomePageClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             
             <div className="lg:col-span-4 flex flex-col gap-4">
               
-              <div className="bg-gradient-to-br from-[#021024] to-[#052659] text-white rounded-[32px] p-6 shadow-2xl border-2 border-white text-left flex flex-col gap-5 relative overflow-hidden backdrop-blur-md">
+              <div className="bg-gradient-to-br from-[#021024] to-[#052659] text-white rounded-[32px] p-6 shadow-2xl border-2 border-white text-left flex flex-col gap-5 relative overflow-hidden backdrop-blur-md flex-1">
                 <div className="absolute w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(193,232,255,0.06)_0%,transparent_70%)] opacity-50 pointer-events-none" />
                 <span className="font-sans text-[10px] uppercase font-bold text-[#7DA0CA] tracking-widest block relative z-10">
                   Clinic Identity Details:
@@ -1675,7 +1675,7 @@ export default function HomePageClient() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 mt-4 pt-4 border-t border-white/5 relative z-10">
+                <div className="grid grid-cols-2 gap-2 mt-auto pt-4 border-t border-white/5 relative z-10">
                   <a 
                     href="tel:01146052234"
                     className="py-3 bg-white hover:bg-[#C1E8FF] text-[#021024] font-bold text-center text-xs uppercase rounded-xl shadow-md transition-all flex justify-center items-center gap-2"
@@ -1710,9 +1710,9 @@ export default function HomePageClient() {
             </div>
 
             <div className="lg:col-span-8 flex flex-col gap-6 w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-1">
                 
-                <div className="bg-white/90 backdrop-blur-md border border-white p-6 md:p-8 rounded-[32px] shadow-2xl shadow-[#021024]/5 flex flex-col justify-between">
+                <div className="bg-white/90 backdrop-blur-md border border-white p-6 md:p-8 rounded-[32px] shadow-2xl shadow-[#021024]/5 flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center gap-2.5 pb-3 border-b border-[#7DA0CA]/20 mb-6 text-left">
                       <Calendar className="w-5 h-5 text-[#052659]" />
