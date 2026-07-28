@@ -69,33 +69,23 @@ export default function Home() {
       "closes": "19:30"
     },
     "medicalSpecialty": [
-      "Dermatology"
+      "Dermatology",
+      "Cosmetology",
+      "Pediatric Dermatology"
     ],
     "availableService": [
-      {
-        "@type": "MedicalProcedure",
-        "name": "Laser Hair Reduction"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Acne Scar Treatment"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Hair Transplant"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Chemical Peels"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Pediatric Dermatology"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Dermatosurgery"
-      }
+      { "@type": "MedicalProcedure", "name": "Aesthetic Dermatology Consultation" },
+      { "@type": "MedicalProcedure", "name": "Laser Hair Reduction" },
+      { "@type": "MedicalProcedure", "name": "Acne & Scar Treatment" },
+      { "@type": "MedicalProcedure", "name": "Hair Transplantation & PRP" },
+      { "@type": "MedicalProcedure", "name": "Mezotherapy & Stem Cell Therapy" },
+      { "@type": "MedicalProcedure", "name": "Chemical & Salicylic Peels" },
+      { "@type": "MedicalProcedure", "name": "Pediatric Dermatology" },
+      { "@type": "MedicalProcedure", "name": "Dermatosurgery & Corn Removal" },
+      { "@type": "MedicalProcedure", "name": "Skin Tag Surgical Removal" },
+      { "@type": "MedicalProcedure", "name": "Liposuction & Buttock Lift" },
+      { "@type": "MedicalProcedure", "name": "Stretch Marks Treatment" },
+      { "@type": "MedicalProcedure", "name": "Psoriasis, Lichen Planus & STI Care" }
     ]
   };
 

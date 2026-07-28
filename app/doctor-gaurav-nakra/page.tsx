@@ -5,14 +5,14 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Dr. Gaurav Nakra — Gold Medalist Dermatologist in East Delhi',
-  description: 'Meet Dr. Gaurav Nakra, senior dermatologist & hair transplant surgeon with 18+ years experience. MBBS, MD (Gold Medalist), DMC No. 44068. Read biography, clinical affiliations, and memberships.',
+  title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
+  description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
   alternates: {
     canonical: 'https://centreforskin.in/doctor-gaurav-nakra',
   },
   openGraph: {
-    title: 'Dr. Gaurav Nakra — Gold Medalist Dermatologist in East Delhi',
-    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & hair transplant surgeon with 18+ years experience. MBBS, MD (Gold Medalist), DMC No. 44068. Read biography, clinical affiliations, and memberships.',
+    title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
+    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
     url: 'https://centreforskin.in/doctor-gaurav-nakra',
     siteName: 'Centre For Skin',
     locale: 'en_IN',
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Gaurav Nakra — Gold Medalist Dermatologist in East Delhi',
-    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & hair transplant surgeon with 18+ years experience. MBBS, MD (Gold Medalist), DMC No. 44068. Read biography, clinical affiliations, and memberships.',
+    title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
+    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
     images: ['https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp'],
   },
 };
@@ -40,9 +40,13 @@ export default function DoctorProfile() {
     "@type": "Physician",
     "name": "Dr. Gaurav Nakra",
     "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp",
-    "medicalSpecialty": "Dermatology",
+    "medicalSpecialty": ["Dermatology", "Cosmetology", "Pediatric Dermatology"],
     "telephone": "01146052234",
-    "knowsAbout": ["Dermatology", "Cosmetology", "Hair Transplantation", "Laser Treatments", "Pediatric Dermatology"],
+    "knowsAbout": ["Dermatology", "Cosmetology", "Hair Transplantation", "Laser Treatments", "Pediatric Dermatology", "Dermatosurgery", "Acne", "Psoriasis", "Lichen Planus"],
+    "award": [
+      "International Publications - International Journal of Clinical Research (2008)",
+      "Most Promising Dermatologist In Delhi NCR (2015)"
+    ],
     "memberOf": [
       {
         "@type": "MedicalOrganization",
@@ -59,7 +63,7 @@ export default function DoctorProfile() {
     },
     "alumniOf": {
       "@type": "EducationalOrganization",
-      "name": "Kasturba Medical College"
+      "name": "D.D.U University, Gorakhpur"
     },
     "address": {
       "@type": "PostalAddress",
@@ -121,7 +125,7 @@ export default function DoctorProfile() {
                 
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
                   <Award className="w-4 h-4 text-amber-500" />
-                  <span className="font-serif text-[10px] font-bold text-[#021024]">MD Gold Medalist</span>
+                  <span className="font-serif text-[10px] font-bold text-[#021024]">20 Years Experience</span>
                 </div>
               </div>
             </div>
@@ -129,13 +133,13 @@ export default function DoctorProfile() {
             {/* Doctor Basic Info Column */}
             <div className="lg:col-span-7 text-left">
               <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase mb-2 block">
-                Senior Consultant Dermatologist
+                Senior Consultant Dermatologist & Cosmetologist
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight mb-2">
                 Dr. Gaurav Nakra
               </h1>
               <p className="font-sans text-sm md:text-base text-[#5483B3] font-bold tracking-wide mb-6">
-                MBBS, MD (Dermatology, Venereology & Leprosy) | Gold Medalist
+                MBBS, MD (Dermatology, Venereology & Leprosy) | 20 Years Experience
               </p>
 
               <hr className="border-[#7DA0CA]/25 my-4" />
@@ -157,7 +161,7 @@ export default function DoctorProfile() {
                   </div>
                   <div>
                     <div className="font-serif font-bold text-[#021024] uppercase tracking-wider">Total Experience</div>
-                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">18+ Years Clinical Practice</div>
+                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">20 Years Clinical Practice</div>
                   </div>
                 </div>
 
@@ -167,7 +171,7 @@ export default function DoctorProfile() {
                   </div>
                   <div>
                     <div className="font-serif font-bold text-[#021024] uppercase tracking-wider">Specialties</div>
-                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">Dermatology, Lasers & Hair Transplant</div>
+                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">Dermatology, Cosmetology & Pediatric Dermatology</div>
                   </div>
                 </div>
 
@@ -207,21 +211,38 @@ export default function DoctorProfile() {
             <div className="lg:col-span-4 flex flex-col gap-6">
               <div className="bg-white/80 backdrop-blur-md border border-white p-6 rounded-[28px] shadow-xl text-left">
                 <h3 className="font-serif text-lg font-black text-[#021024] mb-4 pb-2 border-b border-[#7DA0CA]/20 flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-[#052659]" />
-                  <span>Memberships</span>
+                  <Award className="w-5 h-5 text-[#052659]" />
+                  <span>Awards & Recognitions</span>
                 </h3>
                 <ul className="flex flex-col gap-3 text-xs text-[#052659]/80 font-sans font-bold leading-normal">
                   <li className="flex gap-2.5 items-start">
                     <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
-                    <span>Member of the Indian Association of Dermatologists, Venereologists and Leprologists (IADVL)</span>
+                    <span>International Publications — International Journal of Clinical Research (2008)</span>
                   </li>
                   <li className="flex gap-2.5 items-start">
                     <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
-                    <span>Member of the Indian Medical Association (IMA)</span>
+                    <span>Most Promising Dermatologist In Delhi NCR (2015)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-md border border-white p-6 rounded-[28px] shadow-xl text-left">
+                <h3 className="font-serif text-lg font-black text-[#021024] mb-4 pb-2 border-b border-[#7DA0CA]/20 flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-[#052659]" />
+                  <span>Memberships & Certifications</span>
+                </h3>
+                <ul className="flex flex-col gap-3 text-xs text-[#052659]/80 font-sans font-bold leading-normal">
+                  <li className="flex gap-2.5 items-start">
+                    <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
+                    <span>Member of Indian Association of Dermatologists, Venereologists and Leprologists (IADVL)</span>
                   </li>
                   <li className="flex gap-2.5 items-start">
                     <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
-                    <span>DHI Certified Specialist (Direct Hair Implantation Academy)</span>
+                    <span>Member of Indian Medical Association (IMA)</span>
+                  </li>
+                  <li className="flex gap-2.5 items-start">
+                    <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
+                    <span>Practo Verified Medical Professional (Listed since Dec 2013)</span>
                   </li>
                 </ul>
               </div>
@@ -232,7 +253,7 @@ export default function DoctorProfile() {
                   <span>Clinical Competences</span>
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Clinical Dermatology', 'Aesthetic Lifts', 'Triple-Wavelength Lasers', 'PRP Follicle Therapy', 'Pediatric Dermatology', 'Dermatosurgery', 'Chemical Peels', 'Microdermabrasion'].map((spec, i) => (
+                  {['Clinical Dermatology', 'Aesthetic Dermatology Consultation', 'Hair Transplantation', 'Mezotherapy', 'PRP Therapy', 'Stem Cell Therapy', 'Lasers', 'Botox & Fillers', 'Anti-Ageing Treatments', 'Facelift', 'Salicylic Peel', 'Skin Polishing', 'Corn Removal', 'Skin Tag Surgical Removal', 'Buttock Lift', 'Liposuction', 'Stretch Marks Treatment', 'Acne & Psoriasis', 'Lichen Planus', 'Fungal Infections', 'Nail Disorders', 'STIs', 'Skin Grafting'].map((spec, i) => (
                     <span key={i} className="px-3 py-1.5 bg-[#C1E8FF]/40 text-[#052659] font-sans text-[10px] uppercase font-black rounded-lg border border-[#7DA0CA]/10">
                       {spec}
                     </span>
@@ -245,21 +266,18 @@ export default function DoctorProfile() {
             <div className="lg:col-span-8 bg-white/80 backdrop-blur-md border border-white p-6 md:p-8 rounded-[28px] shadow-xl text-left">
               <h2 className="font-serif text-2xl font-black text-[#021024] mb-6 flex items-center gap-2 pb-3 border-b border-[#7DA0CA]/20">
                 <BookOpen className="w-6 h-6 text-[#052659]" />
-                <span>Professional Profile & Journey</span>
+                <span>Professional Profile & Biography</span>
               </h2>
 
               <div className="prose max-w-none text-sm text-[#052659]/80 leading-relaxed font-sans font-medium flex flex-col gap-5">
                 <p>
-                  Dr. Gaurav Nakra is a highly recognized and board-certified senior dermatologist, cosmetologist, and pediatric skin specialist practicing in East Delhi. He is the founder and medical director of Centre For Skin, a state-of-the-art dermatological clinic located in Saini Enclave near Karkardooma Metro.
+                  Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
                 </p>
                 <p>
-                  Dr. Nakra completed his MBBS from the prestigious Motilal Nehru Medical College in 2006. With an academic drive for medical skin therapeutics, he pursued his MD specialization in Dermatology, Venereology & Leprosy from Kasturba Medical College / DDU University, finishing his program with academic honors and receiving the prestigious Gold Medal.
+                  With 20 years of clinical experience, Dr. Nakra has served in key positions across prominent institutions including Dr. BSA Hospital in Rohini (2009–2012), New Look Laser Clinics (2010–2012), DHI Safdarjung Enclave (2012–2014), GM Hospital (2009–2014), and as founder of Nakra Dermatology Centre in Vivek Vihar (2009–2014).
                 </p>
                 <p>
-                  With a career spanning over 18 years, Dr. Nakra has built a reputation for diagnostics accuracy and medically sound aesthetic procedures. His practice spans clinical dermatology (treating chronic eczema, psoriasis, vitiligo, and fungal infections), aesthetic dermatology (delivering Botox, fillers, and thread lifts), and advanced dermatosurgical excisions.
-                </p>
-                <p>
-                  He is also a certified practitioner in DHI (Direct Hair Implantation) techniques, specializing in hair restoration, pattern baldness management, and Platelet-Rich Plasma (PRP) therapies.
+                  He offers comprehensive diagnosis and treatment across clinical dermatology (Acne, Psoriasis, Lichen Planus, Fungal Infections, STIs, Skin Grafting), aesthetic procedures (Botox, Fillers, Facelift, Buttock Lift, Liposuction, Stretch Marks, Salicylic Peels, Skin Polishing), and hair restorations (Hair Transplantation, Mezotherapy, PRP, Stem Cell Therapy).
                 </p>
               </div>
 
@@ -270,10 +288,16 @@ export default function DoctorProfile() {
 
               <div className="border-l-2 border-[#7DA0CA]/30 pl-5 flex flex-col gap-6 text-left">
                 {[
-                  { year: '2016 – Present', title: 'Founder & Senior Consultant — Centre For Skin', desc: 'Providing advanced medical dermatology, laser therapies, and hair restoration in East Delhi.' },
-                  { year: '2012 – 2016', title: 'Senior Consultant Dermatologist', desc: 'Served in prominent clinical consultant roles including Dr. BSA Hospital (Rohini), DHI (Safdarjung Enclave), and GM Hospital.' },
-                  { year: '2010', title: 'MD Graduation & Gold Medal award', desc: 'Dermatology, Venereology & Leprosy specialization from Kasturba Medical College / DDU University with top honors.' },
-                  { year: '2006', title: 'MBBS Medical Graduation', desc: 'Motilal Nehru Medical College, Allahabad.' }
+                  { year: '2016 – Present', title: 'Founder & Senior Consultant — Centre For Skin', desc: 'Founder and Lead Consultant at Centre For Skin in Saini Enclave, Karkardooma, East Delhi.' },
+                  { year: '2015', title: 'Awarded Most Promising Dermatologist In Delhi NCR', desc: 'Recognized for clinical excellence and patient care in Delhi NCR.' },
+                  { year: '2012 – 2014', title: 'Consultant Dermatologist & Trichologist — DHI Safdarjung Enclave', desc: 'Consultant specialist delivering DHI hair transplants and PRP therapies (2 Years).' },
+                  { year: '2010 – 2012', title: 'Laser Surgeon & Aesthetic Dermatologist — New Look Laser Clinics', desc: 'Specialized laser surgeon and aesthetic dermatologist (2 Years).' },
+                  { year: '2009 – 2014', title: 'Founder — Nakra Dermatology Centre, Vivek Vihar', desc: 'Founded and managed Nakra Dermatology Centre in Vivek Vihar (5 Years).' },
+                  { year: '2009 – 2014', title: 'Dermatosurgeon — GM Hospital', desc: 'Served as Dermatosurgeon performing surgical skin procedures (5 Years).' },
+                  { year: '2009 – 2012', title: 'Consultant Dermatologist — Dr. BSA Hospital, Rohini', desc: 'Served as Consultant Dermatologist in public healthcare (3 Years).' },
+                  { year: '2009', title: 'MD — Dermatology, Venereology & Leprosy', desc: 'Completed MD specialization from D.D.U University, Gorakhpur with distinguished academic record.' },
+                  { year: '2008', title: 'International Publications', desc: 'Published research paper in the International Journal of Clinical Research.' },
+                  { year: '2004 – 2006', title: 'MBBS Medical Graduation', desc: 'Graduated from Motilal Nehru Medical College, Allahabad.' }
                 ].map((t, idx) => (
                   <div key={idx} className="relative group">
                     <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#052659] border-2 border-[#C1E8FF] group-hover:scale-125 transition-transform" />

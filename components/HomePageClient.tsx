@@ -44,10 +44,15 @@ declare global {
 
 // TIMELINE DATA
 const TIMELINE = [
-  { year: '2006', title: 'MBBS Graduation', desc: 'Graduated from the prestigious Motilal Nehru Medical College, Allahabad, laying a solid foundation in medical sciences.' },
-  { year: '2010', title: 'MD — Dermatology, Venereology & Leprosy', desc: 'Completed MD specialization from Kasturba Medical College / DDU University with academic honors.' },
-  { year: '2012', title: 'Senior Consultancy Roles', desc: 'Appointed as consultant at Dr. BSA Hospital, Rohini and DHI Safdarjung Enclave.' },
-  { year: '2016', title: 'Founding of Centre For Skin', desc: 'Established the state-of-the-art clinic in Saini Enclave to offer international-standard healthcare to East Delhi.' },
+  { year: '2004 – 2006', title: 'MBBS Graduation', desc: 'Completed MBBS medical degree from Motilal Nehru Medical College with top academic standing.' },
+  { year: '2008', title: 'International Publications', desc: 'Published research in the International Journal of Clinical Research.' },
+  { year: '2009', title: 'MD — Dermatology, Venereology & Leprosy', desc: 'Completed MD specialization from D.D.U University, Gorakhpur with distinguished academic honors.' },
+  { year: '2009 – 2012', title: 'Consultant Dermatologist — Dr. BSA Hospital, Rohini', desc: 'Served as Consultant Dermatologist (3 Years) & Dermatosurgeon at GM Hospital (5 Years).' },
+  { year: '2009 – 2014', title: 'Founder — Nakra Dermatology Centre, Vivek Vihar', desc: 'Founded and managed Nakra Dermatology Centre in Vivek Vihar for 5 years.' },
+  { year: '2010 – 2012', title: 'Laser Surgeon — New Look Laser Clinics', desc: 'Laser Surgeon & Aesthetic Dermatologist delivering specialized laser therapies.' },
+  { year: '2012 – 2014', title: 'Consultant Dermatologist — DHI Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in DHI Hair Implantation & Hair Restoration.' },
+  { year: '2015', title: 'Awarded Most Promising Dermatologist', desc: 'Honored with the "Most Promising Dermatologist In Delhi NCR" award.' },
+  { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20 years of clinical expertise.' },
 ];
 
 // DEPARTMENTS / SERVICES
@@ -58,31 +63,31 @@ const SERVICES = [
     title: 'Clinical Dermatology',
     titleHindi: 'क्लिनिकल डर्मेटोलॉजी',
     desc: 'Expert diagnostic assessments and customized medical treatments for chronic and acute skin disorders.',
-    treatments: ['Acne & Acne Vulgaris', 'Eczema & Atopic Dermatitis', 'Psoriasis Management', 'Rosacea & Facial Redness', 'Vitiligo Light/Dermal therapies', 'Warts, Moles & Skin Tags', 'Fungal & Bacterial Infections', 'Pruritus / Severe itching treatments']
+    treatments: ['Acne & Acne Vulgaris', 'Psoriasis Management', 'Lichen Planus Care', 'Fungal & Bacterial Infections', 'Nail Disorders', 'Sexually Transmitted Infections (STIs)', 'Skin Grafting', 'Eczema & Atopic Dermatitis', 'Rosacea & Facial Redness', 'Vitiligo Light & Dermal Therapies']
   },
   {
     id: 'aesthetic',
     icon: Sparkles,
-    title: 'Aesthetic Dermatology',
+    title: 'Aesthetic Dermatology & Procedures',
     titleHindi: 'सौंदर्य त्वचाविज्ञान',
-    desc: 'Refined anti-aging and facial rejuvenation procedures designed to restore natural facial harmony and youthful volume.',
-    treatments: ['Botulinum Toxin (Botox) Lifts', 'Hyaluronic Acid Dermal Fillers', 'Advanced PDO/PLLA Thread Lifts', 'Micro-Needling Collagen Induction', 'Double Chin Kybella reduction', 'Skin Booster Micro-droplets', 'Mesotherapy Rejuvenation']
+    desc: 'Aesthetic Dermatology Consultation and refined anti-aging and facial rejuvenation procedures.',
+    treatments: ['Aesthetic Dermatology Consultation', 'Botulinum Toxin (Botox) Lifts', 'Hyaluronic Acid Dermal Fillers', 'Anti-Ageing Treatments & Facelift', 'Buttock Lift', 'Liposuction & Body Contouring', 'Skin Polishing & Microdermabrasion', 'Stretch Marks Treatment', 'Advanced PDO/PLLA Thread Lifts']
   },
   {
     id: 'laser',
     icon: Zap,
     title: 'Advanced Laser Treatments',
     titleHindi: 'उन्नत लेज़र उपचार',
-    desc: 'State-of-the-art fractional, pigmentary, and vascular lasers delivering precision skin resurfacing and pigment clearing.',
-    treatments: ['Permanent Hair Reduction (Triple-Wavelength Diode/ND-YAG)', 'Q-Switched ND-YAG Tattoo & Melasma Removal', 'Fractional CO2 Laser for Acne Scars', 'IPL Photofacials & Sun damage repair', 'Vascular Birthmark & spider veins correction', 'Laser Carbon Peels / Hollywood Peel']
+    desc: 'State-of-the-art fractional, pigmentary, and vascular lasers delivering precision skin resurfacing.',
+    treatments: ['Permanent Hair Reduction (Triple-Wavelength Diode/ND-YAG)', 'Q-Switched ND-YAG Tattoo & Melasma Removal', 'Fractional CO2 Laser for Acne Scars', 'IPL Photofacials & Sun Damage Repair', 'Vascular Birthmark Correction', 'Laser Carbon Peels / Hollywood Peel']
   },
   {
     id: 'hair',
     icon: User,
     title: 'Hair Restoration Clinic',
     titleHindi: 'बाल बहाली क्लिनिक',
-    desc: 'Comprehensive and clinically-verified medical and surgical protocols for male and female pattern baldness and alopecia.',
-    treatments: ['DHI Certified Hair Transplantation', 'Platelet-Rich Plasma (PRP) Therapy', 'Mesotherapy Hair Booster injections', 'Stem Cell Micro-graft follicle activation', 'High-Frequency laser follicle stimulation', 'Nutritional and hormonal thinning therapy']
+    desc: 'Comprehensive and clinically-verified medical and surgical protocols for male and female pattern baldness.',
+    treatments: ['DHI Certified Hair Transplantation', 'Mezotherapy Hair Booster Injections', 'Platelet-Rich Plasma (PRP) Therapy', 'Stem Cell Therapy & Micro-graft activation', 'Follicular Laser Stimulation', 'Trichology & Scalp Rejuvenation']
   },
   {
     id: 'peels',
@@ -90,23 +95,23 @@ const SERVICES = [
     title: 'Chemical Peels & Resurfacing',
     titleHindi: 'रासायनिक पील्स',
     desc: 'Formulated medical-grade organic acid treatments targeting skin texture, hyperpigmentation, and facial clarity.',
-    treatments: ['Salicylic & Glycolic Anti-Acne Peels', 'Yellow Peel / Retinol resurfacing', 'TCA Peels for deep-seated scars', 'Melasmax/Cosmelan Pigmentation Peels', 'Microdermabrasion Diamond Resurfacing', 'Dermaroller Skin rejuvenation']
+    treatments: ['Salicylic Peel & Glycolic Anti-Acne Peels', 'Yellow Peel / Retinol Resurfacing', 'TCA Peels for Deep-Seated Scars', 'Melasmax/Cosmelan Pigmentation Peels', 'Dermaroller Skin Rejuvenation']
   },
   {
     id: 'pediatric',
-    icon: User, // Replaced Smile with User for robustness
+    icon: User,
     title: 'Pediatric Dermatology',
     titleHindi: 'बाल चिकित्सा त्वचा रोग',
-    desc: 'Gentle, compassionate, and precise management of sensitive dermatological situations in infants, kids, and adolescents.',
-    treatments: ['Infantile Atopic Eczema', 'Congenital Hemangiomas & Birthmarks', 'Pediatric Psoriasis & Rashes', 'Viral warts & contagiosum extraction', 'Diaper Rash & cradle cap care']
+    desc: 'Gentle, compassionate, and precise management of sensitive dermatological situations in infants and kids.',
+    treatments: ['Infantile Atopic Eczema', 'Congenital Hemangiomas & Birthmarks', 'Pediatric Psoriasis & Rashes', 'Viral Warts & Molluscum Contagiosum Extraction', 'Diaper Rash & Cradle Cap Care']
   },
   {
     id: 'surgery',
     icon: Scissors,
     title: 'Advanced Dermatosurgery',
     titleHindi: 'उन्नत डर्मेटोसर्जरी',
-    desc: 'Surgical excision, radiofrequency ablation, and vitiligo grafting conducted in a highly sterile operatory room.',
-    treatments: ['Cryotherapy freezing for skin growths', 'Electrocautery / Radiofrequency ablation', 'Suction blister skin grafting for Vitiligo', 'Partial & total medical nail surgery', 'Mole, cyst & lipoma surgical excision']
+    desc: 'Surgical excision, radiofrequency ablation, corn removal, and vitiligo skin grafting.',
+    treatments: ['Corn Removal', 'Skin Tag Surgical Removal', 'Cryotherapy Freezing for Skin Growths', 'Electrocautery / Radiofrequency Ablation', 'Suction Blister Skin Grafting for Vitiligo', 'Mole, Cyst & Lipoma Surgical Excision']
   }
 ];
 
@@ -689,14 +694,14 @@ export default function HomePageClient() {
 
             <p className="text-base sm:text-lg text-[#052659]/80 max-w-2xl font-normal leading-relaxed mb-8">
               {isHindi ? 
-                'पूर्वी दिल्ली में कड़कड़डूमा मेट्रो के पास 18+ वर्षों के विशिष्ट अनुभव के साथ त्वचा, बाल, और लेज़र उपचार का सबसे विश्वसनीय केंद्र। स्वर्ण पदक विजेता विशेषज्ञ द्वारा उत्तम देखभाल।' : 
+                'पूर्वी दिल्ली में कड़कड़डूमा मेट्रो के पास 20 वर्षों के विशिष्ट अनुभव के साथ त्वचा, बाल, और लेज़र उपचार का सबसे विश्वसनीय केंद्र। स्वर्ण पदक विजेता विशेषज्ञ द्वारा उत्तम देखभाल।' : 
                 'Highly specialized, award-winning dermatological science in East Delhi near Karkardooma Metro. Providing gold-standard lasers, certified hair restorations (DHI/PRP), chemical peels, and pediatric dermatology by Gold Medalist Dr. Gaurav Nakra.'}
             </p>
 
             <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-xl mb-10">
               {[
                 { label: 'MD Gold Medalist', desc: isHindi ? 'शीर्ष सम्मानित' : 'Top Credentialed' },
-                { label: '18+ Years', desc: isHindi ? 'विशिष्ट अनुभव' : 'Clinical Expertise' },
+                { label: '20 Years', desc: isHindi ? 'विशिष्ट अनुभव' : 'Clinical Expertise' },
                 { label: '4.5★ (508+ Reviews)', desc: isHindi ? 'संतुष्ट मरीज अभिप्राय' : 'Google Rating' }
               ].map((stat, i) => (
                 <div key={i} className="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-white hover:translate-y-[-2px] hover:shadow-xl transition-all shadow-[#021024]/5 shadow-sm">
@@ -818,7 +823,7 @@ export default function HomePageClient() {
                   <div>
                     <div className="font-serif text-xs font-bold text-white leading-tight">Dr. Gaurav Nakra</div>
                     <div className="font-sans text-[10px] text-white/75 font-semibold mt-0.5">
-                      {isHindi ? 'एमडी गोल्ड मेडलिस्ट · 18+ वर्ष अनुभव' : 'MD Gold Medalist · 18+ Yrs Exp'}
+                      {isHindi ? 'एमडी गोल्ड मेडलिस्ट · 20 वर्ष अनुभव' : 'MD Gold Medalist · 20 Yrs Exp'}
                     </div>
                   </div>
                 </div>
@@ -840,7 +845,7 @@ export default function HomePageClient() {
               { title: 'IMA Approved', desc: 'Indian Medical Association' },
               { title: 'DHI Certified', desc: 'Elite Hair Specialist' },
               { title: 'DMC Licensed', desc: 'Delhi Medical Council 44068' },
-              { title: '18+ Years Expert', desc: 'Dermatological Trust' }
+              { title: '20 Years Expert', desc: 'Dermatological Trust' }
             ].map((logo, i) => (
               <div 
                 key={i} 
@@ -901,19 +906,19 @@ export default function HomePageClient() {
               
               <p className="text-sm sm:text-base text-[#052659]/80 font-normal leading-relaxed mb-4">
                 {isHindi ? 
-                  'स्वर्ण पदक विजेता त्वचा विशेषज्ञ डॉ. गौरव नकरा द्वारा स्थापित, सेंटर फॉर स्किन पूर्वी दिल्ली (कड़कड़डूमा, आनंद विहार, सैनी एन्क्लेव) का सर्वश्रेष्ठ क्लिनिक है। हम त्वचा विज्ञान, उन्नत लेज़र तकनीकों एवं प्रमाणित हेयर ट्रांसप्लांटेशन में उत्कृष्टता प्रदान करते हैं।' : 
-                  'Founded and directed by Gold Medalist Dermatologist Dr. Gaurav Nakra, Centre For Skin is East Delhi’s flagship clinical center headquartered in Saini Enclave, Karkardooma. We map high-end medical lasers, clinical laboratory tests, and FDA-certified procedural equipment to correct complex dermatological challenges.'}
+                  'Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.' : 
+                  'Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.'}
               </p>
               
               <p className="text-sm sm:text-base text-[#052659]/85 font-normal leading-relaxed mb-8">
                 {isHindi ? 
                   'यह क्लिनिक विशेष रूप से आनंद विहार, विवेक विहार, जागृति एन्क्लेव, कौशाम्बी और आसपास के सभी मरीजों को उच्चतम चिकित्सा देखभाल प्रदान करता है। यहां अत्याधुनिक मशीनों द्वारा मुहांसे, बाल झड़ना, टैटू हटाना और कॉस्मेटिक लिफ्टिंग की जाती है।' : 
-                  'We serve patients from Anand Vihar, Vivek Vihar, Jagriti Enclave, Preet Vihar, Kaushambi, and neighboring districts. Equipped with multi-frequency laser platforms, micro-needling systems, and clean operatory theaters, we ensure safe and medical-grade clinical brilliance.'}
+                  'Founded and directed by senior specialist Dr. Gaurav Nakra with 20 years of clinical experience, Centre For Skin serves patients across East Delhi (Karkardooma, Anand Vihar, Saini Enclave, Vivek Vihar, Kaushambi) with medical-grade precision.'}
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 bg-white/80 backdrop-blur-md border border-white rounded-[28px] shadow-2xl shadow-[#021024]/5 mb-10">
                 {[
-                  { value: '18+ Yrs', label: isHindi ? 'अनुभव' : 'Clinical Experience' },
+                  { value: '20 Years', label: isHindi ? 'अनुभव' : 'Clinical Experience' },
                   { value: '5000+', label: isHindi ? 'मरीजों का विश्वास' : 'Treated Patients' },
                   { value: '15+ Systems', label: isHindi ? 'उन्नत मशीनें' : 'Advanced Lasers' },
                   { value: '44068 DMC', label: isHindi ? 'प्रमाणित पंजीकरण' : 'Official License' }
@@ -985,7 +990,7 @@ export default function HomePageClient() {
                 {[
                   {
                     title: isHindi ? 'स्वर्ण पदक विजेता चिकित्सक' : 'Gold Medalist Specialist',
-                    desc: isHindi ? 'डॉ. गौरव नकरा ने Kasturba Medical College से स्वर्ण पदक प्राप्त किया और उन्हें 18+ वर्षों का अनुभव है।' : 'Led by Dr. Gaurav Nakra, a board-certified dermatologist who finished as a Gold Medalist (MD) with 18+ years experience.'
+                    desc: isHindi ? 'डॉ. गौरव नकरा ने D.D.U University से स्वर्ण पदक/सम्मान प्राप्त किया और उन्हें 20 वर्षों का अनुभव है।' : 'Led by Dr. Gaurav Nakra, a board-certified dermatologist who completed MD from D.D.U University, Gorakhpur with 20 years experience.'
                   },
                   {
                     title: isHindi ? 'पंजीकृत और कानूनी रूप से प्रमाणित' : 'DMC Registered & Licensed',
@@ -1264,7 +1269,7 @@ export default function HomePageClient() {
               Dr. Gaurav Nakra
             </h2>
             <p className="font-sans text-xs md:text-sm text-[#5483B3] tracking-[0.1em] uppercase font-bold mt-1.5">
-              MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 18+ Years Experience
+              MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 20 Years Experience
             </p>
           </div>
 
@@ -1327,15 +1332,19 @@ export default function HomePageClient() {
                   </div>
                   <div className="flex items-start gap-3">
                     <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Consultant Dermatologist — Dr. BSA Hospital, Rohini</span>
+                    <span>Consultant Dermatologist — Dr. BSA Hospital, Rohini (2009–2012)</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Consultant — DHI Hair Transplant Safdarjung Enclave</span>
+                    <span>Consultant Dermatologist & Trichologist — DHI Safdarjung Enclave (2012–2014)</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Consultant — New Look Laser Clinics & GM Hospital</span>
+                    <span>Laser Surgeon — New Look Laser Clinics (2010–2012) & Dermatosurgeon — GM Hospital (2009–2014)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Founder — Nakra Dermatology Centre, Vivek Vihar (2009–2014)</span>
                   </div>
                 </div>
               </div>
@@ -1350,21 +1359,21 @@ export default function HomePageClient() {
               </h3>
 
               <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-6">
-                Dr. Gaurav Nakra is a highly acclaimed, board-certified senior dermatologist, cosmetologist, and pediatric skin specialist based in East Delhi. After completing his MBBS degree from Motilal Nehru Medical College in 2006, he pursued specialized post-graduation MD in Dermatology, Venereology & Leprosy from Kasturba Medical College / DDU University, finishing as a prestigious Gold Medalist.
+                Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
               </p>
 
               <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-8">
-                Throughout his career spanning more than 18 years, Dr. Nakra has served in multiple prestigious consultant positions. He holds certifications from the Direct Hair Implantation (DHI) Academy, making him an outstanding authority regarding hair follicle restoration, transplantation surgical design, and scalp PRP infusions.
+                With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI (Safdarjung Enclave), New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5 mb-10">
                 {[
-                  { title: 'MBBS Graduation (2006)', desc: 'Motilal Nehru Medical College, Allahabad' },
-                  { title: 'MD Dermatology (2010)', desc: 'Kasturba Medical College (KMC) — Gold Medal' },
-                  { title: 'DHI certified specialist', desc: 'Certified hair transplantation expert' },
+                  { title: 'MBBS Graduation (2004–2006)', desc: 'Motilal Nehru Medical College, Allahabad' },
+                  { title: 'MD Dermatology (2009)', desc: 'D.D.U University, Gorakhpur — Academic Honors' },
+                  { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
+                  { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },
                   { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
-                  { title: 'IADVL Member', desc: 'Indian Association of Dermatologists' },
-                  { title: 'IMA Accredited', desc: 'Indian Medical Association member' }
+                  { title: '20 Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
                 ].map((q, idx) => (
                   <div key={idx} className="flex gap-3 items-start text-left">
                     <div className="p-1 rounded-lg bg-[#4ADE80]/20 text-[#052659] border border-[#4ADE80]/30 mt-0.5">
