@@ -851,80 +851,169 @@ export default function HomePageClient() {
         </div>
       </div>
 
-      {/* ABOUT CLINIC */}
+      {/* ABOUT / DOCTOR PROFILE */}
       <section 
         id="about" 
-        className="py-20 md:py-32 relative bg-white/40"
+        className="py-20 md:py-32 relative bg-gradient-to-b from-[#C1E8FF]/20 to-[#FFFFFF]"
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div id="doctor" className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-left">
+          
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase block mb-3">
+              {isHindi ? 'वरिष्ठ चिकित्सक प्रोफाइल' : 'Senior Consulting Dermatologist'}
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
+              Dr. Gaurav Nakra
+            </h2>
+            <p className="font-sans text-xs md:text-sm text-[#5483B3] tracking-[0.1em] uppercase font-bold mt-1.5">
+              MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 20 Years Experience
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-[32px] overflow-hidden shadow-2xl border-2 border-[#7DA0CA]/20">
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white group">
                 <img 
-                  src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800&fm=webp" 
-                  alt="Dermatologist diagnostics in modern clinic room" 
-                  className="w-full h-[350px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-500"
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp" 
+                  alt="Dermatologist Specialist Dr. Gaurav Nakra portrait representation" 
+                  className="w-full h-[400px] md:h-[550px] object-cover grayscale-[0.12] group-hover:scale-105 transition-transform duration-500"
                   width={400}
-                  height={500}
+                  height={550}
                   loading="lazy"
                 />
-                
-                <div className="absolute bottom-6 right-6 bg-[#021024]/90 backdrop-blur-md p-4 rounded-2xl border border-[#7DA0CA]/30 shadow-lg text-left">
-                  <div className="flex items-center gap-1 text-[#FACC15] mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current text-[#FACC15]" />
-                    ))}
+
+                <div className="absolute top-4 left-4 bg-white/75 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
+                  <Award className="w-4 h-4 text-amber-500" />
+                  <span className="font-serif text-[10px] font-bold text-[#021024]">MD Gold Medalist</span>
+                </div>
+
+                <div className="absolute bottom-4 left-4 right-4 bg-[#021024]/75 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-md flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#C1E8FF] rounded-xl flex items-center justify-center shrink-0">
+                    <User className="w-5 h-5 text-[#052659]" />
                   </div>
-                  <div className="font-serif text-sm font-bold text-white">4.5★ Highly Verified</div>
-                  <div className="font-sans text-[10px] text-[#7DA0CA] font-medium">508+ Genuine Local Reviews</div>
+                  <div>
+                    <div className="font-serif text-[11px] font-bold text-white uppercase tracking-wider">
+                      Delhi Medical Council
+                    </div>
+                    <div className="font-sans text-[10px] text-[#7DA0CA] font-medium mt-0.5">
+                      Accredited Registration No. 44068
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <div className="flex flex-wrap gap-2.5 p-6 bg-white/80 backdrop-blur-md border border-white rounded-[28px] shadow-2xl shadow-[#021024]/5">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block w-full mb-1.5">
+                  Active specialties area:
+                </span>
+                {['#LaserExpert', '#CustomPeels', '#DHIHairTransplant', '#AntiAgingLifts', '#PediatricDermatology', '#PlateletRichPlasma', '#Dermatosurgery'].map((tag, idx) => (
+                  <span 
+                    key={idx} 
+                    className="px-3 py-1.5 bg-[#C1E8FF]/50 text-[#052659] hover:bg-[#5483B3]/25 font-sans text-[10px] uppercase tracking-wider font-bold rounded-xl border border-[#7DA0CA]/10 select-none transition-all"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Current & Past Medical Associations */}
+              <div className="bg-gradient-to-br from-[#C1E8FF]/40 to-white/80 border border-white rounded-[28px] p-6 shadow-2xl shadow-[#021024]/3 text-left backdrop-blur-md">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-4">
+                  {isHindi ? 'वर्तमान और पूर्व चिकित्सा संघ:' : 'Current & Past Medical Associations:'}
+                </span>
+                <div className="flex flex-col gap-3.5 text-xs text-[#052659]/90 font-bold leading-normal font-sans">
+                  <div className="flex items-start gap-3">
+                    <Award className="w-4 h-4 text-[#052659] shrink-0 mt-0.5" />
+                    <span>Founder & Senior Consultant — Centre For Skin, Saini Enclave</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Consultant Dermatologist — Dr. BSA Hospital, Rohini (2009–2012)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Consultant Dermatologist & Trichologist — DHI Safdarjung Enclave (2012–2014)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Laser Surgeon — New Look Laser Clinics (2010–2012) & Dermatosurgeon — GM Hospital (2009–2014)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <span>Founder — Nakra Dermatology Centre, Vivek Vihar (2009–2014)</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
-            <div className="lg:col-span-7 text-left flex flex-col justify-center">
-              <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase mb-3 block">
-                {isHindi ? 'केंद्र के बारे में जानिए' : 'Discover Our Foundation'}
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight mb-6 gsap-reveal">
-                {isHindi ? 'सेंटर फॉर स्किन — डॉ. गौरव नकरा' : 'Dermatological Science Mapped To Expert Care'}
-              </h2>
+            <div className="lg:col-span-7 flex flex-col justify-start">
               
-              <p className="text-sm sm:text-base text-[#052659]/80 font-normal leading-relaxed mb-4">
-                {isHindi ? 
-                  'Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.' : 
-                  'Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.'}
-              </p>
-              
-              <p className="text-sm sm:text-base text-[#052659]/85 font-normal leading-relaxed mb-8">
-                {isHindi ? 
-                  'यह क्लिनिक विशेष रूप से आनंद विहार, विवेक विहार, जागृति एन्क्लेव, कौशाम्बी और आसपास के सभी मरीजों को उच्चतम चिकित्सा देखभाल प्रदान करता है। यहां अत्याधुनिक मशीनों द्वारा मुहांसे, बाल झड़ना, टैटू हटाना और कॉस्मेटिक लिफ्टिंग की जाती है।' : 
-                  'Founded and directed by senior specialist Dr. Gaurav Nakra with 20 years of clinical experience, Centre For Skin serves patients across East Delhi (Karkardooma, Anand Vihar, Saini Enclave, Vivek Vihar, Kaushambi) with medical-grade precision.'}
+              <h3 className="font-serif text-2xl font-black text-[#021024] mb-4 flex items-center gap-2 pb-3 border-b border-[#7DA0CA]/20">
+                <BookOpen className="w-6 h-6 text-[#052659]" />
+                <span>Biography & Qualifications</span>
+              </h3>
+
+              <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-6">
+                Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 bg-white/80 backdrop-blur-md border border-white rounded-[28px] shadow-2xl shadow-[#021024]/5 mb-10">
+              <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-8">
+                With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI (Safdarjung Enclave), New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5 mb-10">
                 {[
-                  { value: '20 Years', label: isHindi ? 'अनुभव' : 'Clinical Experience' },
-                  { value: '5000+', label: isHindi ? 'मरीजों का विश्वास' : 'Treated Patients' },
-                  { value: '15+ Systems', label: isHindi ? 'उन्नत मशीनें' : 'Advanced Lasers' },
-                  { value: '44068 DMC', label: isHindi ? 'प्रमाणित पंजीकरण' : 'Official License' }
-                ].map((item, i) => (
-                  <div key={i} className="text-center md:text-left">
-                    <div className="font-serif text-base sm:text-xl font-black text-[#021024] underline decoration-[#5483B3]/40 decoration-2 underline-offset-4">{item.value}</div>
-                    <div className="font-sans text-[10px] sm:text-xs text-[#5483B3] font-bold uppercase tracking-wider mt-1.5">{item.label}</div>
+                  { title: 'MBBS Graduation (2004–2006)', desc: 'Motilal Nehru Medical College, Allahabad' },
+                  { title: 'MD Dermatology (2009)', desc: 'D.D.U University, Gorakhpur — Academic Honors' },
+                  { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
+                  { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },
+                  { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
+                  { title: '20 Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
+                ].map((q, idx) => (
+                  <div key={idx} className="flex gap-3 items-start text-left">
+                    <div className="p-1 rounded-lg bg-[#4ADE80]/20 text-[#052659] border border-[#4ADE80]/30 mt-0.5">
+                      <Check className="w-3.5 h-3.5 stroke-[3px]" />
+                    </div>
+                    <div>
+                      <div className="font-serif text-xs md:text-sm font-bold text-[#021024]">{q.title}</div>
+                      <div className="font-sans text-[10px] md:text-xs text-[#5483B3] font-semibold mt-0.5">{q.desc}</div>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              <a 
-                href="/doctor-gaurav-nakra"
-                className="w-fit flex items-center gap-2 text-xs font-sans font-bold text-[#052659] uppercase tracking-wider hover:text-[#5483B3] transition-colors group focus:outline-2 focus:outline-offset-4 focus:outline-[#052659]"
-                onMouseEnter={() => setIsCursorHovering(true)}
-                onMouseLeave={() => setIsCursorHovering(false)}
-              >
-                <span>{isHindi ? 'डॉक्टर का पूर्ण विवरण' : 'Explore Doctor Biography'}</span>
-                <ChevronRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-              </a>
+              {/* Timeline */}
+              <div className="mt-2 pt-6 border-t border-[#7DA0CA]/20">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-6">
+                  {isHindi ? 'व्यावसायिक यात्रा और मील के पत्थर:' : 'Professional Journey & Milestones:'}
+                </span>
+                
+                <div className="border-l-2 border-[#7DA0CA]/30 pl-5 flex flex-col gap-6 text-left">
+                  {TIMELINE.map((t, idx) => (
+                    <div key={idx} className="relative group">
+                      <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#052659] border-2 border-[#C1E8FF] group-hover:scale-125 transition-transform" />
+                      <div className="font-mono text-xs font-bold text-[#5483B3]">{t.year}</div>
+                      <div className="font-serif text-sm font-bold text-[#021024] mt-0.5">{t.title}</div>
+                      <p className="font-sans text-xs text-[#052659]/75 mt-1 leading-relaxed">{t.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <a 
+                  href="/doctor-gaurav-nakra"
+                  className="w-fit flex items-center gap-2 px-6 py-3.5 bg-[#052659] hover:bg-[#5483B3] text-white text-xs font-sans font-bold uppercase tracking-wider rounded-xl shadow-lg transition-all group"
+                  onMouseEnter={() => setIsCursorHovering(true)}
+                  onMouseLeave={() => setIsCursorHovering(false)}
+                >
+                  <span>{isHindi ? 'डॉक्टर का पूर्ण विवरण' : 'View Full Dedicated Profile Page'}</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                </a>
+              </div>
+
             </div>
 
           </div>
@@ -1119,163 +1208,7 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* DOCTOR PROFILE */}
-      <section 
-        id="doctor" 
-        className="py-20 md:py-32 relative bg-gradient-to-b from-[#C1E8FF]/20 to-[#FFFFFF]"
-      >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-left">
-          
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase block mb-3">
-              {isHindi ? 'वरिष्ठ चिकित्सक प्रोफाइल' : 'Senior Consulting Dermatologist'}
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
-              Dr. Gaurav Nakra
-            </h2>
-            <p className="font-sans text-xs md:text-sm text-[#5483B3] tracking-[0.1em] uppercase font-bold mt-1.5">
-              MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 20 Years Experience
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
-            <div className="lg:col-span-5 flex flex-col gap-6">
-              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-4 border-white group">
-                <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp" 
-                  alt="Dermatologist Specialist Dr. Gaurav Nakra portrait representation" 
-                  className="w-full h-[400px] md:h-[550px] object-cover grayscale-[0.12] group-hover:scale-105 transition-transform duration-500"
-                  width={400}
-                  height={550}
-                  loading="lazy"
-                />
-
-                <div className="absolute top-4 left-4 bg-white/75 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
-                  <Award className="w-4 h-4 text-amber-500" />
-                  <span className="font-serif text-[10px] font-bold text-[#021024]">MD Gold Medalist</span>
-                </div>
-
-                <div className="absolute bottom-4 left-4 right-4 bg-[#021024]/75 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-md flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#C1E8FF] rounded-xl flex items-center justify-center shrink-0">
-                    <User className="w-5 h-5 text-[#052659]" />
-                  </div>
-                  <div>
-                    <div className="font-serif text-[11px] font-bold text-white uppercase tracking-wider">
-                      Delhi Medical Council
-                    </div>
-                    <div className="font-sans text-[10px] text-[#7DA0CA] font-medium mt-0.5">
-                      Accredited Registration No. 44068
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2.5 p-6 bg-white/80 backdrop-blur-md border border-white rounded-[28px] shadow-2xl shadow-[#021024]/5">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block w-full mb-1.5">
-                  Active specialties area:
-                </span>
-                {['#LaserExpert', '#CustomPeels', '#DHIHairTransplant', '#AntiAgingLifts', '#PediatricDermatology', '#PlateletRichPlasma', '#Dermatosurgery'].map((tag, idx) => (
-                  <span 
-                    key={idx} 
-                    className="px-3 py-1.5 bg-[#C1E8FF]/50 text-[#052659] hover:bg-[#5483B3]/25 font-sans text-[10px] uppercase tracking-wider font-bold rounded-xl border border-[#7DA0CA]/10 select-none transition-all"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              {/* Current & Past Medical Associations moved to Left Column */}
-              <div className="bg-gradient-to-br from-[#C1E8FF]/40 to-white/80 border border-white rounded-[28px] p-6 shadow-2xl shadow-[#021024]/3 text-left backdrop-blur-md">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-4">
-                  {isHindi ? 'वर्तमान और पूर्व चिकित्सा संघ:' : 'Current & Past Medical Associations:'}
-                </span>
-                <div className="flex flex-col gap-3.5 text-xs text-[#052659]/90 font-bold leading-normal font-sans">
-                  <div className="flex items-start gap-3">
-                    <Award className="w-4 h-4 text-[#052659] shrink-0 mt-0.5" />
-                    <span>Founder & Senior Consultant — Centre For Skin, Saini Enclave</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Consultant Dermatologist — Dr. BSA Hospital, Rohini (2009–2012)</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Consultant Dermatologist & Trichologist — DHI Safdarjung Enclave (2012–2014)</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Laser Surgeon — New Look Laser Clinics (2010–2012) & Dermatosurgeon — GM Hospital (2009–2014)</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
-                    <span>Founder — Nakra Dermatology Centre, Vivek Vihar (2009–2014)</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="lg:col-span-7 flex flex-col justify-start">
-              
-              <h3 className="font-serif text-2xl font-black text-[#021024] mb-4 flex items-center gap-2 pb-3 border-b border-[#7DA0CA]/20">
-                <BookOpen className="w-6 h-6 text-[#052659]" />
-                <span>Biography & Qualifications</span>
-              </h3>
-
-              <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-6">
-                Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
-              </p>
-
-              <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-8">
-                With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI (Safdarjung Enclave), New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5 mb-10">
-                {[
-                  { title: 'MBBS Graduation (2004–2006)', desc: 'Motilal Nehru Medical College, Allahabad' },
-                  { title: 'MD Dermatology (2009)', desc: 'D.D.U University, Gorakhpur — Academic Honors' },
-                  { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
-                  { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },
-                  { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
-                  { title: '20 Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
-                ].map((q, idx) => (
-                  <div key={idx} className="flex gap-3 items-start text-left">
-                    <div className="p-1 rounded-lg bg-[#4ADE80]/20 text-[#052659] border border-[#4ADE80]/30 mt-0.5">
-                      <Check className="w-3.5 h-3.5 stroke-[3px]" />
-                    </div>
-                    <div>
-                      <div className="font-serif text-xs md:text-sm font-bold text-[#021024]">{q.title}</div>
-                      <div className="font-sans text-[10px] md:text-xs text-[#5483B3] font-semibold mt-0.5">{q.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Timeline Moved Upwards */}
-              <div className="mt-2 pt-6 border-t border-[#7DA0CA]/20">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-6">
-                  {isHindi ? 'व्यावसायिक यात्रा और मील के पत्थर:' : 'Professional Journey & Milestones:'}
-                </span>
-                
-                <div className="border-l-2 border-[#7DA0CA]/30 pl-5 flex flex-col gap-6 text-left">
-                  {TIMELINE.map((t, idx) => (
-                    <div key={idx} className="relative group">
-                      <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#052659] border-2 border-[#C1E8FF] group-hover:scale-125 transition-transform" />
-                      <div className="font-mono text-xs font-bold text-[#5483B3]">{t.year}</div>
-                      <div className="font-serif text-sm font-bold text-[#021024] mt-0.5">{t.title}</div>
-                      <p className="font-sans text-xs text-[#052659]/75 mt-1 leading-relaxed">{t.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
 
       {/* TESTIMONIALS */}
       <section 
