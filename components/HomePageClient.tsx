@@ -1158,66 +1158,7 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* FAQS */}
-      <section 
-        id="faqs" 
-        className="py-20 md:py-32 relative bg-white"
-      >
-        <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-10 text-left">
-          
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.2em] uppercase block mb-3">
-              {isHindi ? 'अक्सर पूछे जाने वाले सवाल' : 'Dermatology Q&A'}
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
-              {isHindi ? 'पूछे जाने वाले मुख्य सवाल' : 'Dermatosurgery & Treatment FAQs'}
-            </h2>
-            <p className="font-sans text-xs md:text-sm text-[#052659]/75 mt-3 select-none">
-              Explore gold-standard, structured clinical answers written and verified directly by dermatologist Dr. Gaurav Nakra.
-            </p>
-          </div>
 
-          <div className="flex flex-col gap-4">
-            {FAQS.map((faq, index) => {
-              const isOpen = activeFAQ === index;
-              return (
-                <div 
-                  key={index}
-                  className="border border-[#7DA0CA]/15 rounded-[22px] bg-white/80 backdrop-blur-md overflow-hidden shadow-xl shadow-[#021024]/3 hover:shadow-2xl hover:translate-y-[-2px] transition-all"
-                >
-                  <button
-                    onClick={() => setActiveFAQ(isOpen ? null : index)}
-                    className="w-full p-5 text-left flex justify-between items-center gap-4 cursor-pointer select-none group"
-                    aria-expanded={isOpen}
-                    onMouseEnter={() => setIsCursorHovering(true)}
-                    onMouseLeave={() => setIsCursorHovering(false)}
-                  >
-                    <span className="font-serif text-sm md:text-base font-black text-[#052659] group-hover:text-[#5483B3] transition-colors leading-snug">
-                      {isHindi && index === 0 ? 'सेंटर फॉर स्किन पर लेज़र हेयर रिडक्शन कितना सुरक्षित है?' : faq.q}
-                    </span>
-                    <div className={`p-1.5 rounded-lg border border-[#7DA0CA]/20 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-[#C1E8FF]' : 'bg-transparent'
-                    }`}>
-                      <ChevronDown className="w-4 h-4 text-[#052659]" />
-                    </div>
-                  </button>
-
-                  <div 
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      isOpen ? 'max-h-[500px] border-t border-[#7DA0CA]/20' : 'max-h-0'
-                    }`}
-                  >
-                    <div className="p-5 text-xs md:text-sm text-[#052659]/80 leading-relaxed bg-[#C1E8FF]/10 font-normal">
-                      {isHindi && index === 0 ? 'लेज़र बाल हटाना पूरी तरह से सुरक्षित है। सेंटर फॉर स्किन पर, हम केवल US-FDA स्वीकृत ट्रिपल वेवलेंथ डायोड लेज़र का उपयोग करते हैं जो त्वचा पर अत्यधिक सुरक्षित और प्रभावी है। सभी लेज़र प्रक्रियाएं डॉ. गौरव नकरा के निजी मार्गदर्शन में की जाती हैं।' : faq.a}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
 
 
 
@@ -1625,6 +1566,67 @@ export default function HomePageClient() {
               </div>
             </div>
 
+          </div>
+
+        </div>
+      </section>
+
+      {/* FAQS */}
+      <section 
+        id="faqs" 
+        className="py-20 md:py-32 relative bg-gradient-to-b from-[#C1E8FF]/20 to-white"
+      >
+        <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-10 text-left">
+          
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.2em] uppercase block mb-3">
+              {isHindi ? 'अक्सर पूछे जाने वाले सवाल' : 'Dermatology Q&A'}
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
+              {isHindi ? 'पूछे जाने वाले मुख्य सवाल' : 'Dermatosurgery & Treatment FAQs'}
+            </h2>
+            <p className="font-sans text-xs md:text-sm text-[#052659]/75 mt-3 select-none">
+              Explore gold-standard, structured clinical answers written and verified directly by dermatologist Dr. Gaurav Nakra.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {FAQS.map((faq, index) => {
+              const isOpen = activeFAQ === index;
+              return (
+                <div 
+                  key={index}
+                  className="border border-[#7DA0CA]/15 rounded-[22px] bg-white/80 backdrop-blur-md overflow-hidden shadow-xl shadow-[#021024]/3 hover:shadow-2xl hover:translate-y-[-2px] transition-all"
+                >
+                  <button
+                    onClick={() => setActiveFAQ(isOpen ? null : index)}
+                    className="w-full p-5 text-left flex justify-between items-center gap-4 cursor-pointer select-none group"
+                    aria-expanded={isOpen}
+                    onMouseEnter={() => setIsCursorHovering(true)}
+                    onMouseLeave={() => setIsCursorHovering(false)}
+                  >
+                    <span className="font-serif text-sm md:text-base font-black text-[#052659] group-hover:text-[#5483B3] transition-colors leading-snug">
+                      {isHindi && index === 0 ? 'सेंटर फॉर स्किन पर लेज़र हेयर रिडक्शन कितना सुरक्षित है?' : faq.q}
+                    </span>
+                    <div className={`p-1.5 rounded-lg border border-[#7DA0CA]/20 transition-transform duration-300 ${
+                      isOpen ? 'rotate-180 bg-[#C1E8FF]' : 'bg-transparent'
+                    }`}>
+                      <ChevronDown className="w-4 h-4 text-[#052659]" />
+                    </div>
+                  </button>
+
+                  <div 
+                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                      isOpen ? 'max-h-[500px] border-t border-[#7DA0CA]/20' : 'max-h-0'
+                    }`}
+                  >
+                    <div className="p-5 text-xs md:text-sm text-[#052659]/80 leading-relaxed bg-[#C1E8FF]/10 font-normal">
+                      {isHindi && index === 0 ? 'लेज़र बाल हटाना पूरी तरह से सुरक्षित है। सेंटर फॉर स्किन पर, हम केवल US-FDA स्वीकृत ट्रिपल वेवलेंथ डायोड लेज़र का उपयोग करते हैं जो त्वचा पर अत्यधिक सुरक्षित और प्रभावी है। सभी लेज़र प्रक्रियाएं डॉ. गौरव नकरा के निजी मार्गदर्शन में की जाती हैं।' : faq.a}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
         </div>
