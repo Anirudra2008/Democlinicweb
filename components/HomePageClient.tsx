@@ -61,7 +61,10 @@ const SERVICES = [
     icon: Activity,
     title: 'Clinical Dermatology',
     titleHindi: 'क्लिनिकल डर्मेटोलॉजी',
-    desc: 'Expert diagnostic assessments and customized medical treatments for chronic and acute skin disorders.',
+    desc: 'Expert diagnostic assessments and customized medical treatments for chronic and acute skin disorders by MD Gold Medalist Dr. Gaurav Nakra.',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600',
+    benefits: ['Accurate Diagnostic Assessment', 'DMC Registered Specialist', 'Targeted Prescription Regimen', 'Safe for Sensitive Skin Types'],
     treatments: ['Acne & Acne Vulgaris', 'Psoriasis Management', 'Lichen Planus Care', 'Fungal & Bacterial Infections', 'Nail Disorders', 'Sexually Transmitted Infections (STIs)', 'Skin Grafting', 'Eczema & Atopic Dermatitis', 'Rosacea & Facial Redness', 'Vitiligo Light & Dermal Therapies']
   },
   {
@@ -69,7 +72,10 @@ const SERVICES = [
     icon: Sparkles,
     title: 'Aesthetic Dermatology & Procedures',
     titleHindi: 'सौंदर्य त्वचाविज्ञान',
-    desc: 'Aesthetic Dermatology Consultation and refined anti-aging and facial rejuvenation procedures.',
+    desc: 'Aesthetic Dermatology Consultation and refined anti-aging, Botox, dermal fillers, and facial rejuvenation procedures.',
+    image: 'https://images.unsplash.com/photo-1512290900676-26c2a4d48dc1?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600',
+    benefits: ['Natural Anti-Aging Lifts', 'US-FDA Approved Fillers', 'Painless Micro-Injections', 'Instant Youthful Glow'],
     treatments: ['Aesthetic Dermatology Consultation', 'Botulinum Toxin (Botox) Lifts', 'Hyaluronic Acid Dermal Fillers', 'Anti-Ageing Treatments & Facelift', 'Buttock Lift', 'Liposuction & Body Contouring', 'Skin Polishing & Microdermabrasion', 'Stretch Marks Treatment', 'Advanced PDO/PLLA Thread Lifts']
   },
   {
@@ -77,7 +83,10 @@ const SERVICES = [
     icon: Zap,
     title: 'Advanced Laser Treatments',
     titleHindi: 'उन्नत लेज़र उपचार',
-    desc: 'State-of-the-art fractional, pigmentary, and vascular lasers delivering precision skin resurfacing.',
+    desc: 'State-of-the-art fractional, pigmentary, and vascular lasers delivering precision skin resurfacing and permanent hair reduction.',
+    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600',
+    benefits: ['Triple Wavelength Diode Laser', 'Permanent Hair Reduction', 'Fractional Scar Resurfacing', 'Zero Hyperpigmentation Risk'],
     treatments: ['Permanent Hair Reduction (Triple-Wavelength Diode/ND-YAG)', 'Q-Switched ND-YAG Tattoo & Melasma Removal', 'Fractional CO2 Laser for Acne Scars', 'IPL Photofacials & Sun Damage Repair', 'Vascular Birthmark Correction', 'Laser Carbon Peels / Hollywood Peel']
   },
   {
@@ -85,7 +94,10 @@ const SERVICES = [
     icon: User,
     title: 'Hair Restoration Clinic',
     titleHindi: 'बाल बहाली क्लिनिक',
-    desc: 'Comprehensive and clinically-verified medical and surgical protocols for male and female pattern baldness.',
+    desc: 'Comprehensive and clinically-verified medical and surgical protocols for male and female pattern baldness and scalp health.',
+    image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&q=80&w=600',
+    benefits: ['DHI Certified Hair Transplant', 'High Follicular Survival Rate', 'Autologous PRP Therapy', 'Natural Dense Hair Line'],
     treatments: ['DHI Certified Hair Transplantation', 'Mezotherapy Hair Booster Injections', 'Platelet-Rich Plasma (PRP) Therapy', 'Stem Cell Therapy & Micro-graft activation', 'Follicular Laser Stimulation', 'Trichology & Scalp Rejuvenation']
   },
   {
@@ -93,7 +105,10 @@ const SERVICES = [
     icon: Atom,
     title: 'Chemical Peels & Resurfacing',
     titleHindi: 'रासायनिक पील्स',
-    desc: 'Formulated medical-grade organic acid treatments targeting skin texture, hyperpigmentation, and facial clarity.',
+    desc: 'Formulated medical-grade organic acid treatments targeting skin texture, hyperpigmentation, acne scars, and facial clarity.',
+    image: 'https://images.unsplash.com/photo-1512290900676-26c2a4d48dc1?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600',
+    benefits: ['Medical-Grade Organic Acids', 'Deep Pigmentation Clearance', 'Pore Refinement & Polish', 'Customized Layering Protocol'],
     treatments: ['Salicylic Peel & Glycolic Anti-Acne Peels', 'Yellow Peel / Retinol Resurfacing', 'TCA Peels for Deep-Seated Scars', 'Melasmax/Cosmelan Pigmentation Peels', 'Dermaroller Skin Rejuvenation']
   },
   {
@@ -101,7 +116,10 @@ const SERVICES = [
     icon: User,
     title: 'Pediatric Dermatology',
     titleHindi: 'बाल चिकित्सा त्वचा रोग',
-    desc: 'Gentle, compassionate, and precise management of sensitive dermatological situations in infants and kids.',
+    desc: 'Gentle, compassionate, and precise management of sensitive dermatological situations in infants, toddlers, and teenagers.',
+    image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600',
+    benefits: ['Gentle Non-Stinging Care', 'Pediatric Approved Safety', 'Compassionate Child Handling', 'Rapid Relief Formulations'],
     treatments: ['Infantile Atopic Eczema', 'Congenital Hemangiomas & Birthmarks', 'Pediatric Psoriasis & Rashes', 'Viral Warts & Molluscum Contagiosum Extraction', 'Diaper Rash & Cradle Cap Care']
   },
   {
@@ -109,7 +127,10 @@ const SERVICES = [
     icon: Scissors,
     title: 'Advanced Dermatosurgery',
     titleHindi: 'उन्नत डर्मेटोसर्जरी',
-    desc: 'Surgical excision, radiofrequency ablation, corn removal, and vitiligo skin grafting.',
+    desc: 'Surgical excision, radiofrequency ablation, corn removal, cyst removal, and suction blister vitiligo skin grafting.',
+    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1000',
+    subImage: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600',
+    benefits: ['100% Sterile OT Setting', 'Scar-Minimizing Suturing', 'Radiofrequency Ablation', 'Quick Outpatient Discharge'],
     treatments: ['Corn Removal', 'Skin Tag Surgical Removal', 'Cryotherapy Freezing for Skin Growths', 'Electrocautery / Radiofrequency Ablation', 'Suction Blister Skin Grafting for Vitiligo', 'Mole, Cyst & Lipoma Surgical Excision']
   }
 ];
@@ -1055,54 +1076,95 @@ export default function HomePageClient() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-4 flex flex-col gap-2.5">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left Accordion Column: Department Buttons & Expanded Procedures List */}
+            <div className="lg:col-span-5 flex flex-col gap-3">
               {SERVICES.map((s) => {
                 const IconComponent = s.icon;
+                const isActive = activeTab === s.id;
                 return (
-                  <button
-                    key={s.id}
-                    onClick={() => setActiveTab(s.id)}
-                    className={`w-full text-left p-4 rounded-[24px] border transition-all flex items-center gap-4 cursor-pointer select-none ${
-                      activeTab === s.id 
-                        ? 'bg-[#1E64EC] border-[#1E64EC] text-white shadow-xl scale-102 translate-x-1' 
-                        : 'bg-white border-gray-200 hover:border-[#1E64EC] text-[#121316] hover:bg-[#EBF2FF] shadow-sm'
-                    }`}
-                    aria-label={`Select treatment category: ${s.title}`}
-                    onMouseEnter={() => setIsCursorHovering(true)}
-                    onMouseLeave={() => setIsCursorHovering(false)}
-                  >
-                    <div className={`p-2.5 rounded-xl ${
-                      activeTab === s.id ? 'bg-white/20 text-white' : 'bg-[#EBF2FF] text-[#1E64EC]'
-                    }`}>
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="font-serif text-sm font-black leading-snug">
-                        {isHindi ? s.titleHindi : s.title}
+                  <div key={s.id} className="flex flex-col gap-2">
+                    <button
+                      onClick={() => setActiveTab(s.id)}
+                      className={`w-full text-left p-4 rounded-[24px] border transition-all flex items-center gap-4 cursor-pointer select-none ${
+                        isActive 
+                          ? 'bg-[#1E64EC] border-[#1E64EC] text-white shadow-xl scale-102' 
+                          : 'bg-white border-gray-200 hover:border-[#1E64EC] text-[#121316] hover:bg-[#EBF2FF]/60 shadow-sm'
+                      }`}
+                      aria-label={`Select treatment category: ${s.title}`}
+                      onMouseEnter={() => setIsCursorHovering(true)}
+                      onMouseLeave={() => setIsCursorHovering(false)}
+                    >
+                      <div className={`p-2.5 rounded-xl transition-colors ${
+                        isActive ? 'bg-white/20 text-white' : 'bg-[#EBF2FF] text-[#1E64EC]'
+                      }`}>
+                        <IconComponent className="w-5 h-5" />
                       </div>
-                      <div className="font-sans text-[10px] font-semibold uppercase tracking-wider mt-0.5">
-                        View {s.treatments.length} Procedures
+                      <div className="flex-1">
+                        <div className="font-serif text-sm font-black leading-snug">
+                          {isHindi ? s.titleHindi : s.title}
+                        </div>
+                        <div className={`font-sans text-[10px] font-semibold uppercase tracking-wider mt-0.5 ${
+                          isActive ? 'text-white/90 font-bold' : 'text-[#1E64EC]'
+                        }`}>
+                          View {s.treatments.length} Procedures
+                        </div>
                       </div>
-                    </div>
-                  </button>
+                      <div className={`p-1.5 rounded-lg border transition-all ${
+                        isActive ? 'bg-white/20 border-white/40 text-white rotate-180' : 'bg-transparent border-gray-200 text-[#121316]'
+                      }`}>
+                        <ChevronDown className="w-4 h-4" />
+                      </div>
+                    </button>
+
+                    {/* Accordion Expanded Procedures Dropdown directly under the selected button */}
+                    {isActive && (
+                      <div className="bg-[#EBF2FF]/80 border-2 border-[#1E64EC]/30 rounded-[24px] p-4 text-left shadow-inner my-1 animate-fade-in">
+                        <div className="flex items-center justify-between pb-2 border-b border-[#1E64EC]/20 mb-3">
+                          <span className="font-sans text-[10px] uppercase font-extrabold text-[#1E64EC] tracking-wider">
+                            Certified Procedures ({s.treatments.length})
+                          </span>
+                          <span className="w-2 h-2 rounded-full bg-[#1E64EC] animate-pulse" />
+                        </div>
+                        
+                        <div className="grid grid-cols-1 gap-2 max-h-[360px] overflow-y-auto pr-1 custom-scrollbar">
+                          {s.treatments.map((t, idx) => (
+                            <div 
+                              key={idx}
+                              className="p-2.5 bg-white hover:bg-[#EBF2FF] border border-gray-200/80 hover:border-[#1E64EC] rounded-xl flex items-start gap-2.5 transition-all shadow-sm group cursor-pointer"
+                            >
+                              <div className="p-1 rounded-md bg-[#1E64EC]/10 text-[#1E64EC] group-hover:bg-[#1E64EC] group-hover:text-white transition-colors shrink-0 mt-0.5">
+                                <ShieldCheck className="w-3.5 h-3.5 stroke-[2.5px]" />
+                              </div>
+                              <span className="font-serif text-xs font-bold text-[#121316] group-hover:text-[#1E64EC] transition-colors leading-tight">
+                                {t}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
 
-            <div className="lg:col-span-8">
+            {/* Right Column: Visual Department Pictures Showcase Gallery Box */}
+            <div className="lg:col-span-7">
               {SERVICES.map((s) => {
                 if (s.id !== activeTab) return null;
                 const IconComponent = s.icon;
                 return (
                   <div 
                     key={s.id}
-                    className="bg-white border border-gray-200 rounded-[32px] p-6 md:p-8 shadow-xl text-left h-fit flex flex-col justify-between animate-fade-in"
+                    className="bg-white border border-gray-200 rounded-[32px] p-6 md:p-8 shadow-2xl text-left h-full flex flex-col justify-between animate-fade-in"
                   >
                     <div>
+                      {/* Header */}
                       <div className="flex justify-between items-start border-b border-gray-200 pb-4 mb-6">
                         <div className="flex items-center gap-4">
-                          <div className="p-3 bg-[#EBF2FF] rounded-2xl text-[#1E64EC]">
+                          <div className="p-3 bg-[#EBF2FF] rounded-2xl text-[#1E64EC] shadow-sm">
                             <IconComponent className="w-8 h-8" />
                           </div>
                           <div>
@@ -1110,7 +1172,7 @@ export default function HomePageClient() {
                               {isHindi ? s.titleHindi : s.title}
                             </h3>
                             <span className="font-sans text-[10px] bg-[#EBF2FF] text-[#1E64EC] px-2.5 py-1 rounded-full font-extrabold uppercase tracking-wider inline-block mt-1">
-                              Accredited Services
+                              Department Visual Showcase
                             </span>
                           </div>
                         </div>
@@ -1121,29 +1183,77 @@ export default function HomePageClient() {
                         {s.desc}
                       </p>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
-                        {s.treatments.map((t, idx) => (
-                          <div 
-                            key={idx} 
-                            className="p-3 bg-[#FAF8F5] hover:bg-[#EBF2FF] border border-gray-200 hover:border-[#1E64EC]/40 rounded-2xl flex items-start gap-2.5 transition-all group"
-                          >
-                            <ShieldCheck className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                            <span className="font-serif text-xs md:text-sm font-bold text-[#121316]">{t}</span>
+                      {/* Department Pictures Showcase Grid */}
+                      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-6">
+                        {/* Featured Primary Image */}
+                        <div className="md:col-span-7 relative rounded-[24px] overflow-hidden shadow-lg border-2 border-gray-100 group h-[240px]">
+                          <img 
+                            src={s.image} 
+                            alt={`${s.title} Clinical Treatment`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#121316]/80 via-transparent to-transparent" />
+                          <div className="absolute bottom-3 left-3 right-3 text-white">
+                            <span className="font-sans text-[10px] uppercase font-extrabold text-[#93C5FD] tracking-wider block">
+                              Certified Clinical Procedure
+                            </span>
+                            <div className="font-serif text-sm font-black leading-tight mt-0.5">
+                              {s.title}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Secondary Image & Accreditation Card */}
+                        <div className="md:col-span-5 flex flex-col gap-3">
+                          <div className="relative rounded-[20px] overflow-hidden shadow-md border border-gray-100 group h-[125px]">
+                            <img 
+                              src={s.subImage} 
+                              alt={`${s.title} Advanced Equipment`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              loading="lazy"
+                            />
+                            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-lg border border-white/60 shadow">
+                              <span className="font-serif text-[9px] font-bold text-[#121316]">US-FDA Approved</span>
+                            </div>
+                          </div>
+
+                          <div className="p-3 bg-[#FAF8F5] border border-gray-200 rounded-[20px] flex-1 flex flex-col justify-center">
+                            <div className="flex items-center gap-2 mb-1">
+                              <Award className="w-4 h-4 text-[#1E64EC] shrink-0" />
+                              <span className="font-serif text-xs font-bold text-[#121316]">Gold Medalist Supervised</span>
+                            </div>
+                            <p className="font-sans text-[10px] text-[#121316]/75 leading-tight font-medium">
+                              100% Sterile operating suite & medical protocol by Dr. Gaurav Nakra.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Key Clinical Benefits Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
+                        {s.benefits.map((benefit, idx) => (
+                          <div key={idx} className="p-3 bg-[#FAF8F5] border border-gray-200/80 rounded-xl flex items-center gap-2.5">
+                            <div className="p-1 rounded-lg bg-[#1E64EC]/10 text-[#1E64EC] shrink-0">
+                              <Check className="w-3.5 h-3.5 stroke-[3px]" />
+                            </div>
+                            <span className="font-serif text-xs font-bold text-[#121316]">{benefit}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="bg-[#EBF2FF]/70 border border-[#1E64EC]/20 rounded-[22px] p-4.5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    {/* Action Footer */}
+                    <div className="bg-[#EBF2FF]/70 border border-[#1E64EC]/20 rounded-[22px] p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <div className="flex items-center gap-3 text-left">
-                        <Info className="w-5 h-5 text-[#1E64EC]" />
+                        <Info className="w-5 h-5 text-[#1E64EC] shrink-0" />
                         <span className="font-sans text-[11px] md:text-xs text-[#121316] leading-tight font-semibold">
-                          All clinical and aesthetic treatments are administered in highly sterile operation rooms.
+                          All clinical and aesthetic treatments are administered under strict sterile medical protocols.
                         </span>
                       </div>
                       <a 
                         href="#booking"
-                        className="w-full sm:w-auto px-6 py-3 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-[11px] font-sans font-black uppercase tracking-wider rounded-2xl shadow-md hover:shadow-lg transition-all flex justify-center items-center gap-2 hover:translate-y-[-2px]"
+                        className="w-full sm:w-auto px-6 py-3 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-[11px] font-sans font-black uppercase tracking-wider rounded-2xl shadow-md hover:shadow-lg transition-all flex justify-center items-center gap-2 hover:translate-y-[-2px] shrink-0"
                       >
                         <span>Book Selection</span>
                         <ChevronRight className="w-3.5 h-3.5" />
