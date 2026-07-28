@@ -299,58 +299,7 @@ export default function HomePageClient() {
 
       const THREE = window.THREE;
 
-      // BG CANVAS: Float particles
-      const bgCanvas = bgCanvasRef.current;
-      if (bgCanvas) {
-        bgScene = new THREE.Scene();
-        bgCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        bgCamera.position.z = 20;
-
-        bgRenderer = new THREE.WebGLRenderer({ canvas: bgCanvas, alpha: true, antialias: true });
-        bgRenderer.setSize(window.innerWidth, window.innerHeight);
-        bgRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        const particlesGeometry = new THREE.BufferGeometry();
-        const particlesCount = window.innerWidth < 768 ? 40 : 120;
-        const posArray = new Float32Array(particlesCount * 3);
-        const speedArray = new Float32Array(particlesCount);
-
-        for (let i = 0; i < particlesCount * 3; i += 3) {
-          posArray[i] = (Math.random() - 0.5) * 40;
-          posArray[i + 1] = (Math.random() - 0.5) * 30;
-          posArray[i + 2] = (Math.random() - 0.5) * 20;
-          speedArray[i/3] = 0.01 + Math.random() * 0.015;
-        }
-
-        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-        const createParticleTexture = () => {
-          const canvas = document.createElement('canvas');
-          canvas.width = 16;
-          canvas.height = 16;
-          const ctx = canvas.getContext('2d');
-          if (ctx) {
-            const gradient = ctx.createRadialGradient(8, 8, 0, 8, 8, 8);
-            gradient.addColorStop(0, 'rgba(125, 160, 202, 0.8)'); // Soft blue
-            gradient.addColorStop(0.5, 'rgba(193, 232, 255, 0.3)'); // Light blue
-            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, 16, 16);
-          }
-          return new THREE.CanvasTexture(canvas);
-        };
-
-        const particlesMaterial = new THREE.PointsMaterial({
-          size: 1.2,
-          map: createParticleTexture(),
-          transparent: true,
-          blending: THREE.AdditiveBlending,
-          depthWrite: false,
-        });
-
-        bgParticles = new THREE.Points(particlesGeometry, particlesMaterial);
-        bgScene.add(bgParticles);
-      }
+      // BG CANVAS: Static background layer (falling particles removed)
 
       // HERO CANVAS: Dermis grid wave rotating mesh
       const heroCanvas = heroCanvasRef.current;
@@ -434,24 +383,6 @@ export default function HomePageClient() {
         frame += 0.01;
         animationFrameId = requestAnimationFrame(animate);
 
-        if (bgParticles) {
-          const positions = bgParticles.geometry.attributes.position.array;
-          const count = positions.length / 3;
-          const scrollSpeed = scrollRef.current * 0.005;
-
-          for (let i = 0; i < count; i++) {
-            positions[i * 3 + 1] -= (0.012 + scrollSpeed * 0.04);
-            positions[i * 3] += Math.sin(frame + i) * 0.005;
-
-            if (positions[i * 3 + 1] < -18) {
-              positions[i * 3 + 1] = 18;
-              positions[i * 3] = (Math.random() - 0.5) * 40;
-            }
-          }
-          bgParticles.geometry.attributes.position.needsUpdate = true;
-          bgParticles.rotation.y = frame * 0.05;
-        }
-
         if (heroPoints) {
           const positions = heroPoints.geometry.attributes.position.array;
           const colsCount = 25;
@@ -471,9 +402,6 @@ export default function HomePageClient() {
           heroPoints.rotation.x = Math.sin(frame * 0.2) * 0.05;
         }
 
-        if (bgRenderer && bgScene && bgCamera) {
-          bgRenderer.render(bgScene, bgCamera);
-        }
         if (heroRenderer && heroScene && heroCamera) {
           heroRenderer.render(heroScene, heroCamera);
         }
@@ -482,11 +410,6 @@ export default function HomePageClient() {
       animate();
 
       resizeObserver = new ResizeObserver(() => {
-        if (bgRenderer && bgCamera) {
-          bgCamera.aspect = window.innerWidth / window.innerHeight;
-          bgCamera.updateProjectionMatrix();
-          bgRenderer.setSize(window.innerWidth, window.innerHeight);
-        }
         if (heroRenderer && heroCamera && heroCanvas && heroCanvas.parentElement) {
           const width = heroCanvas.parentElement.clientWidth;
           const height = heroCanvas.parentElement.clientHeight || 450;
@@ -711,13 +634,7 @@ export default function HomePageClient() {
         style={{ left: '-100px', top: '-100px' }}
       />
 
-      <canvas 
-        ref={bgCanvasRef} 
-        id="bg-three-js"
-        className="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 bg-[#C1E8FF]/30 bg-gradient-to-b from-[#C1E8FF]/40 to-white" 
-      />
-      <div className="fixed top-[10%] right-[5%] w-72 h-72 bg-[#5483B3]/20 blur-[100px] rounded-full pointer-events-none -z-10 animate-pulse" />
-      <div className="fixed bottom-[20%] left-[10%] w-96 h-96 bg-[#052659]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="fixed inset-0 pointer-events-none -z-10 bg-[#C1E8FF]/20 bg-gradient-to-b from-[#C1E8FF]/30 via-white to-[#C1E8FF]/10" />
 
       {loading && (
         <div 
