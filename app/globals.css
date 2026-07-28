@@ -30,3 +30,29 @@
   pointer-events: none !important;
   visibility: hidden !important;
 }
+
+/* Smooth custom scrollbar for procedures accordion */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #1E64EC #FAF8F5;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #FAF8F5;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1E64EC;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #154ec2;
+}

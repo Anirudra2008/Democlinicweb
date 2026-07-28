@@ -64,6 +64,7 @@ const SERVICES = [
     desc: 'Expert diagnostic assessments and customized medical treatments for chronic and acute skin disorders by MD Gold Medalist Dr. Gaurav Nakra.',
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600',
     benefits: ['Accurate Diagnostic Assessment', 'DMC Registered Specialist', 'Targeted Prescription Regimen', 'Safe for Sensitive Skin Types'],
     treatments: ['Acne & Acne Vulgaris', 'Psoriasis Management', 'Lichen Planus Care', 'Fungal & Bacterial Infections', 'Nail Disorders', 'Sexually Transmitted Infections (STIs)', 'Skin Grafting', 'Eczema & Atopic Dermatitis', 'Rosacea & Facial Redness', 'Vitiligo Light & Dermal Therapies']
   },
@@ -75,6 +76,7 @@ const SERVICES = [
     desc: 'Aesthetic Dermatology Consultation and refined anti-aging, Botox, dermal fillers, and facial rejuvenation procedures.',
     image: 'https://images.unsplash.com/photo-1512290900676-26c2a4d48dc1?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600',
     benefits: ['Natural Anti-Aging Lifts', 'US-FDA Approved Fillers', 'Painless Micro-Injections', 'Instant Youthful Glow'],
     treatments: ['Aesthetic Dermatology Consultation', 'Botulinum Toxin (Botox) Lifts', 'Hyaluronic Acid Dermal Fillers', 'Anti-Ageing Treatments & Facelift', 'Buttock Lift', 'Liposuction & Body Contouring', 'Skin Polishing & Microdermabrasion', 'Stretch Marks Treatment', 'Advanced PDO/PLLA Thread Lifts']
   },
@@ -85,7 +87,8 @@ const SERVICES = [
     titleHindi: 'उन्नत लेज़र उपचार',
     desc: 'State-of-the-art fractional, pigmentary, and vascular lasers delivering precision skin resurfacing and permanent hair reduction.',
     image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=1000',
-    subImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600',
+    subImage: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1512290900676-26c2a4d48dc1?auto=format&fit=crop&q=80&w=600',
     benefits: ['Triple Wavelength Diode Laser', 'Permanent Hair Reduction', 'Fractional Scar Resurfacing', 'Zero Hyperpigmentation Risk'],
     treatments: ['Permanent Hair Reduction (Triple-Wavelength Diode/ND-YAG)', 'Q-Switched ND-YAG Tattoo & Melasma Removal', 'Fractional CO2 Laser for Acne Scars', 'IPL Photofacials & Sun Damage Repair', 'Vascular Birthmark Correction', 'Laser Carbon Peels / Hollywood Peel']
   },
@@ -97,6 +100,7 @@ const SERVICES = [
     desc: 'Comprehensive and clinically-verified medical and surgical protocols for male and female pattern baldness and scalp health.',
     image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600',
     benefits: ['DHI Certified Hair Transplant', 'High Follicular Survival Rate', 'Autologous PRP Therapy', 'Natural Dense Hair Line'],
     treatments: ['DHI Certified Hair Transplantation', 'Mezotherapy Hair Booster Injections', 'Platelet-Rich Plasma (PRP) Therapy', 'Stem Cell Therapy & Micro-graft activation', 'Follicular Laser Stimulation', 'Trichology & Scalp Rejuvenation']
   },
@@ -108,6 +112,7 @@ const SERVICES = [
     desc: 'Formulated medical-grade organic acid treatments targeting skin texture, hyperpigmentation, acne scars, and facial clarity.',
     image: 'https://images.unsplash.com/photo-1512290900676-26c2a4d48dc1?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600',
     benefits: ['Medical-Grade Organic Acids', 'Deep Pigmentation Clearance', 'Pore Refinement & Polish', 'Customized Layering Protocol'],
     treatments: ['Salicylic Peel & Glycolic Anti-Acne Peels', 'Yellow Peel / Retinol Resurfacing', 'TCA Peels for Deep-Seated Scars', 'Melasmax/Cosmelan Pigmentation Peels', 'Dermaroller Skin Rejuvenation']
   },
@@ -119,6 +124,7 @@ const SERVICES = [
     desc: 'Gentle, compassionate, and precise management of sensitive dermatological situations in infants, toddlers, and teenagers.',
     image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600',
     benefits: ['Gentle Non-Stinging Care', 'Pediatric Approved Safety', 'Compassionate Child Handling', 'Rapid Relief Formulations'],
     treatments: ['Infantile Atopic Eczema', 'Congenital Hemangiomas & Birthmarks', 'Pediatric Psoriasis & Rashes', 'Viral Warts & Molluscum Contagiosum Extraction', 'Diaper Rash & Cradle Cap Care']
   },
@@ -130,6 +136,7 @@ const SERVICES = [
     desc: 'Surgical excision, radiofrequency ablation, corn removal, cyst removal, and suction blister vitiligo skin grafting.',
     image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600',
+    thirdImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600',
     benefits: ['100% Sterile OT Setting', 'Scar-Minimizing Suturing', 'Radiofrequency Ablation', 'Quick Outpatient Discharge'],
     treatments: ['Corn Removal', 'Skin Tag Surgical Removal', 'Cryotherapy Freezing for Skin Growths', 'Electrocautery / Radiofrequency Ablation', 'Suction Blister Skin Grafting for Vitiligo', 'Mole, Cyst & Lipoma Surgical Excision']
   }
@@ -1128,11 +1135,11 @@ export default function HomePageClient() {
                           <span className="w-2 h-2 rounded-full bg-[#1E64EC] animate-pulse" />
                         </div>
                         
-                        <div className="grid grid-cols-1 gap-2 max-h-[360px] overflow-y-auto pr-1 custom-scrollbar">
+                        <div className="flex flex-col gap-2 max-h-[360px] overflow-y-auto pr-1 custom-scrollbar overscroll-contain touch-pan-y">
                           {s.treatments.map((t, idx) => (
                             <div 
                               key={idx}
-                              className="p-2.5 bg-white hover:bg-[#EBF2FF] border border-gray-200/80 hover:border-[#1E64EC] rounded-xl flex items-start gap-2.5 transition-all shadow-sm group cursor-pointer"
+                              className="p-2.5 bg-white hover:bg-[#EBF2FF] border border-gray-200/80 hover:border-[#1E64EC] rounded-xl flex items-start gap-2.5 transition-colors duration-150 shadow-sm group cursor-pointer"
                             >
                               <div className="p-1 rounded-md bg-[#1E64EC]/10 text-[#1E64EC] group-hover:bg-[#1E64EC] group-hover:text-white transition-colors shrink-0 mt-0.5">
                                 <ShieldCheck className="w-3.5 h-3.5 stroke-[2.5px]" />
@@ -1204,9 +1211,9 @@ export default function HomePageClient() {
                           </div>
                         </div>
 
-                        {/* Secondary Image & Accreditation Card */}
+                        {/* Secondary & Tertiary Department Pictures */}
                         <div className="md:col-span-5 flex flex-col gap-3">
-                          <div className="relative rounded-[20px] overflow-hidden shadow-md border border-gray-100 group h-[125px]">
+                          <div className="relative rounded-[20px] overflow-hidden shadow-md border border-gray-100 group h-[115px]">
                             <img 
                               src={s.subImage} 
                               alt={`${s.title} Advanced Equipment`}
@@ -1218,14 +1225,16 @@ export default function HomePageClient() {
                             </div>
                           </div>
 
-                          <div className="p-3 bg-[#FAF8F5] border border-gray-200 rounded-[20px] flex-1 flex flex-col justify-center">
-                            <div className="flex items-center gap-2 mb-1">
-                              <Award className="w-4 h-4 text-[#1E64EC] shrink-0" />
-                              <span className="font-serif text-xs font-bold text-[#121316]">Gold Medalist Supervised</span>
+                          <div className="relative rounded-[20px] overflow-hidden shadow-md border border-gray-100 group h-[115px]">
+                            <img 
+                              src={s.thirdImage} 
+                              alt={`${s.title} Clinical Results`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              loading="lazy"
+                            />
+                            <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-lg border border-white/60 shadow">
+                              <span className="font-serif text-[9px] font-bold text-[#1E64EC]">Sterile Care Suite</span>
                             </div>
-                            <p className="font-sans text-[10px] text-[#121316]/75 leading-tight font-medium">
-                              100% Sterile operating suite & medical protocol by Dr. Gaurav Nakra.
-                            </p>
                           </div>
                         </div>
                       </div>
