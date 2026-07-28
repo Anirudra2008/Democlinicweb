@@ -56,3 +56,33 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #154ec2;
 }
+
+/* HIGH PERFORMANCE MOBILE SCROLLING & GPU COMPOSITING OPTIMIZATIONS */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Disable expensive per-frame surface blur compositing on mobile GPUs */
+  .backdrop-blur-xl,
+  .backdrop-blur-lg,
+  .backdrop-blur-md,
+  .backdrop-blur-sm,
+  .backdrop-blur {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Hardware acceleration & smooth touch scrolling */
+  html, body {
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
+    scroll-behavior: smooth;
+  }
+
+  /* Force GPU layer promotion for sticky/fixed elements */
+  nav, footer, button, [class*="fixed"] {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}

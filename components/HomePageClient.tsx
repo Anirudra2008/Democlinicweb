@@ -287,7 +287,12 @@ export default function HomePageClient() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    
+    // Only listen for mousemove on desktop fine pointers to protect mobile battery & scroll performance
+    const isFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (isFinePointer) {
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    }
 
     // Initial positioning
     const initialProgressBar = document.getElementById('scroll-progress-bar');
@@ -300,7 +305,9 @@ export default function HomePageClient() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (isFinePointer) {
+        window.removeEventListener('mousemove', handleMouseMove);
+      }
     };
   }, []);
 
@@ -312,18 +319,24 @@ export default function HomePageClient() {
     let heroRenderer: any, heroScene: any, heroCamera: any, heroPoints: any;
     let animationFrameId: number;
     let resizeObserver: ResizeObserver;
+    let heroObserver: IntersectionObserver;
+    let isHeroVisible = true;
 
     const initThree = () => {
       if (!window.THREE) return;
 
       const THREE = window.THREE;
 
-      // BG CANVAS: Static background layer (falling particles removed)
-
       // HERO CANVAS: Dermis grid wave rotating mesh
       const heroCanvas = heroCanvasRef.current;
       const heroContainer = heroCanvas?.parentElement;
       if (heroCanvas && heroContainer) {
+        // Pause WebGL rendering loop when hero canvas is not visible in viewport
+        heroObserver = new IntersectionObserver(([entry]) => {
+          isHeroVisible = entry.isIntersecting;
+        }, { threshold: 0.05 });
+        heroObserver.observe(heroCanvas);
+
         const containerWidth = heroContainer.clientWidth;
         const containerHeight = heroContainer.clientHeight || 450;
 
@@ -334,7 +347,7 @@ export default function HomePageClient() {
 
         heroRenderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true, antialias: true });
         heroRenderer.setSize(containerWidth, containerHeight);
-        heroRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        heroRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
         const cols = 25;
         const rows = 25;
@@ -399,9 +412,12 @@ export default function HomePageClient() {
 
       let frame = 0;
       const animate = () => {
-        frame += 0.01;
         animationFrameId = requestAnimationFrame(animate);
 
+        // Instantly skip CPU calculation & WebGL draw calls when hero is scrolled offscreen
+        if (!isHeroVisible) return;
+
+        frame += 0.01;
         if (heroPoints) {
           const positions = heroPoints.geometry.attributes.position.array;
           const colsCount = 25;
@@ -1095,7 +1111,9 @@ export default function HomePageClient() {
                     <button
                       onClick={(e) => {
                         setActiveTab(s.id);
-                        (e.currentTarget as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        if (window.innerWidth >= 768) {
+                          (e.currentTarget as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
                       }}
                       className={`w-full text-left p-4 rounded-[24px] border transition-all duration-300 flex items-center gap-4 cursor-pointer select-none ${
                         isActive 
