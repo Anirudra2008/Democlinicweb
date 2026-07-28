@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'profile',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp',
+        url: 'https://democlinicweb-sigma.vercel.app/dr-gaurav-nakra.jpg',
         width: 800,
         height: 800,
         alt: 'Dr. Gaurav Nakra Dermatologist',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
     description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
-    images: ['https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp'],
+    images: ['https://democlinicweb-sigma.vercel.app/dr-gaurav-nakra.jpg'],
   },
 };
 
@@ -39,7 +39,7 @@ export default function DoctorProfile() {
     "@context": "https://schema.org",
     "@type": "Physician",
     "name": "Dr. Gaurav Nakra",
-    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp",
+    "image": "https://democlinicweb-sigma.vercel.app/dr-gaurav-nakra.jpg",
     "medicalSpecialty": ["Dermatology", "Cosmetology", "Pediatric Dermatology"],
     "telephone": "01146052234",
     "knowsAbout": ["Dermatology", "Cosmetology", "Hair Transplantation", "Laser Treatments", "Pediatric Dermatology", "Dermatosurgery", "Acne", "Psoriasis", "Lichen Planus"],
@@ -116,11 +116,11 @@ export default function DoctorProfile() {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-[28px] overflow-hidden border-4 border-white shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp"
+                  src="/dr-gaurav-nakra.jpg"
                   alt="Dr. Gaurav Nakra, Senior Dermatologist"
                   width={600}
                   height={800}
-                  className="w-full h-auto object-cover grayscale-[0.05]"
+                  className="w-full h-auto object-cover object-top"
                 />
                 
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">

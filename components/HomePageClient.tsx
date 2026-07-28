@@ -906,9 +906,9 @@ export default function HomePageClient() {
             <div className="lg:col-span-5 flex flex-col justify-between gap-6">
               <div className="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white group h-full min-h-[420px]">
                 <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800&fm=webp" 
-                  alt="Dermatologist Specialist Dr. Gaurav Nakra portrait representation" 
-                  className="w-full h-full object-cover grayscale-[0.12] group-hover:scale-105 transition-transform duration-500"
+                  src="/dr-gaurav-nakra.jpg" 
+                  alt="Dr. Gaurav Nakra — Senior Consulting Dermatologist" 
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   width={400}
                   height={550}
                   loading="lazy"
