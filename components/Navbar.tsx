@@ -25,7 +25,6 @@ export default function Navbar({ isHindi: propIsHindi, setIsHindi: propSetIsHind
     { id: 'departments', label: 'Departments', labelHn: 'विभाग', href: '/#departments' },
     { id: 'doctor', label: 'Doctor Profile', labelHn: 'चिकित्सक विवरण', href: '/doctor-gaurav-nakra' },
     { id: 'testimonials', label: 'Testimonials', labelHn: 'अभिप्राय', href: '/#testimonials' },
-    { id: 'gallery', label: 'Clinic Gallery', labelHn: 'गैलरी', href: '/#gallery' },
     { id: 'contact', label: 'Contact', labelHn: 'संपर्क करें', href: '/#contact' },
   ];
 

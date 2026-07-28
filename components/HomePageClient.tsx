@@ -22,7 +22,6 @@ import {
   Info,
   ExternalLink,
   Atom,
-  Eye,
   ShieldCheck,
   Zap,
   X,
@@ -161,24 +160,11 @@ const FAQS = [
   }
 ];
 
-// CLINICAL GALLERY
-const GALLERY = [
-  { url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Consultation Suite', desc: 'Private clinical consultation room where detailed skin and hair diagnostics are performed.' },
-  { url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Advanced Laser Zone', desc: 'Sterile environment holding state-of-the-art FDA-cleared laser systems.' },
-  { url: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Procedure Room', desc: 'Surgical operatory equipped for vitiligo grafting, skin biopsy, and cyst excisions.' },
-  { url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Clinical Patient Lounge', desc: 'Calming, spacious reception and waiting area designed for comfort & privacy.' },
-  { url: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Diagnostics lab', desc: 'Premium diagnostic setups for microscopic skin testing & hair follicle trichoscopy.' },
-  { url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Sterilization Bay', desc: 'Clinical grade autoclave and triple-stage instrument disinfection setup.' },
-  { url: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Aesthetic Treatment Suite', desc: 'Calming lighting and comfortable ergonomic beds for facial peels & facial lifts.' },
-  { url: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800&fm=webp', title: 'Trichology PRP Setup', desc: 'Specialized centrifuge system for top-grade clinical Platelet-Rich Plasma extraction.' }
-];
-
 export default function HomePageClient() {
   const [loading, setLoading] = useState(true);
   const [loadPercent, setLoadPercent] = useState(0);
   const [activeTab, setActiveTab] = useState('clinical');
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [isCursorHovering, setIsCursorHovering] = useState(false);
   
@@ -1353,92 +1339,7 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section 
-        id="gallery" 
-        className="py-20 md:py-32 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-left">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
-            <div className="text-left max-w-2xl">
-              <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase mb-3 block">
-                {isHindi ? 'क्लिनिक गैलरी' : 'Facility Portrayal'}
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
-                {isHindi ? 'हमारा अत्याधुनिक क्लिनिक' : 'Our State-of-the-Art Operations Clinic'}
-              </h2>
-            </div>
-            <p className="font-sans text-xs md:text-sm text-[#052659]/75 mt-4 md:mt-0 font-bold max-w-sm md:text-right">
-              Explore the sterile, fully optimized workspace designed specifically for precision laser therapies, hair transplant surgery, and clinical checkups.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {GALLERY.map((g, idx) => (
-              <div 
-                key={idx}
-                onClick={() => setLightboxIndex(idx)}
-                className="relative group rounded-[32px] overflow-hidden shadow-2xl cursor-pointer aspect-video md:aspect-square border-4 border-white transition-all bg-slate-100 hover:shadow-2xl"
-                onMouseEnter={() => setIsCursorHovering(true)}
-                onMouseLeave={() => setIsCursorHovering(false)}
-              >
-                <img 
-                  src={g.url} 
-                  alt={g.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  width={300}
-                  height={300}
-                  loading="lazy"
-                />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-[#021024]/90 via-[#021024]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-left">
-                  <div className="font-serif text-sm font-bold text-white mb-0.5">{g.title}</div>
-                  <div className="font-sans text-[10px] text-[#7DA0CA] leading-snug">{g.desc}</div>
-                </div>
-
-                <div className="absolute top-4 right-4 p-2 rounded-full bg-[#FFFFFF]/70 backdrop-blur-md text-[#021024] opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Eye className="w-4 h-4" />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {lightboxIndex !== null && (
-            <div 
-              id="lightbox-backdrop"
-              className="fixed inset-0 bg-[#021024]/95 flex items-center justify-center z-[9999] p-4 text-white transition-opacity duration-300"
-              onClick={() => setLightboxIndex(null)}
-            >
-              <button 
-                className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 hover:scale-105 transition-all text-white select-none cursor-pointer"
-                onClick={() => setLightboxIndex(null)}
-              >
-                <X className="w-6 h-6" />
-              </button>
-
-              <div 
-                className="max-w-4xl w-full flex flex-col gap-4"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20">
-                  <img 
-                    src={GALLERY[lightboxIndex].url}
-                    alt={GALLERY[lightboxIndex].title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <div className="text-left bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-                  <h4 className="font-serif text-lg font-black text-white">{GALLERY[lightboxIndex].title}</h4>
-                  <p className="font-sans text-sm text-[#7DA0CA] leading-relaxed mt-2">{GALLERY[lightboxIndex].desc}</p>
-                </div>
-              </div>
-            </div>
-          )}
-
-        </div>
-      </section>
 
       {/* CONTACT & BOOKING */}
       <section 
