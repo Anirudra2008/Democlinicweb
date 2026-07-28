@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer 
       id="clinic-footer"
-      className="bg-[#021024] text-white pt-16 pb-8 border-t border-white/10"
+      className="bg-[#121316] text-white pt-16 pb-8 border-t border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 text-left mb-16">
@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Logo and accreditation column */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3 bg-transparent">
-              <div className="w-9 h-9 rounded-xl overflow-hidden bg-gradient-to-tr from-[#5483B3] to-[#C1E8FF] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl overflow-hidden bg-[#1E64EC] flex items-center justify-center">
                 <img src="/logo.png" alt="Centre For Skin Logo" className="w-full h-full object-cover" width={36} height={36} />
               </div>
               <div className="font-serif text-lg font-black tracking-widest text-white">
@@ -22,19 +22,19 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="font-sans text-xs text-[#7DA0CA] leading-relaxed">
+            <p className="font-sans text-xs text-[#94A3B8] leading-relaxed">
               Comprehensive academic medical dermatology and precision hair transplantations. Direct licensed Delhi Medical Council registration 44068 under Senior Gold Medalist consultant.
             </p>
 
             {/* Verified member badges */}
             <div className="flex gap-2.5 flex-wrap mt-2">
-              <span className="px-2 py-1 bg-white/5 border border-white/10 text-[#7DA0CA] font-mono text-[9px] font-bold rounded-md">
+              <span className="px-2.5 py-1 bg-white/5 border border-white/10 text-[#CBD5E1] font-mono text-[9px] font-bold rounded-md">
                 IADVL FED
               </span>
-              <span className="px-2 py-1 bg-white/5 border border-white/10 text-[#7DA0CA] font-mono text-[9px] font-bold rounded-md">
+              <span className="px-2.5 py-1 bg-white/5 border border-white/10 text-[#CBD5E1] font-mono text-[9px] font-bold rounded-md">
                 IMA MEMBER
               </span>
-              <span className="px-2 py-1 bg-white/5 border border-white/10 text-[#7DA0CA] font-mono text-[9px] font-bold rounded-md">
+              <span className="px-2.5 py-1 bg-white/5 border border-white/10 text-[#CBD5E1] font-mono text-[9px] font-bold rounded-md">
                 DHI HAIR REG
               </span>
             </div>
@@ -42,10 +42,10 @@ export default function Footer() {
 
           {/* Quick links & Locations directories column */}
           <div className="flex flex-col gap-4">
-            <h5 className="font-serif text-sm font-black text-white uppercase tracking-wider border-l-2 border-[#5483B3] pl-2.5">
+            <h5 className="font-serif text-sm font-black text-white uppercase tracking-wider border-l-2 border-[#1E64EC] pl-2.5">
               Target Locations
             </h5>
-            <div className="flex flex-col gap-2.5 text-xs text-[#7DA0CA] font-bold font-sans">
+            <div className="flex flex-col gap-2.5 text-xs text-[#94A3B8] font-bold font-sans">
               <a href="/locations/karkardooma-dermatologist" className="hover:text-white transition-colors">Dermatologist in Karkardooma</a>
               <a href="/locations/preet-vihar-dermatologist" className="hover:text-white transition-colors">Dermatologist near Preet Vihar</a>
               <a href="/locations/laxmi-nagar-dermatologist" className="hover:text-white transition-colors">Dermatologist near Laxmi Nagar</a>
@@ -58,10 +58,10 @@ export default function Footer() {
 
           {/* Specialties list column */}
           <div className="flex flex-col gap-4">
-            <h5 className="font-serif text-sm font-black text-white uppercase tracking-wider border-l-2 border-[#5483B3] pl-2.5">
+            <h5 className="font-serif text-sm font-black text-white uppercase tracking-wider border-l-2 border-[#1E64EC] pl-2.5">
               Specialized Treatments
             </h5>
-            <div className="flex flex-col gap-2.5 text-xs text-[#7DA0CA] font-bold font-sans">
+            <div className="flex flex-col gap-2.5 text-xs text-[#94A3B8] font-bold font-sans">
               <a href="/services/laser-hair-reduction-delhi" className="hover:text-white transition-colors">Laser Hair Reduction</a>
               <a href="/services/acne-scar-treatment-delhi" className="hover:text-white transition-colors">Acne Scar Treatment</a>
               <a href="/services/hair-transplant-delhi" className="hover:text-white transition-colors">Hair Transplant / DHI / PRP</a>
@@ -75,10 +75,10 @@ export default function Footer() {
 
           {/* Direct coordinate directions listing column */}
           <div className="flex flex-col gap-4">
-            <h5 className="font-serif text-sm font-black text-white uppercase tracking-wider border-l-2 border-[#5483B3] pl-2.5">
+            <h5 className="font-serif text-sm font-black text-white uppercase tracking-wider border-l-2 border-[#1E64EC] pl-2.5">
               Booking Ingress
             </h5>
-            <div className="text-xs text-[#7DA0CA] leading-relaxed flex flex-col gap-3 font-sans font-bold">
+            <div className="text-xs text-[#94A3B8] leading-relaxed flex flex-col gap-3 font-sans font-bold">
               <div>
                 <span className="text-white block font-serif">Karkardooma Center:</span>
                 178, Basement, Saini Enclave, Near Karkardooma Metro Station, Anand Vihar, East Delhi, Delhi 110092
@@ -96,11 +96,11 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <p className="font-sans text-[11px] text-[#7DA0CA] font-semibold">
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+          <p className="font-sans text-[11px] text-[#94A3B8] font-semibold">
             &copy; 2026 Centre For Skin — Dr. Gaurav Nakra. All rights reserved. | Medical License Registration: Delhi Medical Council No. 44068.
           </p>
-          <div className="flex gap-4 text-[11px] text-[#7DA0CA] font-semibold">
+          <div className="flex gap-4 text-[11px] text-[#94A3B8] font-semibold">
             <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
             <span>|</span>
             <a href="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</a>

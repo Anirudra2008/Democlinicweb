@@ -611,7 +611,7 @@ export default function HomePageClient() {
 
       <div 
         id="scroll-progress-bar"
-        className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#052659] via-[#5483B3] to-[#4ADE80] z-[999] transition-all duration-75"
+        className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#121316] via-[#1E64EC] to-[#4ADE80] z-[999] transition-all duration-75"
         style={{ width: '0%' }}
       />
 
@@ -619,40 +619,40 @@ export default function HomePageClient() {
         id="custom-cursor"
         className={`fixed pointer-events-none z-[1000] hidden md:block rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out border ${
           isCursorHovering 
-            ? 'w-14 h-14 bg-[#5483B3]/20 border-[#5483B3] scale-110' 
-            : 'w-7 h-7 bg-transparent border-[#052659]/60'
+            ? 'w-14 h-14 bg-[#1E64EC]/15 border-[#1E64EC] scale-110' 
+            : 'w-7 h-7 bg-transparent border-[#121316]/60'
         }`}
         style={{ left: '-100px', top: '-100px' }}
       />
 
-      <div className="fixed inset-0 pointer-events-none -z-10 bg-[#C1E8FF]/20 bg-gradient-to-b from-[#C1E8FF]/30 via-white to-[#C1E8FF]/10" />
+      <div className="fixed inset-0 pointer-events-none -z-10 bg-[#FAF8F5]" />
 
       {loading && (
         <div 
           id="preloader-overlay"
-          className="fixed inset-0 bg-[#021024] flex flex-col justify-center items-center z-[9999] transition-all duration-500"
+          className="fixed inset-0 bg-[#121316] flex flex-col justify-center items-center z-[9999] transition-all duration-500"
         >
           <div className="text-center px-4 max-w-md w-full">
-            <div className="w-16 h-16 bg-gradient-to-tr from-[#5483B3] to-[#C1E8FF] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl animate-pulse">
-              <Activity className="w-9 h-9 text-[#021024]" />
+            <div className="w-16 h-16 bg-[#1E64EC] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl animate-pulse">
+              <Activity className="w-9 h-9 text-white" />
             </div>
 
-            <h1 className="text-2xl md:text-3xl font-serif text-[#C1E8FF] tracking-wider mb-2 select-none font-bold">
+            <h1 className="text-2xl md:text-3xl font-serif text-white tracking-wider mb-2 select-none font-extrabold">
               CENTRE FOR SKIN
             </h1>
-            <p className="text-xs md:text-sm text-[#7DA0CA] font-sans uppercase tracking-[0.2em] mb-8 font-medium">
+            <p className="text-xs md:text-sm text-[#94A3B8] font-sans uppercase tracking-[0.2em] mb-8 font-semibold">
               Medical & Aesthetic Excellence
             </p>
 
-            <div className="w-full h-[3px] bg-[#052659] rounded-full overflow-hidden mb-3">
+            <div className="w-full h-[3px] bg-white/10 rounded-full overflow-hidden mb-3">
               <div 
-                className="h-full bg-gradient-to-r from-[#5483B3] to-[#C1E8FF] transition-all ease-out duration-75"
+                className="h-full bg-[#1E64EC] transition-all ease-out duration-75"
                 style={{ width: `${loadPercent}%` }}
               />
             </div>
 
-            <div className="flex justify-between items-center text-[11px] font-mono text-[#7DA0CA] tracking-wider">
-              <span>INITIALIZING 3D ENGINE</span>
+            <div className="flex justify-between items-center text-[11px] font-mono text-[#94A3B8] tracking-wider">
+              <span>INITIALIZING SYSTEM</span>
               <span>{loadPercent}%</span>
             </div>
           </div>
@@ -664,21 +664,21 @@ export default function HomePageClient() {
       {/* HERO SECTION */}
       <section 
         id="home"
-        className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden"
+        className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden bg-[#FAF8F5]"
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           
           <div className="lg:col-span-7 flex flex-col justify-center text-left hero-parallax">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-[#021024] leading-tight mb-3">
-              <span className="bg-gradient-to-r from-[#052659] via-[#5483B3] to-[#021024] bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-[#121316] leading-tight mb-3">
+              <span className="bg-gradient-to-r from-[#121316] via-[#1E64EC] to-[#121316] bg-clip-text text-transparent">
                 Centre For Skin
               </span>
-              <span className="block text-2xl sm:text-3xl text-[#5483B3] font-sans font-medium mt-1">
+              <span className="block text-2xl sm:text-3xl text-[#1E64EC] font-sans font-bold mt-1">
                 {isHindi ? 'सेंटर फॉर स्किन — डॉ. गौरव नकरा' : 'Dr. Gaurav Nakra'}
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-[#052659]/80 max-w-2xl font-normal leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-[#121316]/80 max-w-2xl font-normal leading-relaxed mb-8">
               {isHindi ? 
                 'पूर्वी दिल्ली में कड़कड़डूमा मेट्रो के पास 20 वर्षों के विशिष्ट अनुभव के साथ त्वचा, बाल, और लेज़र उपचार का सबसे विश्वसनीय केंद्र। स्वर्ण पदक विजेता विशेषज्ञ द्वारा उत्तम देखभाल।' : 
                 'Highly specialized, award-winning dermatological science in East Delhi near Karkardooma Metro. Providing gold-standard lasers, certified hair restorations (DHI/PRP), chemical peels, and pediatric dermatology by Gold Medalist Dr. Gaurav Nakra.'}
@@ -690,9 +690,9 @@ export default function HomePageClient() {
                 { label: '20 Years', desc: isHindi ? 'विशिष्ट अनुभव' : 'Clinical Expertise' },
                 { label: '4.5★ (508+ Reviews)', desc: isHindi ? 'संतुष्ट मरीज अभिप्राय' : 'Google Rating' }
               ].map((stat, i) => (
-                <div key={i} className="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-white hover:translate-y-[-2px] hover:shadow-xl transition-all shadow-[#021024]/5 shadow-sm">
-                  <div className="font-serif text-sm md:text-base font-black text-[#021024] underline decoration-[#FACC15] decoration-4 underline-offset-4">{stat.label}</div>
-                  <div className="font-sans text-[10px] md:text-xs text-[#5483B3] uppercase tracking-wider font-bold mt-1">{stat.desc}</div>
+                <div key={i} className="bg-white rounded-2xl p-4 border border-gray-200/80 hover:translate-y-[-2px] hover:shadow-xl transition-all shadow-sm">
+                  <div className="font-serif text-sm md:text-base font-black text-[#121316] underline decoration-[#1E64EC] decoration-4 underline-offset-4">{stat.label}</div>
+                  <div className="font-sans text-[10px] md:text-xs text-[#1E64EC] uppercase tracking-wider font-bold mt-1">{stat.desc}</div>
                 </div>
               ))}
             </div>
@@ -700,7 +700,7 @@ export default function HomePageClient() {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a 
                 href="#booking"
-                className="w-full sm:w-auto px-8 py-4 bg-[#052659] hover:bg-[#5483B3] text-white text-xs uppercase tracking-wider font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all flex justify-center items-center gap-2 group border border-[#052659]"
+                className="w-full sm:w-auto px-8 py-4 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-xs uppercase tracking-wider font-extrabold rounded-xl shadow-lg hover:shadow-2xl shadow-[#1E64EC]/20 transition-all flex justify-center items-center gap-2 group"
                 onMouseEnter={() => setIsCursorHovering(true)}
                 onMouseLeave={() => setIsCursorHovering(false)}
               >
@@ -709,7 +709,7 @@ export default function HomePageClient() {
               </a>
               <a 
                 href="#departments"
-                className="w-full sm:w-auto px-8 py-4 bg-white/80 hover:bg-[#C1E8FF]/40 text-[#052659] border-2 border-[#7DA0CA] hover:border-[#5483B3] text-xs uppercase tracking-wider font-bold rounded-xl shadow-sm transition-all text-center"
+                className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-[#EBF2FF] text-[#121316] border-2 border-gray-300 hover:border-[#1E64EC] text-xs uppercase tracking-wider font-bold rounded-xl shadow-sm transition-all text-center"
                 onMouseEnter={() => setIsCursorHovering(true)}
                 onMouseLeave={() => setIsCursorHovering(false)}
               >
@@ -717,20 +717,20 @@ export default function HomePageClient() {
               </a>
             </div>
 
-            <div className="mt-12 pt-6 border-t border-[#7DA0CA]/30">
-              <span className="font-sans text-[10px] uppercase font-bold text-[#7DA0CA] tracking-[0.2em] block mb-3">
+            <div className="mt-12 pt-6 border-t border-gray-200">
+              <span className="font-sans text-[10px] uppercase font-bold text-[#64748B] tracking-[0.2em] block mb-3">
                 {isHindi ? 'राष्ट्रीय और अंतरराष्ट्रीय मान्यता प्राप्त' : 'Accredited Member & Certified Federation'}
               </span>
-              <div className="flex flex-wrap items-center gap-6">
-                <span className="text-xs font-bold text-[#5483B3] bg-white px-3 py-1.5 rounded-lg shadow-sm">IADVL MEMBER</span>
-                <span className="text-xs font-bold text-[#5483B3] bg-white px-3 py-1.5 rounded-lg shadow-sm">IMA FEDERATION</span>
-                <span className="text-xs font-bold text-[#5483B3] bg-white px-3 py-1.5 rounded-lg shadow-sm">DHI CLINICAL HAIR SPL</span>
+              <div className="flex flex-wrap items-center gap-4">
+                <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">IADVL MEMBER</span>
+                <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">IMA FEDERATION</span>
+                <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">DHI CLINICAL HAIR SPL</span>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-5 relative flex justify-center items-center">
-            <div className="w-full max-w-[380px] aspect-[3/4] md:aspect-[4/5] rounded-[24px] overflow-hidden shadow-[0_20px_40px_rgba(15,31,56,0.25)] relative border border-white/20 hover:scale-[1.02] hover:shadow-[0_30px_60px_rgba(15,31,56,0.35)] transition-all duration-300 group z-10 flex flex-col justify-end">
+            <div className="w-full max-w-[380px] aspect-[3/4] md:aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl relative border border-white/20 hover:scale-[1.02] transition-all duration-300 group z-10 flex flex-col justify-end">
               
               {/* Full-bleed cover photo */}
               <img 
@@ -747,15 +747,15 @@ export default function HomePageClient() {
               />
 
               {/* Top-left combined absolute badge */}
-              <div className="absolute top-5 left-5 bg-[#F5F1E8] text-[#021024] text-[11px] font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-md z-20 pointer-events-none select-none flex items-center gap-1 border border-white/20">
-                <span className="text-[#052659] text-xs">★</span> CLINICAL &bull; PRECISE
+              <div className="absolute top-5 left-5 bg-[#FAF8F5] text-[#121316] text-[11px] font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-md z-20 pointer-events-none select-none flex items-center gap-1 border border-white/20">
+                <span className="text-[#1E64EC] text-xs">★</span> CLINICAL &bull; PRECISE
               </div>
 
               {/* Bottom gradient overlay covering ~65% */}
               <div 
                 className="absolute inset-0 z-10 pointer-events-none"
                 style={{
-                  background: 'linear-gradient(to top, rgba(2, 16, 36, 0.98) 0%, rgba(2, 16, 36, 0.65) 45%, rgba(2, 16, 36, 0) 100%)'
+                  background: 'linear-gradient(to top, rgba(18, 19, 22, 0.98) 0%, rgba(18, 19, 22, 0.65) 45%, rgba(18, 19, 22, 0) 100%)'
                 }}
               />
 
@@ -778,7 +778,7 @@ export default function HomePageClient() {
                   {/* Right block: Stat Columns */}
                   <div className="flex flex-col gap-4 text-right border-l border-white/20 pl-4 sm:pl-6 shrink-0">
                     <div className="flex flex-col items-end">
-                      <MapPin className="w-4 h-4 text-[#FACC15] mb-0.5" />
+                      <MapPin className="w-4 h-4 text-[#1E64EC] mb-0.5" />
                       <span className="font-serif text-[11px] sm:text-xs font-black text-white block leading-none">
                         {isHindi ? 'कड़कड़डूमा' : 'Karkardooma'}
                       </span>
@@ -787,7 +787,7 @@ export default function HomePageClient() {
                       </span>
                     </div>
                     <div className="flex flex-col items-end">
-                      <Building className="w-4 h-4 text-[#FACC15] mb-0.5" />
+                      <Building className="w-4 h-4 text-[#1E64EC] mb-0.5" />
                       <span className="font-serif text-[11px] sm:text-xs font-black text-white block leading-none">
                         {isHindi ? 'सैनी एन्क्लेव' : 'Saini Enclave'}
                       </span>
@@ -803,7 +803,7 @@ export default function HomePageClient() {
 
                 {/* Footer Byline */}
                 <div className="flex items-center gap-3 w-full text-left">
-                  <div className="w-8 h-8 rounded-full bg-[#052659] border border-white/20 flex items-center justify-center font-serif text-xs font-black text-white shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-[#1E64EC] border border-white/20 flex items-center justify-center font-serif text-xs font-black text-white shrink-0">
                     GN
                   </div>
                   <div>
@@ -823,7 +823,7 @@ export default function HomePageClient() {
       </section>
 
       {/* TRUST BAR */}
-      <div className="w-full bg-[#021024] py-8 border-y border-[#5483B3]/20 relative z-10 shadow-lg">
+      <div className="w-full bg-[#121316] py-8 border-y border-white/10 relative z-10 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 items-center text-center">
             {[
@@ -839,10 +839,10 @@ export default function HomePageClient() {
                 onMouseEnter={() => setIsCursorHovering(true)}
                 onMouseLeave={() => setIsCursorHovering(false)}
               >
-                <div className="font-serif text-sm md:text-base font-black text-[#7DA0CA] group-hover:text-[#C1E8FF] transition-colors duration-300">
+                <div className="font-serif text-sm md:text-base font-black text-[#CBD5E1] group-hover:text-white transition-colors duration-300">
                   {logo.title}
                 </div>
-                <div className="font-sans text-[9px] md:text-[10px] text-[#5483B3] group-hover:text-[#7DA0CA] uppercase tracking-wider font-semibold mt-1 transition-colors duration-300">
+                <div className="font-sans text-[9px] md:text-[10px] text-[#1E64EC] group-hover:text-[#93C5FD] uppercase tracking-wider font-bold mt-1 transition-colors duration-300">
                   {logo.desc}
                 </div>
               </div>
@@ -854,19 +854,19 @@ export default function HomePageClient() {
       {/* ABOUT / DOCTOR PROFILE */}
       <section 
         id="about" 
-        className="py-20 md:py-32 relative bg-gradient-to-b from-[#C1E8FF]/20 to-[#FFFFFF]"
+        className="py-20 md:py-32 relative bg-[#FAF8F5]"
       >
         <div id="doctor" className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-left">
           
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase block mb-3">
+            <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.25em] uppercase block mb-3">
               {isHindi ? 'वरिष्ठ चिकित्सक प्रोफाइल' : 'Senior Consulting Dermatologist'}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#121316] leading-tight gsap-reveal">
               Dr. Gaurav Nakra
             </h2>
-            <p className="font-sans text-xs md:text-sm text-[#5483B3] tracking-[0.1em] uppercase font-bold mt-1.5">
+            <p className="font-sans text-xs md:text-sm text-[#1E64EC] tracking-[0.1em] uppercase font-bold mt-1.5">
               MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 20 Years Experience
             </p>
           </div>
@@ -886,34 +886,34 @@ export default function HomePageClient() {
                   loading="lazy"
                 />
 
-                <div className="absolute top-4 left-4 bg-white/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
                   <Award className="w-4 h-4 text-amber-500" />
-                  <span className="font-serif text-[10px] font-bold text-[#021024]">MD Gold Medalist</span>
+                  <span className="font-serif text-[10px] font-bold text-[#121316]">MD Gold Medalist</span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 bg-[#021024]/80 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-md flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#C1E8FF] rounded-xl flex items-center justify-center shrink-0">
-                    <User className="w-5 h-5 text-[#052659]" />
+                <div className="absolute bottom-4 left-4 right-4 bg-[#121316]/85 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-md flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#1E64EC] rounded-xl flex items-center justify-center shrink-0">
+                    <User className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <div className="font-serif text-[11px] font-bold text-white uppercase tracking-wider">
                       Delhi Medical Council
                     </div>
-                    <div className="font-sans text-[10px] text-[#7DA0CA] font-medium mt-0.5">
+                    <div className="font-sans text-[10px] text-[#93C5FD] font-medium mt-0.5">
                       Accredited Registration No. 44068
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2 p-5 bg-white/80 backdrop-blur-md border border-white rounded-[24px] shadow-lg shadow-[#021024]/5">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block w-full mb-1">
+              <div className="flex flex-wrap gap-2 p-5 bg-white border border-gray-200 rounded-[24px] shadow-sm">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#1E64EC] tracking-widest block w-full mb-1">
                   Active specialties area:
                 </span>
                 {['#LaserExpert', '#CustomPeels', '#DHIHairTransplant', '#AntiAgingLifts', '#PediatricDermatology', '#PlateletRichPlasma', '#Dermatosurgery'].map((tag, idx) => (
                   <span 
                     key={idx} 
-                    className="px-2.5 py-1 bg-[#C1E8FF]/50 text-[#052659] hover:bg-[#5483B3]/25 font-sans text-[10px] uppercase tracking-wider font-bold rounded-lg border border-[#7DA0CA]/10 select-none transition-all"
+                    className="px-2.5 py-1 bg-[#EBF2FF] text-[#1E64EC] hover:bg-[#1E64EC] hover:text-white font-sans text-[10px] uppercase tracking-wider font-extrabold rounded-lg border border-[#1E64EC]/15 select-none transition-all"
                   >
                     {tag}
                   </span>
@@ -922,18 +922,18 @@ export default function HomePageClient() {
             </div>
 
             {/* Right Column: Bio, Qualifications & Associations */}
-            <div className="lg:col-span-7 flex flex-col justify-between bg-white/70 backdrop-blur-md p-6 md:p-8 rounded-[36px] border border-white shadow-xl">
+            <div className="lg:col-span-7 flex flex-col justify-between bg-white p-6 md:p-8 rounded-[36px] border border-gray-200 shadow-xl">
               <div>
-                <h3 className="font-serif text-2xl font-black text-[#021024] mb-4 flex items-center gap-2 pb-3 border-b border-[#7DA0CA]/20">
-                  <BookOpen className="w-6 h-6 text-[#052659]" />
+                <h3 className="font-serif text-2xl font-black text-[#121316] mb-4 flex items-center gap-2 pb-3 border-b border-gray-200">
+                  <BookOpen className="w-6 h-6 text-[#1E64EC]" />
                   <span>Biography & Qualifications</span>
                 </h3>
 
-                <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-4">
+                <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-4">
                   Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
                 </p>
 
-                <p className="text-sm md:text-base text-[#052659]/80 leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-6">
                   With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI (Safdarjung Enclave), New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
                 </p>
 
@@ -946,13 +946,13 @@ export default function HomePageClient() {
                     { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
                     { title: '20 Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
                   ].map((q, idx) => (
-                    <div key={idx} className="flex gap-2.5 items-start text-left bg-white/60 p-2.5 rounded-xl border border-[#7DA0CA]/10">
-                      <div className="p-1 rounded-lg bg-[#4ADE80]/20 text-[#052659] border border-[#4ADE80]/30 mt-0.5 shrink-0">
+                    <div key={idx} className="flex gap-2.5 items-start text-left bg-[#FAF8F5] p-3 rounded-xl border border-gray-200/80">
+                      <div className="p-1 rounded-lg bg-[#1E64EC]/10 text-[#1E64EC] border border-[#1E64EC]/20 mt-0.5 shrink-0">
                         <Check className="w-3.5 h-3.5 stroke-[3px]" />
                       </div>
                       <div>
-                        <div className="font-serif text-xs font-bold text-[#021024]">{q.title}</div>
-                        <div className="font-sans text-[10px] text-[#5483B3] font-semibold mt-0.5">{q.desc}</div>
+                        <div className="font-serif text-xs font-bold text-[#121316]">{q.title}</div>
+                        <div className="font-sans text-[10px] text-[#1E64EC] font-semibold mt-0.5">{q.desc}</div>
                       </div>
                     </div>
                   ))}
@@ -960,25 +960,25 @@ export default function HomePageClient() {
               </div>
 
               {/* Current & Past Medical Associations */}
-              <div className="bg-gradient-to-br from-[#C1E8FF]/40 to-white/90 border border-white rounded-[24px] p-5 shadow-sm text-left backdrop-blur-md">
-                <span className="font-sans text-[10px] uppercase font-bold text-[#5483B3] tracking-widest block mb-3">
+              <div className="bg-[#EBF2FF]/60 border border-[#1E64EC]/20 rounded-[24px] p-5 shadow-sm text-left">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#1E64EC] tracking-widest block mb-3">
                   {isHindi ? 'वर्तमान और पूर्व चिकित्सा संघ:' : 'Current & Past Medical Associations:'}
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-[#052659]/90 font-bold leading-normal font-sans">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-[#121316] font-bold leading-normal font-sans">
                   <div className="flex items-start gap-2">
-                    <Award className="w-4 h-4 text-[#052659] shrink-0 mt-0.5" />
+                    <Award className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
                     <span>Founder & Senior Consultant — Centre For Skin</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
                     <span>Consultant — Dr. BSA Hospital, Rohini (2009–2012)</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
                     <span>Consultant — DHI Safdarjung Enclave (2012–2014)</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Building className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5" />
+                    <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
                     <span>Laser Surgeon — New Look & GM Hospital</span>
                   </div>
                 </div>
@@ -989,20 +989,20 @@ export default function HomePageClient() {
           </div>
 
           {/* Full-Width Timeline Grid Section */}
-          <div className="mt-8 pt-10 border-t border-[#7DA0CA]/25">
+          <div className="mt-8 pt-10 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
               <div>
-                <span className="font-sans text-xs font-black text-[#5483B3] tracking-[0.25em] uppercase block mb-1">
+                <span className="font-sans text-xs font-black text-[#1E64EC] tracking-[0.25em] uppercase block mb-1">
                   {isHindi ? 'व्यावसायिक यात्रा' : 'Clinical Milestone Log'}
                 </span>
-                <h3 className="font-serif text-2xl font-black text-[#021024]">
+                <h3 className="font-serif text-2xl font-black text-[#121316]">
                   {isHindi ? 'व्यावसायिक यात्रा और मील के पत्थर' : 'Professional Journey & Milestones'}
                 </h3>
               </div>
               
               <a 
                 href="/doctor-gaurav-nakra"
-                className="w-fit flex items-center gap-2 px-5 py-2.5 bg-[#052659] hover:bg-[#5483B3] text-white text-xs font-sans font-bold uppercase tracking-wider rounded-xl shadow-md transition-all group"
+                className="w-fit flex items-center gap-2 px-5 py-2.5 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-xs font-sans font-extrabold uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all group"
                 onMouseEnter={() => setIsCursorHovering(true)}
                 onMouseLeave={() => setIsCursorHovering(false)}
               >
@@ -1013,16 +1013,16 @@ export default function HomePageClient() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {TIMELINE.map((t, idx) => (
-                <div key={idx} className="bg-white/80 backdrop-blur-md p-5 rounded-[24px] border border-white shadow-lg shadow-[#021024]/3 hover:shadow-xl hover:translate-y-[-2px] transition-all flex flex-col justify-between text-left">
+                <div key={idx} className="bg-white p-5 rounded-[24px] border border-gray-200 shadow-md hover:shadow-xl hover:border-[#1E64EC]/40 hover:translate-y-[-2px] transition-all flex flex-col justify-between text-left">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-mono text-xs font-black px-2.5 py-1 bg-[#052659] text-white rounded-lg">
+                      <span className="font-mono text-xs font-black px-2.5 py-1 bg-[#1E64EC] text-white rounded-lg">
                         {t.year}
                       </span>
-                      <span className="w-2 h-2 rounded-full bg-[#5483B3]" />
+                      <span className="w-2 h-2 rounded-full bg-[#1E64EC]" />
                     </div>
-                    <h4 className="font-serif text-sm font-bold text-[#021024] mb-1.5">{t.title}</h4>
-                    <p className="font-sans text-xs text-[#052659]/75 leading-relaxed">{t.desc}</p>
+                    <h4 className="font-serif text-sm font-bold text-[#121316] mb-1.5">{t.title}</h4>
+                    <p className="font-sans text-xs text-[#121316]/75 leading-relaxed">{t.desc}</p>
                   </div>
                 </div>
               ))}
@@ -1035,21 +1035,21 @@ export default function HomePageClient() {
       {/* CLINICAL DEPARTMENTS & SERVICES */}
       <section 
         id="departments" 
-        className="py-20 md:py-32 relative bg-gradient-to-b from-white to-[#C1E8FF]/20"
+        className="py-20 md:py-32 relative bg-[#FAF8F5] border-t border-gray-200/60"
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div className="text-left max-w-2xl">
-              <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase mb-3 block">
+              <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.25em] uppercase mb-3 block">
                 {isHindi ? 'क्लिनिक की उन्नत सेवाएं' : 'Clinic Specializations'}
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#121316] leading-tight gsap-reveal">
                 {isHindi ? 'हमारे विशेषज्ञ चिकित्सा विभाग' : 'Comprehensive Skin, Hair & Aesthetic Solutions'}
               </h2>
             </div>
             <div className="mt-4 md:mt-0">
-              <p className="font-sans text-xs md:text-sm text-[#052659]/75 md:text-right max-w-md font-semibold">
+              <p className="font-sans text-xs md:text-sm text-[#121316]/75 md:text-right max-w-md font-semibold">
                 Click on any clinical category to access the specific, certified list of laser or dermatological treatments.
               </p>
             </div>
@@ -1065,15 +1065,15 @@ export default function HomePageClient() {
                     onClick={() => setActiveTab(s.id)}
                     className={`w-full text-left p-4 rounded-[24px] border transition-all flex items-center gap-4 cursor-pointer select-none ${
                       activeTab === s.id 
-                        ? 'bg-[#052659] border-[#052659] text-white shadow-2xl scale-102 translate-x-1' 
-                        : 'bg-white/80 border-[#7DA0CA]/20 hover:border-[#5483B3] text-[#052659] hover:bg-[#C1E8FF]/20 backdrop-blur-sm shadow-md'
+                        ? 'bg-[#1E64EC] border-[#1E64EC] text-white shadow-xl scale-102 translate-x-1' 
+                        : 'bg-white border-gray-200 hover:border-[#1E64EC] text-[#121316] hover:bg-[#EBF2FF] shadow-sm'
                     }`}
                     aria-label={`Select treatment category: ${s.title}`}
                     onMouseEnter={() => setIsCursorHovering(true)}
                     onMouseLeave={() => setIsCursorHovering(false)}
                   >
                     <div className={`p-2.5 rounded-xl ${
-                      activeTab === s.id ? 'bg-[#5483B3]/20 text-[#C1E8FF]' : 'bg-[#C1E8FF]/30 text-[#052659]'
+                      activeTab === s.id ? 'bg-white/20 text-white' : 'bg-[#EBF2FF] text-[#1E64EC]'
                     }`}>
                       <IconComponent className="w-5 h-5" />
                     </div>
@@ -1097,27 +1097,27 @@ export default function HomePageClient() {
                 return (
                   <div 
                     key={s.id}
-                    className="bg-white/90 backdrop-blur-md border border-white rounded-[32px] p-6 md:p-8 shadow-2xl shadow-[#021024]/5 text-left h-fit flex flex-col justify-between animate-fade-in"
+                    className="bg-white border border-gray-200 rounded-[32px] p-6 md:p-8 shadow-xl text-left h-fit flex flex-col justify-between animate-fade-in"
                   >
                     <div>
-                      <div className="flex justify-between items-start border-b border-[#7DA0CA]/30 pb-4 mb-6">
+                      <div className="flex justify-between items-start border-b border-gray-200 pb-4 mb-6">
                         <div className="flex items-center gap-4">
-                          <div className="p-3 bg-[#052659]/10 rounded-2xl text-[#052659]">
+                          <div className="p-3 bg-[#EBF2FF] rounded-2xl text-[#1E64EC]">
                             <IconComponent className="w-8 h-8" />
                           </div>
                           <div>
-                            <h3 className="font-serif text-xl md:text-2xl font-black text-[#021024]">
+                            <h3 className="font-serif text-xl md:text-2xl font-black text-[#121316]">
                               {isHindi ? s.titleHindi : s.title}
                             </h3>
-                            <span className="font-sans text-[10px] bg-[#C1E8FF] text-[#052659] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider inline-block mt-1">
+                            <span className="font-sans text-[10px] bg-[#EBF2FF] text-[#1E64EC] px-2.5 py-1 rounded-full font-extrabold uppercase tracking-wider inline-block mt-1">
                               Accredited Services
                             </span>
                           </div>
                         </div>
-                        <div className="font-serif text-3xl font-black text-[#7DA0CA]/30">CS</div>
+                        <div className="font-serif text-3xl font-black text-gray-300">CS</div>
                       </div>
 
-                      <p className="text-sm md:text-base text-[#052659]/80 mb-6 leading-relaxed">
+                      <p className="text-sm md:text-base text-[#121316]/80 mb-6 leading-relaxed">
                         {s.desc}
                       </p>
 
@@ -1125,25 +1125,25 @@ export default function HomePageClient() {
                         {s.treatments.map((t, idx) => (
                           <div 
                             key={idx} 
-                            className="p-3 bg-[#C1E8FF]/20 hover:bg-[#C1E8FF]/40 border border-[#7DA0CA]/10 hover:border-[#5483B3]/30 rounded-2xl flex items-start gap-2.5 transition-all group"
+                            className="p-3 bg-[#FAF8F5] hover:bg-[#EBF2FF] border border-gray-200 hover:border-[#1E64EC]/40 rounded-2xl flex items-start gap-2.5 transition-all group"
                           >
-                            <ShieldCheck className="w-4 h-4 text-[#5483B3] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                            <span className="font-serif text-xs md:text-sm font-bold text-[#021024]">{t}</span>
+                            <ShieldCheck className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                            <span className="font-serif text-xs md:text-sm font-bold text-[#121316]">{t}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="bg-[#C1E8FF]/30 border border-[#7DA0CA]/25 rounded-[22px] p-4.5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="bg-[#EBF2FF]/70 border border-[#1E64EC]/20 rounded-[22px] p-4.5 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <div className="flex items-center gap-3 text-left">
-                        <Info className="w-5 h-5 text-[#5483B3]" />
-                        <span className="font-sans text-[11px] md:text-xs text-[#052659] leading-tight font-semibold">
+                        <Info className="w-5 h-5 text-[#1E64EC]" />
+                        <span className="font-sans text-[11px] md:text-xs text-[#121316] leading-tight font-semibold">
                           All clinical and aesthetic treatments are administered in highly sterile operation rooms.
                         </span>
                       </div>
                       <a 
                         href="#booking"
-                        className="w-full sm:w-auto px-6 py-3 bg-[#052659] hover:bg-[#5483B3] text-white text-[11px] font-sans font-black uppercase tracking-wider rounded-2xl shadow-xl shadow-[#052659]/15 flex justify-center items-center gap-2 hover:translate-y-[-2px] transition-all"
+                        className="w-full sm:w-auto px-6 py-3 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-[11px] font-sans font-black uppercase tracking-wider rounded-2xl shadow-md hover:shadow-lg transition-all flex justify-center items-center gap-2 hover:translate-y-[-2px]"
                       >
                         <span>Book Selection</span>
                         <ChevronRight className="w-3.5 h-3.5" />
@@ -1158,32 +1158,28 @@ export default function HomePageClient() {
         </div>
       </section>
 
-
-
-
-
       {/* TESTIMONIALS */}
       <section 
         id="testimonials" 
-        className="py-20 md:py-32 relative bg-[#021024] text-white"
+        className="py-20 md:py-32 relative bg-[#121316] text-white"
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-left">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.2em] uppercase block mb-3">
+            <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.2em] uppercase block mb-3">
               {isHindi ? 'मरीजों के वास्तविक विचार' : 'Patient Portrayals'}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-white leading-tight gsap-reveal">
               {isHindi ? 'संतुष्ट मरीजों के अभिप्राय' : 'Verified Google Reviews Trust'}
             </h2>
             <div className="flex justify-center items-center gap-2 mt-4 select-none">
-              <span className="font-sans text-sm font-bold text-[#7DA0CA]">Excellent Rating:</span>
+              <span className="font-sans text-sm font-bold text-[#94A3B8]">Excellent Rating:</span>
               <div className="flex items-center gap-0.5 text-[#FACC15]">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current text-[#FACC15]" />
                 ))}
               </div>
-              <span className="font-sans text-sm font-black text-[#C1E8FF]">4.5/5 (508+ patients)</span>
+              <span className="font-sans text-sm font-black text-white">4.5/5 (508+ patients)</span>
             </div>
           </div>
 
@@ -1191,7 +1187,7 @@ export default function HomePageClient() {
             {TESTIMONIALS.map((t, idx) => (
               <div 
                 key={idx}
-                className="bg-white/5 border border-white/10 rounded-[28px] p-6 md:p-8 flex flex-col justify-between hover:border-white/20 hover:bg-white/10 transition-all shadow-2xl relative"
+                className="bg-white/5 border border-white/10 rounded-[28px] p-6 md:p-8 flex flex-col justify-between hover:border-[#1E64EC]/50 hover:bg-white/10 transition-all shadow-2xl relative"
               >
                 <div>
                   <div className="flex items-center gap-0.5 text-[#FACC15] mb-4">
@@ -1208,12 +1204,12 @@ export default function HomePageClient() {
                 <div className="border-t border-white/10 pt-4 mt-6 flex justify-between items-center bg-transparent">
                   <div>
                     <div className="font-serif text-sm font-black text-white">{t.name}</div>
-                    <div className="font-sans text-[10px] text-[#7DA0CA] uppercase tracking-wider font-semibold mt-1">
+                    <div className="font-sans text-[10px] text-[#94A3B8] uppercase tracking-wider font-semibold mt-1">
                       Verified Case: {t.treatment}
                     </div>
                   </div>
                   
-                  <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center font-mono text-[10px] font-black text-[#7DA0CA]">
+                  <div className="w-7 h-7 rounded-full bg-[#1E64EC] flex items-center justify-center font-mono text-[10px] font-black text-white">
                     G
                   </div>
                 </div>
@@ -1224,23 +1220,21 @@ export default function HomePageClient() {
         </div>
       </section>
 
-
-
       {/* CONTACT & BOOKING */}
       <section 
         id="contact" 
-        className="py-20 md:py-32 relative bg-gradient-to-b from-white to-[#C1E8FF]/20"
+        className="py-20 md:py-32 relative bg-[#FAF8F5]"
       >
         <div id="booking" className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-left">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase block mb-3">
+            <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.25em] uppercase block mb-3">
               {isHindi ? 'पंजीकरण और बुकिंग' : 'Interactive Contact Hub'}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#121316] leading-tight gsap-reveal">
               {isHindi ? 'अपॉइंटमेंट बुक करें और संपर्क करें' : 'Get in Touch — Doctor Availability Portal'}
             </h2>
-            <p className="font-sans text-xs md:text-sm text-[#052659]/75 mt-3 select-none">
+            <p className="font-sans text-xs md:text-sm text-[#121316]/75 mt-3 select-none">
               Fill out the diagnostic appointment system coordinates, or use direct clicking call targets below.
             </p>
           </div>
@@ -1249,29 +1243,28 @@ export default function HomePageClient() {
             
             <div className="lg:col-span-4 flex flex-col gap-4">
               
-              <div className="bg-gradient-to-br from-[#021024] to-[#052659] text-white rounded-[32px] p-6 shadow-2xl border-2 border-white text-left flex flex-col gap-5 relative overflow-hidden backdrop-blur-md flex-1">
-                <div className="absolute w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(193,232,255,0.06)_0%,transparent_70%)] opacity-50 pointer-events-none" />
-                <span className="font-sans text-[10px] uppercase font-bold text-[#7DA0CA] tracking-widest block relative z-10">
+              <div className="bg-gradient-to-br from-[#121316] via-[#121316] to-[#1E64EC]/90 text-white rounded-[32px] p-6 shadow-2xl border-2 border-white/20 text-left flex flex-col gap-5 relative overflow-hidden flex-1">
+                <span className="font-sans text-[10px] uppercase font-bold text-[#94A3B8] tracking-widest block relative z-10">
                   Clinic Identity Details:
                 </span>
                 
                 <div className="flex gap-4 items-start bg-transparent relative z-10">
-                  <div className="p-2.5 rounded-[12px] bg-white/10 text-[#C1E8FF] border border-white/10">
+                  <div className="p-2.5 rounded-[12px] bg-white/10 text-white border border-white/10">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="font-serif text-[11px] font-bold text-[#7DA0CA] uppercase tracking-wider">
+                    <div className="font-serif text-[11px] font-bold text-[#94A3B8] uppercase tracking-wider">
                       Appointment Desks
                     </div>
                     <a 
                       href="tel:01146052234" 
-                      className="font-sans text-base font-black text-white hover:text-[#5483B3] transition-colors mt-0.5 block"
+                      className="font-sans text-base font-black text-white hover:text-[#93C5FD] transition-colors mt-0.5 block"
                     >
                       011 4605 2234
                     </a>
                     <a 
                       href="tel:+917042087962" 
-                      className="font-sans text-xs font-semibold text-[#7DA0CA] hover:text-white transition-colors mt-0.5 block"
+                      className="font-sans text-xs font-semibold text-[#94A3B8] hover:text-white transition-colors mt-0.5 block"
                     >
                       Mob: +91 70420 87962
                     </a>
@@ -1279,16 +1272,16 @@ export default function HomePageClient() {
                 </div>
 
                 <div className="flex gap-4 items-start bg-transparent relative z-10">
-                  <div className="p-2.5 rounded-[12px] bg-white/10 text-[#C1E8FF] border border-white/10">
+                  <div className="p-2.5 rounded-[12px] bg-white/10 text-white border border-white/10">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="font-serif text-[11px] font-bold text-[#7DA0CA] uppercase tracking-wider">
+                    <div className="font-serif text-[11px] font-bold text-[#94A3B8] uppercase tracking-wider">
                       Official Clinic Email
                     </div>
                     <a 
                       href="mailto:info@centreforskin.in" 
-                      className="font-sans text-xs font-bold text-white hover:text-[#5483B3] transition-colors mt-0.5 block"
+                      className="font-sans text-xs font-bold text-white hover:text-[#93C5FD] transition-colors mt-0.5 block"
                     >
                       info@centreforskin.in
                     </a>
@@ -1296,28 +1289,28 @@ export default function HomePageClient() {
                 </div>
 
                 <div className="flex gap-4 items-start bg-transparent relative z-10">
-                  <div className="p-2.5 rounded-[12px] bg-white/10 text-[#C1E8FF] border border-white/10">
+                  <div className="p-2.5 rounded-[12px] bg-white/10 text-white border border-white/10">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="font-serif text-[11px] font-bold text-[#7DA0CA] uppercase tracking-wider">
+                    <div className="font-serif text-[11px] font-bold text-[#94A3B8] uppercase tracking-wider">
                       Clinic Address
                     </div>
                     <p className="font-sans text-xs text-white leading-relaxed mt-1">
                       178, Basement, Saini Enclave, Near Karkardooma Metro Station, Anand Vihar, East Delhi, Delhi — 110092
                     </p>
-                    <span className="font-sans text-[10px] text-amber-400 font-semibold mt-1 block">
+                    <span className="font-sans text-[10px] text-[#FACC15] font-semibold mt-1 block">
                       Landmark: Opposite Balaji Temple, Phase 1, D-Block Market
                     </span>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-start bg-transparent relative z-10">
-                  <div className="p-2.5 rounded-[12px] bg-white/10 text-[#C1E8FF] border border-white/10">
+                  <div className="p-2.5 rounded-[12px] bg-white/10 text-white border border-white/10">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="font-serif text-[11px] font-bold text-[#7DA0CA] uppercase tracking-wider">
+                    <div className="font-serif text-[11px] font-bold text-[#94A3B8] uppercase tracking-wider">
                       Operating Schedule
                     </div>
                     <div className="font-sans text-xs text-white leading-relaxed mt-1 font-semibold">
@@ -1329,10 +1322,10 @@ export default function HomePageClient() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 mt-auto pt-4 border-t border-white/5 relative z-10">
+                <div className="grid grid-cols-2 gap-2 mt-auto pt-4 border-t border-white/10 relative z-10">
                   <a 
                     href="tel:01146052234"
-                    className="py-3 bg-white hover:bg-[#C1E8FF] text-[#021024] font-bold text-center text-xs uppercase rounded-xl shadow-md transition-all flex justify-center items-center gap-2"
+                    className="py-3 bg-white hover:bg-gray-100 text-[#121316] font-bold text-center text-xs uppercase rounded-xl shadow-md transition-all flex justify-center items-center gap-2"
                   >
                     <Phone className="w-3.5 h-3.5" />
                     <span>Call Desk</span>
@@ -1341,7 +1334,7 @@ export default function HomePageClient() {
                     href="https://www.google.com/maps/search/?api=1&query=Centre+For+Skin+178+Saini+Enclave+Karkardooma+Delhi+110092"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-3 bg-[#5483B3] hover:bg-white hover:text-[#021024] text-white font-bold text-center text-xs uppercase rounded-xl border border-[#5483B3] shadow-md transition-all flex justify-center items-center gap-1.5"
+                    className="py-3 bg-[#1E64EC] hover:bg-[#154ec2] text-white font-bold text-center text-xs uppercase rounded-xl border border-[#1E64EC] shadow-md transition-all flex justify-center items-center gap-1.5"
                   >
                     <span>Directions</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -1349,10 +1342,10 @@ export default function HomePageClient() {
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-md border border-white p-5 rounded-[24px] flex items-center justify-between shadow-xl shadow-[#021024]/5 text-left">
+              <div className="bg-white border border-gray-200 p-5 rounded-[24px] flex items-center justify-between shadow-md text-left">
                 <div>
-                  <div className="font-serif text-sm font-black text-[#052659]">508+ Reviews</div>
-                  <div className="font-sans text-[10px] text-[#5483B3] font-bold uppercase tracking-wider mt-0.5">Total Local feedback</div>
+                  <div className="font-serif text-sm font-black text-[#121316]">508+ Reviews</div>
+                  <div className="font-sans text-[10px] text-[#1E64EC] font-bold uppercase tracking-wider mt-0.5">Total Local feedback</div>
                 </div>
                 <div className="flex items-center gap-0.5 text-[#FACC15]">
                   {[...Array(5)].map((_, i) => (
@@ -1366,20 +1359,20 @@ export default function HomePageClient() {
             <div className="lg:col-span-8 flex flex-col gap-6 w-full">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full flex-1">
                 
-                <div className="bg-white/90 backdrop-blur-md border border-white p-6 md:p-8 rounded-[32px] shadow-2xl shadow-[#021024]/5 flex flex-col justify-between h-full">
+                <div className="bg-white border border-gray-200 p-6 md:p-8 rounded-[32px] shadow-xl flex flex-col justify-between h-full">
                   <div>
-                    <div className="flex items-center gap-2.5 pb-3 border-b border-[#7DA0CA]/20 mb-6 text-left">
-                      <Calendar className="w-5 h-5 text-[#052659]" />
-                      <h4 className="font-serif text-lg font-black text-[#021024]">Online Appointment</h4>
+                    <div className="flex items-center gap-2.5 pb-3 border-b border-gray-200 mb-6 text-left">
+                      <Calendar className="w-5 h-5 text-[#1E64EC]" />
+                      <h4 className="font-serif text-lg font-black text-[#121316]">Online Appointment</h4>
                     </div>
 
                     {formSubmitted ? (
-                      <div className="bg-[#4ADE80]/15 border border-[#4ADE80] rounded-2xl p-6 text-center text-[#052659] h-[250px] flex flex-col justify-center items-center">
+                      <div className="bg-[#4ADE80]/15 border border-[#4ADE80] rounded-2xl p-6 text-center text-[#121316] h-[250px] flex flex-col justify-center items-center">
                         <div className="w-12 h-12 bg-[#4ADE80] text-white rounded-full flex items-center justify-center mb-3">
                           <Check className="w-6 h-6 stroke-[3px]" />
                         </div>
                         <h5 className="font-serif text-base font-black">Booking Request Received!</h5>
-                        <p className="font-sans text-[11px] text-[#5483B3] font-semibold mt-1.5">
+                        <p className="font-sans text-[11px] text-[#1E64EC] font-semibold mt-1.5">
                           Dr. Gaurav Nakra&rsquo;s desk will call you back shortly to confirm your consultation slot.
                         </p>
                       </div>
@@ -1402,7 +1395,7 @@ export default function HomePageClient() {
                         )}
 
                         <div>
-                          <label htmlFor="booking-name" className="font-sans text-[11px] font-bold text-[#052659] uppercase tracking-wider block mb-1">
+                          <label htmlFor="booking-name" className="font-sans text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-1">
                             Patient Name <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -1414,12 +1407,12 @@ export default function HomePageClient() {
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             placeholder="e.g., Rajesh Sharma"
                             disabled={formLoading}
-                            className="w-full px-4 py-2.5 rounded-xl border border-[#7DA0CA]/20 bg-[#C1E8FF]/20 text-xs text-[#021024] font-bold focus:outline focus:outline-[#052659] focus:bg-white placeholder-[#5483B3]/60 transition-colors disabled:opacity-60"
+                            className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-[#FAF8F5] text-xs text-[#121316] font-bold focus:outline focus:outline-[#1E64EC] focus:bg-white placeholder-[#64748B]/60 transition-colors disabled:opacity-60"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="booking-phone" className="font-sans text-[11px] font-bold text-[#052659] uppercase tracking-wider block mb-1">
+                          <label htmlFor="booking-phone" className="font-sans text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-1">
                             Mobile Number <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -1432,13 +1425,13 @@ export default function HomePageClient() {
                             placeholder="e.g., 9911991199"
                             maxLength={10}
                             disabled={formLoading}
-                            className="w-full px-4 py-2.5 rounded-xl border border-[#7DA0CA]/20 bg-[#C1E8FF]/20 text-xs text-[#021024] font-bold focus:outline focus:outline-[#052659] focus:bg-white placeholder-[#5483B3]/60 transition-colors disabled:opacity-60"
+                            className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-[#FAF8F5] text-xs text-[#121316] font-bold focus:outline focus:outline-[#1E64EC] focus:bg-white placeholder-[#64748B]/60 transition-colors disabled:opacity-60"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="booking-email" className="font-sans text-[11px] font-bold text-[#052659] uppercase tracking-wider block mb-1">
-                            Email Address <span className="text-[#7DA0CA] font-medium normal-case">(optional)</span>
+                          <label htmlFor="booking-email" className="font-sans text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-1">
+                            Email Address <span className="text-[#64748B] font-medium normal-case">(optional)</span>
                           </label>
                           <input
                             id="booking-email"
@@ -1449,12 +1442,12 @@ export default function HomePageClient() {
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             placeholder="e.g., patient@gmail.com"
                             disabled={formLoading}
-                            className="w-full px-4 py-2.5 rounded-xl border border-[#7DA0CA]/20 bg-[#C1E8FF]/20 text-xs text-[#021024] font-bold focus:outline focus:outline-[#052659] focus:bg-white placeholder-[#5483B3]/60 transition-colors disabled:opacity-60"
+                            className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-[#FAF8F5] text-xs text-[#121316] font-bold focus:outline focus:outline-[#1E64EC] focus:bg-white placeholder-[#64748B]/60 transition-colors disabled:opacity-60"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="booking-dept" className="font-sans text-[11px] font-bold text-[#052659] uppercase tracking-wider block mb-1">
+                          <label htmlFor="booking-dept" className="font-sans text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-1">
                             Select Clinical Department
                           </label>
                           <select
@@ -1463,7 +1456,7 @@ export default function HomePageClient() {
                             value={formData.department}
                             onChange={(e) => setFormData({ ...formData, department: e.target.value })}
                             disabled={formLoading}
-                            className="w-full px-4 py-2.5 rounded-xl border border-[#7DA0CA]/20 bg-[#C1E8FF]/20 text-xs text-[#021024] font-bold focus:outline focus:outline-[#052659] focus:bg-white transition-colors disabled:opacity-60"
+                            className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-[#FAF8F5] text-xs text-[#121316] font-bold focus:outline focus:outline-[#1E64EC] focus:bg-white transition-colors disabled:opacity-60"
                           >
                             <option value="Clinical Dermatology">Clinical Dermatology</option>
                             <option value="Aesthetic Rejuvenation">Aesthetic Dermatology</option>
@@ -1475,7 +1468,7 @@ export default function HomePageClient() {
                         </div>
 
                         <div>
-                          <label htmlFor="booking-date" className="font-sans text-[11px] font-bold text-[#052659] uppercase tracking-wider block mb-1">
+                          <label htmlFor="booking-date" className="font-sans text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-1">
                             Preferred Consultation Date <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -1486,13 +1479,13 @@ export default function HomePageClient() {
                             min={new Date().toISOString().split('T')[0]}
                             onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                             disabled={formLoading}
-                            className="w-full px-4 py-2.5 rounded-xl border border-[#7DA0CA]/20 bg-[#C1E8FF]/20 text-xs text-[#021024] font-bold focus:outline focus:outline-[#052659] focus:bg-white transition-colors disabled:opacity-60"
+                            className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-[#FAF8F5] text-xs text-[#121316] font-bold focus:outline focus:outline-[#1E64EC] focus:bg-white transition-colors disabled:opacity-60"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="booking-msg" className="font-sans text-[11px] font-bold text-[#052659] uppercase tracking-wider block mb-1">
-                            Symptoms / Message <span className="text-[#7DA0CA] font-medium normal-case">(optional)</span>
+                          <label htmlFor="booking-msg" className="font-sans text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-1">
+                            Symptoms / Message <span className="text-[#64748B] font-medium normal-case">(optional)</span>
                           </label>
                           <textarea
                             id="booking-msg"
@@ -1503,7 +1496,7 @@ export default function HomePageClient() {
                             rows={2}
                             maxLength={500}
                             disabled={formLoading}
-                            className="w-full px-4 py-2.5 rounded-xl border border-[#7DA0CA]/20 bg-[#C1E8FF]/20 text-xs text-[#021024] font-bold focus:outline focus:outline-[#052659] focus:bg-white placeholder-[#5483B3]/60 transition-colors resize-none disabled:opacity-60"
+                            className="w-full px-4 py-2.5 rounded-xl border border-gray-300 bg-[#FAF8F5] text-xs text-[#121316] font-bold focus:outline focus:outline-[#1E64EC] focus:bg-white placeholder-[#64748B]/60 transition-colors resize-none disabled:opacity-60"
                           />
                         </div>
 
@@ -1511,7 +1504,7 @@ export default function HomePageClient() {
                           type="submit"
                           disabled={formLoading}
                           aria-label="Submit appointment booking request"
-                          className="mt-2 py-3.5 bg-[#052659] hover:bg-[#5483B3] text-white text-xs uppercase tracking-wider font-black rounded-2xl shadow-xl shadow-[#052659]/15 cursor-pointer hover:translate-y-[-2px] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:translate-y-0"
+                          className="mt-2 py-3.5 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-xs uppercase tracking-wider font-extrabold rounded-2xl shadow-xl shadow-[#1E64EC]/20 cursor-pointer hover:translate-y-[-2px] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:translate-y-0"
                         >
                           {formLoading ? (
                             <>
@@ -1526,7 +1519,7 @@ export default function HomePageClient() {
                           )}
                         </button>
 
-                        <p className="text-center text-[10px] text-[#7DA0CA] font-sans mt-1">
+                        <p className="text-center text-[10px] text-[#64748B] font-sans mt-1">
                           Your details are encrypted and used solely for appointment confirmation.
                         </p>
                       </form>
@@ -1534,7 +1527,7 @@ export default function HomePageClient() {
                   </div>
                 </div>
 
-                <div className="w-full h-full min-h-[350px] border border-white rounded-[32px] overflow-hidden shadow-2xl relative block">
+                <div className="w-full h-full min-h-[350px] border border-gray-200 rounded-[32px] overflow-hidden shadow-xl relative block">
                   <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.21854228965!2d77.3005828763044!3d28.653177675653428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb6389255de3%3A0xe54d6fbbeacde997!2sCentre%20For%20Skin%2C%20178%20Saini%20Enclave%20Karkardooma!5e0!3m2!1sen!2sin!4v178094392434!5m2!1sen!2sin" 
                     width="100%" 
@@ -1546,16 +1539,16 @@ export default function HomePageClient() {
                     title="Google Maps Location: Centre For Skin, 178 Saini Enclave"
                   />
                   
-                  <div className="absolute top-4 left-4 right-4 bg-white/85 backdrop-blur-md px-4 py-3 rounded-xl border border-[#7DA0CA]/30 shadow-md flex justify-between items-center text-left">
+                  <div className="absolute top-4 left-4 right-4 bg-white/90 backdrop-blur-md px-4 py-3 rounded-xl border border-gray-200 shadow-md flex justify-between items-center text-left">
                     <div>
-                      <div className="font-serif text-xs font-bold text-[#021024]">Need simple routing?</div>
-                      <div className="font-sans text-[10px] text-[#5483B3] font-semibold mt-0.5">Click map to initiate Google Navigation.</div>
+                      <div className="font-serif text-xs font-bold text-[#121316]">Need simple routing?</div>
+                      <div className="font-sans text-[10px] text-[#1E64EC] font-semibold mt-0.5">Click map to initiate Google Navigation.</div>
                     </div>
                     <a 
                       href="https://www.google.com/maps/search/?api=1&query=Centre+For+Skin+178+Saini+Enclave+Karkardooma+Delhi+110092"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 rounded-lg bg-[#052659] text-white hover:bg-[#5483B3] transition-colors"
+                      className="p-1.5 rounded-lg bg-[#1E64EC] text-white hover:bg-[#154ec2] transition-colors"
                       aria-label="Redirect to Google Maps page directly"
                     >
                       <ExternalLink className="w-4 h-4" />
@@ -1574,18 +1567,18 @@ export default function HomePageClient() {
       {/* FAQS */}
       <section 
         id="faqs" 
-        className="py-20 md:py-32 relative bg-gradient-to-b from-[#C1E8FF]/20 to-white"
+        className="py-20 md:py-32 relative bg-[#FAF8F5] border-t border-gray-200/60"
       >
         <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-10 text-left">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.2em] uppercase block mb-3">
+            <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.2em] uppercase block mb-3">
               {isHindi ? 'अक्सर पूछे जाने वाले सवाल' : 'Dermatology Q&A'}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight gsap-reveal">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#121316] leading-tight gsap-reveal">
               {isHindi ? 'पूछे जाने वाले मुख्य सवाल' : 'Dermatosurgery & Treatment FAQs'}
             </h2>
-            <p className="font-sans text-xs md:text-sm text-[#052659]/75 mt-3 select-none">
+            <p className="font-sans text-xs md:text-sm text-[#121316]/75 mt-3 select-none">
               Explore gold-standard, structured clinical answers written and verified directly by dermatologist Dr. Gaurav Nakra.
             </p>
           </div>
@@ -1596,7 +1589,7 @@ export default function HomePageClient() {
               return (
                 <div 
                   key={index}
-                  className="border border-[#7DA0CA]/15 rounded-[22px] bg-white/80 backdrop-blur-md overflow-hidden shadow-xl shadow-[#021024]/3 hover:shadow-2xl hover:translate-y-[-2px] transition-all"
+                  className="border border-gray-200 rounded-[22px] bg-white overflow-hidden shadow-md hover:border-[#1E64EC]/40 hover:shadow-xl hover:translate-y-[-2px] transition-all"
                 >
                   <button
                     onClick={() => setActiveFAQ(isOpen ? null : index)}
@@ -1605,22 +1598,22 @@ export default function HomePageClient() {
                     onMouseEnter={() => setIsCursorHovering(true)}
                     onMouseLeave={() => setIsCursorHovering(false)}
                   >
-                    <span className="font-serif text-sm md:text-base font-black text-[#052659] group-hover:text-[#5483B3] transition-colors leading-snug">
+                    <span className="font-serif text-sm md:text-base font-black text-[#121316] group-hover:text-[#1E64EC] transition-colors leading-snug">
                       {isHindi && index === 0 ? 'सेंटर फॉर स्किन पर लेज़र हेयर रिडक्शन कितना सुरक्षित है?' : faq.q}
                     </span>
-                    <div className={`p-1.5 rounded-lg border border-[#7DA0CA]/20 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-[#C1E8FF]' : 'bg-transparent'
+                    <div className={`p-1.5 rounded-lg border border-gray-200 transition-transform duration-300 ${
+                      isOpen ? 'rotate-180 bg-[#EBF2FF] text-[#1E64EC]' : 'bg-transparent text-[#121316]'
                     }`}>
-                      <ChevronDown className="w-4 h-4 text-[#052659]" />
+                      <ChevronDown className="w-4 h-4" />
                     </div>
                   </button>
 
                   <div 
                     className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      isOpen ? 'max-h-[500px] border-t border-[#7DA0CA]/20' : 'max-h-0'
+                      isOpen ? 'max-h-[500px] border-t border-gray-200' : 'max-h-0'
                     }`}
                   >
-                    <div className="p-5 text-xs md:text-sm text-[#052659]/80 leading-relaxed bg-[#C1E8FF]/10 font-normal">
+                    <div className="p-5 text-xs md:text-sm text-[#121316]/80 leading-relaxed bg-[#EBF2FF]/40 font-normal">
                       {isHindi && index === 0 ? 'लेज़र बाल हटाना पूरी तरह से सुरक्षित है। सेंटर फॉर स्किन पर, हम केवल US-FDA स्वीकृत ट्रिपल वेवलेंथ डायोड लेज़र का उपयोग करते हैं जो त्वचा पर अत्यधिक सुरक्षित और प्रभावी है। सभी लेज़र प्रक्रियाएं डॉ. गौरव नकरा के निजी मार्गदर्शन में की जाती हैं।' : faq.a}
                     </div>
                   </div>
@@ -1648,7 +1641,7 @@ export default function HomePageClient() {
           <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.66.986 3.284 1.48 4.909 1.48 5.27 0 9.563-4.287 9.566-9.564.002-2.556-.992-4.959-2.799-6.77-1.804-1.807-4.205-2.8-6.77-2.802-5.277 0-9.571 4.287-9.575 9.568-.002 1.83.499 3.619 1.453 5.17l-.994 3.63 3.733-.974-.423-.24z" />
           </svg>
-          <div className="absolute left-16 bg-[#021024] text-white text-[10px] font-sans uppercase font-bold tracking-wider px-3 py-1.5 rounded-lg border border-white/15 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block whitespace-nowrap shadow-md">
+          <div className="absolute left-16 bg-[#121316] text-white text-[10px] font-sans uppercase font-bold tracking-wider px-3 py-1.5 rounded-lg border border-white/15 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block whitespace-nowrap shadow-md">
             Chat on WhatsApp
           </div>
           <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-red-500 animate-ping" />
@@ -1659,7 +1652,7 @@ export default function HomePageClient() {
       {showBackToTop && (
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-5 right-5 z-[50] p-3.5 bg-[#052659] text-white hover:bg-[#5483B3] rounded-full shadow-2xl transition-all border-2 border-white/20 select-none hover:scale-105 active:scale-95 cursor-pointer"
+          className="fixed bottom-5 right-5 z-[50] p-3.5 bg-[#1E64EC] text-white hover:bg-[#154ec2] rounded-full shadow-2xl transition-all border-2 border-white/20 select-none hover:scale-105 active:scale-95 cursor-pointer"
           aria-label="Scroll Back To Top Viewport"
           onMouseEnter={() => setIsCursorHovering(true)}
           onMouseLeave={() => setIsCursorHovering(false)}

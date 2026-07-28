@@ -1,16 +1,16 @@
 import type {Metadata} from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css'; // Global styles
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-outfit',
   display: 'swap',
 });
 
-const playfairDisplay = Playfair_Display({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-jakarta',
   display: 'swap',
 });
 
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfairDisplay.variable} scroll-smooth`}>
-      <body suppressHydrationWarning className="bg-[#C1E8FF]/20 text-[#021024] antialiased">
+    <html lang="en" className={`${jakarta.variable} ${outfit.variable} scroll-smooth`}>
+      <body suppressHydrationWarning className="bg-[#FAF8F5] text-[#121316] antialiased">
         {children}
       </body>
     </html>

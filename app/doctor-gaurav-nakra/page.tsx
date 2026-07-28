@@ -107,11 +107,11 @@ export default function DoctorProfile() {
 
       <Navbar />
 
-      <main className="min-h-screen pt-28 pb-16 bg-[#C1E8FF]/10">
+      <main className="min-h-screen pt-28 pb-16 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
           {/* Hero Banner Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 bg-white/70 backdrop-blur-md rounded-[32px] p-6 md:p-8 border border-white shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 bg-white rounded-[32px] p-6 md:p-8 border border-gray-200 shadow-xl">
             {/* Image Column */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-[28px] overflow-hidden border-4 border-white shadow-lg">
@@ -125,63 +125,63 @@ export default function DoctorProfile() {
                 
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
                   <Award className="w-4 h-4 text-amber-500" />
-                  <span className="font-serif text-[10px] font-bold text-[#021024]">20 Years Experience</span>
+                  <span className="font-serif text-[10px] font-bold text-[#121316]">20 Years Experience</span>
                 </div>
               </div>
             </div>
 
             {/* Doctor Basic Info Column */}
             <div className="lg:col-span-7 text-left">
-              <span className="font-sans text-xs md:text-sm font-black text-[#5483B3] tracking-[0.25em] uppercase mb-2 block">
+              <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.25em] uppercase mb-2 block">
                 Senior Consultant Dermatologist & Cosmetologist
               </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#021024] leading-tight mb-2">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#121316] leading-tight mb-2">
                 Dr. Gaurav Nakra
               </h1>
-              <p className="font-sans text-sm md:text-base text-[#5483B3] font-bold tracking-wide mb-6">
+              <p className="font-sans text-sm md:text-base text-[#1E64EC] font-bold tracking-wide mb-6">
                 MBBS, MD (Dermatology, Venereology & Leprosy) | 20 Years Experience
               </p>
 
-              <hr className="border-[#7DA0CA]/25 my-4" />
+              <hr className="border-gray-200 my-4" />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-xs mb-8">
                 <div className="flex gap-3 items-center">
-                  <div className="p-2 rounded-lg bg-[#052659]/10 text-[#052659] border border-[#052659]/20 shrink-0">
+                  <div className="p-2 rounded-lg bg-[#EBF2FF] text-[#1E64EC] border border-[#1E64EC]/20 shrink-0">
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="font-serif font-bold text-[#021024] uppercase tracking-wider">Registration Number</div>
-                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">Delhi Medical Council No. 44068</div>
+                    <div className="font-serif font-bold text-[#121316] uppercase tracking-wider">Registration Number</div>
+                    <div className="font-sans text-[#1E64EC] font-semibold mt-0.5">Delhi Medical Council No. 44068</div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center">
-                  <div className="p-2 rounded-lg bg-[#052659]/10 text-[#052659] border border-[#052659]/20 shrink-0">
+                  <div className="p-2 rounded-lg bg-[#EBF2FF] text-[#1E64EC] border border-[#1E64EC]/20 shrink-0">
                     <Award className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="font-serif font-bold text-[#021024] uppercase tracking-wider">Total Experience</div>
-                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">20 Years Clinical Practice</div>
+                    <div className="font-serif font-bold text-[#121316] uppercase tracking-wider">Total Experience</div>
+                    <div className="font-sans text-[#1E64EC] font-semibold mt-0.5">20 Years Clinical Practice</div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center">
-                  <div className="p-2 rounded-lg bg-[#052659]/10 text-[#052659] border border-[#052659]/20 shrink-0">
+                  <div className="p-2 rounded-lg bg-[#EBF2FF] text-[#1E64EC] border border-[#1E64EC]/20 shrink-0">
                     <GraduationCap className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="font-serif font-bold text-[#021024] uppercase tracking-wider">Specialties</div>
-                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">Dermatology, Cosmetology & Pediatric Dermatology</div>
+                    <div className="font-serif font-bold text-[#121316] uppercase tracking-wider">Specialties</div>
+                    <div className="font-sans text-[#1E64EC] font-semibold mt-0.5">Dermatology, Cosmetology & Pediatric Dermatology</div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 items-center">
-                  <div className="p-2 rounded-lg bg-[#052659]/10 text-[#052659] border border-[#052659]/20 shrink-0">
+                  <div className="p-2 rounded-lg bg-[#EBF2FF] text-[#1E64EC] border border-[#1E64EC]/20 shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="font-serif font-bold text-[#021024] uppercase tracking-wider">Location</div>
-                    <div className="font-sans text-[#5483B3] font-semibold mt-0.5">Centre For Skin, Saini Enclave, Delhi</div>
+                    <div className="font-serif font-bold text-[#121316] uppercase tracking-wider">Location</div>
+                    <div className="font-sans text-[#1E64EC] font-semibold mt-0.5">Centre For Skin, Saini Enclave, Delhi</div>
                   </div>
                 </div>
               </div>
@@ -189,13 +189,13 @@ export default function DoctorProfile() {
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <a 
                   href="/#booking"
-                  className="w-full sm:w-auto px-8 py-3.5 bg-[#052659] hover:bg-[#5483B3] text-white text-xs uppercase tracking-wider font-bold rounded-xl shadow-md transition-all text-center"
+                  className="w-full sm:w-auto px-8 py-3.5 bg-[#1E64EC] hover:bg-[#154ec2] text-white text-xs uppercase tracking-wider font-bold rounded-xl shadow-md hover:shadow-lg transition-all text-center"
                 >
                   Book Appointment
                 </a>
                 <a 
                   href="tel:01146052234"
-                  className="w-full sm:w-auto px-8 py-3.5 bg-white border-2 border-[#7DA0CA] hover:border-[#052659] text-[#052659] text-xs uppercase tracking-wider font-bold rounded-xl shadow-sm transition-all text-center flex justify-center items-center gap-2"
+                  className="w-full sm:w-auto px-8 py-3.5 bg-white border-2 border-gray-300 hover:border-[#1E64EC] text-[#121316] text-xs uppercase tracking-wider font-bold rounded-xl shadow-sm transition-all text-center flex justify-center items-center gap-2"
                 >
                   <Phone className="w-4 h-4" />
                   <span>011 4605 2234</span>
@@ -209,12 +209,12 @@ export default function DoctorProfile() {
             
             {/* Left side: Memberships & Specialties */}
             <div className="lg:col-span-4 flex flex-col gap-6">
-              <div className="bg-white/80 backdrop-blur-md border border-white p-6 rounded-[28px] shadow-xl text-left">
-                <h3 className="font-serif text-lg font-black text-[#021024] mb-4 pb-2 border-b border-[#7DA0CA]/20 flex items-center gap-2">
-                  <Award className="w-5 h-5 text-[#052659]" />
+              <div className="bg-white border border-gray-200 p-6 rounded-[28px] shadow-lg text-left">
+                <h3 className="font-serif text-lg font-black text-[#121316] mb-4 pb-2 border-b border-gray-200 flex items-center gap-2">
+                  <Award className="w-5 h-5 text-[#1E64EC]" />
                   <span>Awards & Recognitions</span>
                 </h3>
-                <ul className="flex flex-col gap-3 text-xs text-[#052659]/80 font-sans font-bold leading-normal">
+                <ul className="flex flex-col gap-3 text-xs text-[#121316]/80 font-sans font-bold leading-normal">
                   <li className="flex gap-2.5 items-start">
                     <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
                     <span>International Publications — International Journal of Clinical Research (2008)</span>
@@ -226,12 +226,12 @@ export default function DoctorProfile() {
                 </ul>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-md border border-white p-6 rounded-[28px] shadow-xl text-left">
-                <h3 className="font-serif text-lg font-black text-[#021024] mb-4 pb-2 border-b border-[#7DA0CA]/20 flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-[#052659]" />
+              <div className="bg-white border border-gray-200 p-6 rounded-[28px] shadow-lg text-left">
+                <h3 className="font-serif text-lg font-black text-[#121316] mb-4 pb-2 border-b border-gray-200 flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-[#1E64EC]" />
                   <span>Memberships & Certifications</span>
                 </h3>
-                <ul className="flex flex-col gap-3 text-xs text-[#052659]/80 font-sans font-bold leading-normal">
+                <ul className="flex flex-col gap-3 text-xs text-[#121316]/80 font-sans font-bold leading-normal">
                   <li className="flex gap-2.5 items-start">
                     <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
                     <span>Member of Indian Association of Dermatologists, Venereologists and Leprologists (IADVL)</span>
@@ -247,14 +247,14 @@ export default function DoctorProfile() {
                 </ul>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-md border border-white p-6 rounded-[28px] shadow-xl text-left">
-                <h3 className="font-serif text-lg font-black text-[#021024] mb-4 pb-2 border-b border-[#7DA0CA]/20 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#052659]" />
+              <div className="bg-white border border-gray-200 p-6 rounded-[28px] shadow-lg text-left">
+                <h3 className="font-serif text-lg font-black text-[#121316] mb-4 pb-2 border-b border-gray-200 flex items-center gap-2">
+                  <ShieldCheck className="w-5 h-5 text-[#1E64EC]" />
                   <span>Clinical Competences</span>
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {['Clinical Dermatology', 'Aesthetic Dermatology Consultation', 'Hair Transplantation', 'Mezotherapy', 'PRP Therapy', 'Stem Cell Therapy', 'Lasers', 'Botox & Fillers', 'Anti-Ageing Treatments', 'Facelift', 'Salicylic Peel', 'Skin Polishing', 'Corn Removal', 'Skin Tag Surgical Removal', 'Buttock Lift', 'Liposuction', 'Stretch Marks Treatment', 'Acne & Psoriasis', 'Lichen Planus', 'Fungal Infections', 'Nail Disorders', 'STIs', 'Skin Grafting'].map((spec, i) => (
-                    <span key={i} className="px-3 py-1.5 bg-[#C1E8FF]/40 text-[#052659] font-sans text-[10px] uppercase font-black rounded-lg border border-[#7DA0CA]/10">
+                    <span key={i} className="px-3 py-1.5 bg-[#EBF2FF] text-[#1E64EC] font-sans text-[10px] uppercase font-extrabold rounded-lg border border-[#1E64EC]/15">
                       {spec}
                     </span>
                   ))}
@@ -263,13 +263,13 @@ export default function DoctorProfile() {
             </div>
 
             {/* Right side: Detailed Biography */}
-            <div className="lg:col-span-8 bg-white/80 backdrop-blur-md border border-white p-6 md:p-8 rounded-[28px] shadow-xl text-left">
-              <h2 className="font-serif text-2xl font-black text-[#021024] mb-6 flex items-center gap-2 pb-3 border-b border-[#7DA0CA]/20">
-                <BookOpen className="w-6 h-6 text-[#052659]" />
+            <div className="lg:col-span-8 bg-white border border-gray-200 p-6 md:p-8 rounded-[28px] shadow-lg text-left">
+              <h2 className="font-serif text-2xl font-black text-[#121316] mb-6 flex items-center gap-2 pb-3 border-b border-gray-200">
+                <BookOpen className="w-6 h-6 text-[#1E64EC]" />
                 <span>Professional Profile & Biography</span>
               </h2>
 
-              <div className="prose max-w-none text-sm text-[#052659]/80 leading-relaxed font-sans font-medium flex flex-col gap-5">
+              <div className="prose max-w-none text-sm text-[#121316]/80 leading-relaxed font-sans font-medium flex flex-col gap-5">
                 <p>
                   Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
                 </p>
@@ -281,12 +281,12 @@ export default function DoctorProfile() {
                 </p>
               </div>
 
-              <h3 className="font-serif text-xl font-black text-[#021024] mt-10 mb-6 flex items-center gap-2 pb-2 border-b border-[#7DA0CA]/25">
-                <Briefcase className="w-5 h-5 text-[#052659]" />
+              <h3 className="font-serif text-xl font-black text-[#121316] mt-10 mb-6 flex items-center gap-2 pb-2 border-b border-gray-200">
+                <Briefcase className="w-5 h-5 text-[#1E64EC]" />
                 <span>Practice History & Education Timeline</span>
               </h3>
 
-              <div className="border-l-2 border-[#7DA0CA]/30 pl-5 flex flex-col gap-6 text-left">
+              <div className="border-l-2 border-gray-200 pl-5 flex flex-col gap-6 text-left">
                 {[
                   { year: '2016 – Present', title: 'Founder & Senior Consultant — Centre For Skin', desc: 'Founder and Lead Consultant at Centre For Skin in Saini Enclave, Karkardooma, East Delhi.' },
                   { year: '2015', title: 'Awarded Most Promising Dermatologist In Delhi NCR', desc: 'Recognized for clinical excellence and patient care in Delhi NCR.' },
@@ -300,10 +300,10 @@ export default function DoctorProfile() {
                   { year: '2004 – 2006', title: 'MBBS Medical Graduation', desc: 'Graduated from Motilal Nehru Medical College, Allahabad.' }
                 ].map((t, idx) => (
                   <div key={idx} className="relative group">
-                    <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#052659] border-2 border-[#C1E8FF] group-hover:scale-125 transition-transform" />
-                    <div className="font-mono text-xs font-bold text-[#5483B3]">{t.year}</div>
-                    <div className="font-serif text-sm font-bold text-[#021024] mt-0.5">{t.title}</div>
-                    <p className="font-sans text-xs text-[#052659]/75 mt-1 leading-relaxed">{t.desc}</p>
+                    <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#1E64EC] border-2 border-white group-hover:scale-125 transition-transform" />
+                    <div className="font-mono text-xs font-black text-[#1E64EC]">{t.year}</div>
+                    <div className="font-serif text-sm font-bold text-[#121316] mt-0.5">{t.title}</div>
+                    <p className="font-sans text-xs text-[#121316]/75 mt-1 leading-relaxed">{t.desc}</p>
                   </div>
                 ))}
               </div>
