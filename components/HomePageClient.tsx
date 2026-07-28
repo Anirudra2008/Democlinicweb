@@ -1091,10 +1091,13 @@ export default function HomePageClient() {
                 const IconComponent = s.icon;
                 const isActive = activeTab === s.id;
                 return (
-                  <div key={s.id} className="flex flex-col gap-2">
+                  <div key={s.id} className="flex flex-col">
                     <button
-                      onClick={() => setActiveTab(s.id)}
-                      className={`w-full text-left p-4 rounded-[24px] border transition-all flex items-center gap-4 cursor-pointer select-none ${
+                      onClick={(e) => {
+                        setActiveTab(s.id);
+                        (e.currentTarget as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                      }}
+                      className={`w-full text-left p-4 rounded-[24px] border transition-all duration-300 flex items-center gap-4 cursor-pointer select-none ${
                         isActive 
                           ? 'bg-[#1E64EC] border-[#1E64EC] text-white shadow-xl scale-102' 
                           : 'bg-white border-gray-200 hover:border-[#1E64EC] text-[#121316] hover:bg-[#EBF2FF]/60 shadow-sm'
@@ -1103,7 +1106,7 @@ export default function HomePageClient() {
                       onMouseEnter={() => setIsCursorHovering(true)}
                       onMouseLeave={() => setIsCursorHovering(false)}
                     >
-                      <div className={`p-2.5 rounded-xl transition-colors ${
+                      <div className={`p-2.5 rounded-xl transition-colors duration-300 ${
                         isActive ? 'bg-white/20 text-white' : 'bg-[#EBF2FF] text-[#1E64EC]'
                       }`}>
                         <IconComponent className="w-5 h-5" />
@@ -1112,46 +1115,52 @@ export default function HomePageClient() {
                         <div className="font-serif text-sm font-black leading-snug">
                           {isHindi ? s.titleHindi : s.title}
                         </div>
-                        <div className={`font-sans text-[10px] font-semibold uppercase tracking-wider mt-0.5 ${
+                        <div className={`font-sans text-[10px] font-semibold uppercase tracking-wider mt-0.5 transition-colors duration-300 ${
                           isActive ? 'text-white/90 font-bold' : 'text-[#1E64EC]'
                         }`}>
                           View {s.treatments.length} Procedures
                         </div>
                       </div>
-                      <div className={`p-1.5 rounded-lg border transition-all ${
+                      <div className={`p-1.5 rounded-lg border transition-transform duration-300 ${
                         isActive ? 'bg-white/20 border-white/40 text-white rotate-180' : 'bg-transparent border-gray-200 text-[#121316]'
                       }`}>
                         <ChevronDown className="w-4 h-4" />
                       </div>
                     </button>
 
-                    {/* Accordion Expanded Procedures Dropdown directly under the selected button */}
-                    {isActive && (
-                      <div className="bg-[#EBF2FF]/80 border-2 border-[#1E64EC]/30 rounded-[24px] p-4 text-left shadow-inner my-1 animate-fade-in">
-                        <div className="flex items-center justify-between pb-2 border-b border-[#1E64EC]/20 mb-3">
-                          <span className="font-sans text-[10px] uppercase font-extrabold text-[#1E64EC] tracking-wider">
-                            Certified Procedures ({s.treatments.length})
-                          </span>
-                          <span className="w-2 h-2 rounded-full bg-[#1E64EC] animate-pulse" />
-                        </div>
-                        
-                        <div className="flex flex-col gap-2 max-h-[360px] overflow-y-auto pr-1 custom-scrollbar overscroll-contain touch-pan-y">
-                          {s.treatments.map((t, idx) => (
-                            <div 
-                              key={idx}
-                              className="p-2.5 bg-white hover:bg-[#EBF2FF] border border-gray-200/80 hover:border-[#1E64EC] rounded-xl flex items-start gap-2.5 transition-colors duration-150 shadow-sm group cursor-pointer"
-                            >
-                              <div className="p-1 rounded-md bg-[#1E64EC]/10 text-[#1E64EC] group-hover:bg-[#1E64EC] group-hover:text-white transition-colors shrink-0 mt-0.5">
-                                <ShieldCheck className="w-3.5 h-3.5 stroke-[2.5px]" />
+                    {/* Smooth 60 FPS Accordion Height Opening Animation Container */}
+                    <div 
+                      className={`grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden ${
+                        isActive ? 'grid-rows-[1fr] opacity-100 mt-2 mb-1' : 'grid-rows-[0fr] opacity-0 mt-0 mb-0 pointer-events-none'
+                      }`}
+                    >
+                      <div className="overflow-hidden min-h-0">
+                        <div className="bg-[#EBF2FF]/80 border-2 border-[#1E64EC]/30 rounded-[24px] p-4 text-left shadow-inner">
+                          <div className="flex items-center justify-between pb-2 border-b border-[#1E64EC]/20 mb-3">
+                            <span className="font-sans text-[10px] uppercase font-extrabold text-[#1E64EC] tracking-wider">
+                              Certified Procedures ({s.treatments.length})
+                            </span>
+                            <span className="w-2 h-2 rounded-full bg-[#1E64EC] animate-pulse" />
+                          </div>
+                          
+                          <div className="flex flex-col gap-2 max-h-[360px] overflow-y-auto pr-1 custom-scrollbar overscroll-contain touch-pan-y">
+                            {s.treatments.map((t, idx) => (
+                              <div 
+                                key={idx}
+                                className="p-2.5 bg-white hover:bg-[#EBF2FF] border border-gray-200/80 hover:border-[#1E64EC] rounded-xl flex items-start gap-2.5 transition-all duration-150 shadow-sm group cursor-pointer hover:translate-x-1"
+                              >
+                                <div className="p-1 rounded-md bg-[#1E64EC]/10 text-[#1E64EC] group-hover:bg-[#1E64EC] group-hover:text-white transition-colors shrink-0 mt-0.5">
+                                  <ShieldCheck className="w-3.5 h-3.5 stroke-[2.5px]" />
+                                </div>
+                                <span className="font-serif text-xs font-bold text-[#121316] group-hover:text-[#1E64EC] transition-colors leading-tight">
+                                  {t}
+                                </span>
                               </div>
-                              <span className="font-serif text-xs font-bold text-[#121316] group-hover:text-[#1E64EC] transition-colors leading-tight">
-                                {t}
-                              </span>
-                            </div>
-                          ))}
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}
