@@ -30,7 +30,7 @@ export default function KarkardoomaDermatologist() {
         "name": "How do I reach Centre For Skin from Karkardooma Metro Station?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The clinic is located in Saini Enclave, just opposite the Balaji Temple. It is a brief 2-3 minute walking distance (under 200 meters) from the Karkardooma Metro Station (Blue & Pink Line interchange). Exit towards Saini Enclave and walk past the D-Block Market."
+          "text": "The clinic is located in Saini Enclave, just opposite the Balaji Temple (Canara Bank Karkardooma). It is a brief 2-3 minute walking distance (under 200 meters) from the Karkardooma Metro Station (Blue & Pink Line interchange). Exit towards Saini Enclave and walk past the D-Block Market."
         }
       },
       {
@@ -46,7 +46,7 @@ export default function KarkardoomaDermatologist() {
         "name": "What landmarks are near the Centre For Skin Karkardooma branch?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The most prominent local landmarks are the Balaji Temple (directly opposite the clinic), Saini Enclave D-Block Market, and the Karkardooma Metro Station (walking distance)."
+          "text": "The most prominent local landmarks are the Balaji Temple (Canara Bank Karkardooma) (directly opposite the clinic), Saini Enclave D-Block Market, and the Karkardooma Metro Station (walking distance)."
         }
       }
     ]
@@ -103,7 +103,7 @@ export default function KarkardoomaDermatologist() {
                 Best Dermatologist in Karkardooma, East Delhi — Dr. Gaurav Nakra
               </h1>
               <p className="text-sm md:text-base text-[#C1E8FF] font-medium leading-relaxed mb-6">
-                Gold Medalist clinical expertise, state-of-the-art lasers, and certified hair restoration procedures at Saini Enclave, opposite Balaji Temple.
+                Gold Medalist clinical expertise, state-of-the-art lasers, and certified hair restoration procedures at Saini Enclave, opposite Balaji Temple (Canara Bank Karkardooma).
               </p>
               
               <div className="flex flex-wrap gap-4 text-xs font-bold text-[#7DA0CA]">
@@ -151,7 +151,7 @@ export default function KarkardoomaDermatologist() {
                       <strong>By Metro:</strong> We are just a 2-minute walking distance (under 200 meters) from the <strong>Karkardooma Metro Station</strong>, which serves as a major interchange between the Blue Line and the Pink Line. Simply exit the station, head towards Saini Enclave D-Block Market, and you will find us opposite the temple.
                     </li>
                     <li>
-                      <strong>By Road / Landmarks:</strong> The clinic is located at 178, Basement, Saini Enclave. We are situated directly opposite the famous <strong>Balaji Temple</strong> (Phase 1), a prominent landmark in the area. 
+                      <strong>By Road / Landmarks:</strong> The clinic is located at 178, Basement, Saini Enclave. We are situated directly opposite the famous <strong>Balaji Temple (Canara Bank Karkardooma)</strong> (Phase 1), a prominent landmark in the area. 
                     </li>
                     <li>
                       <strong>Proximity to NCR:</strong> The clinic is easily accessible from Anand Vihar ISBT, Vivek Vihar, Jagriti Enclave, and Kaushambi, making it a convenient destination for NCR residents.
@@ -204,7 +204,7 @@ export default function KarkardoomaDermatologist() {
                     },
                     {
                       q: 'How do I reach Centre For Skin from Karkardooma Metro Station?',
-                      a: 'The clinic is located in Saini Enclave, just opposite the Balaji Temple. It is a brief 2-3 minute walking distance (under 200 meters) from the Karkardooma Metro Station (Blue & Pink Line interchange). Exit towards Saini Enclave and walk past the D-Block Market.'
+                      a: 'The clinic is located in Saini Enclave, just opposite the Balaji Temple (Canara Bank Karkardooma). It is a brief 2-3 minute walking distance (under 200 meters) from the Karkardooma Metro Station (Blue & Pink Line interchange). Exit towards Saini Enclave and walk past the D-Block Market.'
                     },
                     {
                       q: 'Can I book a same-day dermatology consultation in Saini Enclave?',
@@ -212,7 +212,7 @@ export default function KarkardoomaDermatologist() {
                     },
                     {
                       q: 'What landmarks are near the Centre For Skin Karkardooma branch?',
-                      a: 'The most prominent local landmarks are the Balaji Temple (directly opposite the clinic), Saini Enclave D-Block Market, and the Karkardooma Metro Station (walking distance).'
+                      a: 'The most prominent local landmarks are the Balaji Temple (Canara Bank Karkardooma) (directly opposite the clinic), Saini Enclave D-Block Market, and the Karkardooma Metro Station (walking distance).'
                     }
                   ].map((faq, index) => (
                     <div key={index} className="border border-[#7DA0CA]/15 rounded-2xl bg-white p-4.5 shadow-sm">

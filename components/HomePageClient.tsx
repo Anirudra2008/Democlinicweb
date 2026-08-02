@@ -1455,7 +1455,7 @@ export default function HomePageClient() {
                       178, Basement, Saini Enclave, Near Karkardooma Metro Station, Anand Vihar, East Delhi, Delhi — 110092
                     </p>
                     <span className="font-sans text-[10px] text-[#FACC15] font-semibold mt-1 block">
-                      Landmark: Opposite Balaji Temple, Phase 1, D-Block Market
+                      Landmark - Canara Bank Karkardooma
                     </span>
                   </div>
                 </div>
