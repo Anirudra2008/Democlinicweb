@@ -30,6 +30,7 @@ import {
 
 import Navbar from './Navbar';
 import Footer from './Footer';
+import TestimonialFloatCluster from './TestimonialFloatCluster';
 
 // DECLARE WEATHER & OTHER GLOBAL VARIABLES FOR TS SATISFACTION
 declare global {
@@ -198,6 +199,44 @@ export default function HomePageClient() {
   
   // Hindi translation states
   const [isHindi, setIsHindi] = useState(false);
+
+  // Clinic IST Open / Closed Status Hook (Mon-Sat 12:30 PM - 7:30 PM IST)
+  const [isOpen, setIsOpen] = useState(false);
+  const [statusText, setStatusText] = useState('12:30 PM – 7:30 PM · Mon–Sat');
+
+  useEffect(() => {
+    const checkStatus = () => {
+      const now = new Date();
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const ist = new Date(utc + (3600000 * 5.5));
+      
+      const day = ist.getDay(); // 0 = Sun, 1-6 = Mon-Sat
+      const hours = ist.getHours();
+      const mins = ist.getMinutes();
+      const currentDecimal = hours + (mins / 60);
+
+      const isMonToSat = day >= 1 && day <= 6;
+      const isWithinHours = currentDecimal >= 12.5 && currentDecimal < 19.5;
+
+      if (isMonToSat && isWithinHours) {
+        setIsOpen(true);
+        setStatusText('12:30 PM – 7:30 PM · Mon–Sat');
+      } else {
+        setIsOpen(false);
+        if (day === 0) {
+          setStatusText('Closed Sundays · Opens Mon 12:30 PM');
+        } else if (currentDecimal < 12.5) {
+          setStatusText('Opens Today 12:30 PM');
+        } else {
+          setStatusText(day === 6 ? 'Closed · Opens Mon 12:30 PM' : 'Opens Tomorrow 12:30 PM');
+        }
+      }
+    };
+
+    checkStatus();
+    const interval = setInterval(checkStatus, 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Form State
   const [formData, setFormData] = useState({
@@ -728,7 +767,7 @@ export default function HomePageClient() {
                 'Highly specialized, award-winning dermatological science in East Delhi near Karkardooma Metro. Providing gold-standard lasers, certified hair restorations (DHI/PRP), chemical peels, and pediatric dermatology by Gold Medalist Dr. Gaurav Nakra.'}
             </p>
 
-            <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-xl mb-10">
+            <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-xl mb-6">
               {[
                 { label: 'MD Gold Medalist', desc: isHindi ? 'शीर्ष सम्मानित' : 'Top Credentialed' },
                 { label: '20 Years', desc: isHindi ? 'विशिष्ट अनुभव' : 'Clinical Expertise' },
@@ -739,6 +778,18 @@ export default function HomePageClient() {
                   <div className="font-sans text-[10px] md:text-xs text-[#1E64EC] uppercase tracking-wider font-bold mt-1">{stat.desc}</div>
                 </div>
               ))}
+            </div>
+
+            {/* Live Clinic Operating Status Pill */}
+            <div className="mb-8 inline-flex items-center gap-2.5 bg-white px-4 py-2 rounded-full border border-gray-200/90 shadow-sm w-fit">
+              <span className="flex items-center gap-1.5 font-sans text-xs md:text-sm font-bold text-[#121316]">
+                <span className={`w-2.5 h-2.5 rounded-full ${isOpen ? 'bg-[#22C55E] animate-pulse' : 'bg-gray-400'}`} />
+                {isOpen ? (isHindi ? 'अभी खुला है' : 'Open Now') : (isHindi ? 'अभी बंद है' : 'Closed')}
+              </span>
+              <span className="text-gray-300 font-light">|</span>
+              <span className="font-sans text-xs text-[#64748B] font-semibold">
+                {statusText}
+              </span>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -773,94 +824,9 @@ export default function HomePageClient() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative flex justify-center items-center">
-            <div className="w-full max-w-[380px] aspect-[3/4] md:aspect-[4/5] rounded-[24px] overflow-hidden shadow-2xl relative border border-white/20 hover:scale-[1.02] transition-all duration-300 group z-10 flex flex-col justify-end">
-              
-              {/* Full-bleed cover photo */}
-              <img 
-                src="/clinic-hero-card.jpg" 
-                alt="Centre For Skin clinic interior" 
-                className="absolute inset-0 w-full h-full object-cover object-center -z-20 transition-transform duration-500 group-hover:scale-105"
-                loading="eager"
-              />
-
-              {/* Dynamic canvas on top of image but behind text */}
-              <canvas 
-                ref={heroCanvasRef} 
-                className="absolute inset-0 w-full h-full opacity-20 mix-blend-screen pointer-events-none -z-10" 
-              />
-
-              {/* Top-left combined absolute badge */}
-              <div className="absolute top-5 left-5 bg-[#FAF8F5] text-[#121316] text-[11px] font-bold tracking-wider px-3.5 py-1.5 rounded-full shadow-md z-20 pointer-events-none select-none flex items-center gap-1 border border-white/20">
-                <span className="text-[#1E64EC] text-xs">★</span> CLINICAL &bull; PRECISE
-              </div>
-
-              {/* Bottom gradient overlay covering ~65% */}
-              <div 
-                className="absolute inset-0 z-10 pointer-events-none"
-                style={{
-                  background: 'linear-gradient(to top, rgba(18, 19, 22, 0.98) 0%, rgba(18, 19, 22, 0.65) 45%, rgba(18, 19, 22, 0) 100%)'
-                }}
-              />
-
-              {/* Content block */}
-              <div className="relative z-20 p-6 md:p-8 flex flex-col w-full mt-auto">
-                <div className="flex justify-between items-end gap-4 w-full">
-                  {/* Left block: Operational Timings */}
-                  <div className="text-left flex-1">
-                    <span className="font-sans text-[10px] sm:text-[11px] font-black text-white/70 tracking-[0.15em] uppercase block mb-1">
-                      {isHindi ? 'कार्य समय विवरण' : 'OPERATIONAL TIMINGS'}
-                    </span>
-                    <h4 className="text-xl sm:text-[24px] lg:text-[26px] font-serif font-black text-white leading-tight">
-                      12:30 PM – 7:30 PM
-                    </h4>
-                    <span className="font-sans text-xs sm:text-sm text-white/80 font-semibold mt-1 block">
-                      {isHindi ? 'सोमवार - शनिवार · रविवार बंद' : 'Monday – Saturday · Sunday Closed'}
-                    </span>
-                  </div>
-
-                  {/* Right block: Stat Columns */}
-                  <div className="flex flex-col gap-4 text-right border-l border-white/20 pl-4 sm:pl-6 shrink-0">
-                    <div className="flex flex-col items-end">
-                      <MapPin className="w-4 h-4 text-[#1E64EC] mb-0.5" />
-                      <span className="font-serif text-[11px] sm:text-xs font-black text-white block leading-none">
-                        {isHindi ? 'कड़कड़डूमा' : 'Karkardooma'}
-                      </span>
-                      <span className="font-sans text-[9px] text-white/70 font-bold uppercase tracking-wider mt-0.5 block leading-none">
-                        {isHindi ? 'मेट्रो स्टेशन' : 'Metro Station'}
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-end">
-                      <Building className="w-4 h-4 text-[#1E64EC] mb-0.5" />
-                      <span className="font-serif text-[11px] sm:text-xs font-black text-white block leading-none">
-                        {isHindi ? 'सैनी एन्क्लेव' : 'Saini Enclave'}
-                      </span>
-                      <span className="font-sans text-[9px] text-white/70 font-bold uppercase tracking-wider mt-0.5 block leading-none">
-                        {isHindi ? '178, बेसमेंट' : '178, Basement'}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Divider */}
-                <div className="w-full h-[1px] bg-white/20 my-4" />
-
-                {/* Footer Byline */}
-                <div className="flex items-center gap-3 w-full text-left">
-                  <div className="w-8 h-8 rounded-full bg-[#1E64EC] border border-white/20 flex items-center justify-center font-serif text-xs font-black text-white shrink-0">
-                    GN
-                  </div>
-                  <div>
-                    <div className="font-serif text-xs font-bold text-white leading-tight">Dr. Gaurav Nakra</div>
-                    <div className="font-sans text-[10px] text-white/75 font-semibold mt-0.5">
-                      {isHindi ? 'एमडी गोल्ड मेडलिस्ट · 20 वर्ष अनुभव' : 'MD Gold Medalist · 20 Yrs Exp'}
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
+          {/* Right Column: Signature Patient Voice Testimonial Floating Cluster */}
+          <div className="lg:col-span-5 relative flex justify-center items-center w-full h-full min-h-[540px] md:min-h-[580px] lg:min-h-[620px]">
+            <TestimonialFloatCluster />
           </div>
 
         </div>
