@@ -46,7 +46,7 @@ export default function PreetViharDermatologist() {
         "name": "How can I schedule an appointment with Dr. Gaurav Nakra from Preet Vihar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can schedule a consultation easily by booking on our website form, or by calling our desk lines at 011 4605 2234 or +91 70420 87962."
+          "text": "You can schedule a consultation easily by booking on our website form, or by calling our desk line at 011 4605 2234."
         }
       }
     ]
@@ -209,7 +209,7 @@ export default function PreetViharDermatologist() {
                     },
                     {
                       q: 'How can I schedule an appointment with Dr. Gaurav Nakra from Preet Vihar?',
-                      a: 'You can schedule a consultation easily by booking on our website form, or by calling our desk lines at 011 4605 2234 or +91 70420 87962.'
+                      a: 'You can schedule a consultation easily by booking on our website form, or by calling our desk line at 011 4605 2234.'
                     }
                   ].map((faq, index) => (
                     <div key={index} className="border border-[#7DA0CA]/15 rounded-2xl bg-white p-4.5 shadow-sm">
@@ -240,7 +240,6 @@ export default function PreetViharDermatologist() {
                   <Phone className="w-4 h-4 text-[#C1E8FF] shrink-0 mt-0.5" />
                   <div className="font-sans text-xs text-[#7DA0CA] font-bold">
                     <a href="tel:01146052234" className="text-white hover:underline block">011 4605 2234</a>
-                    <a href="tel:+917042087962" className="text-white hover:underline block mt-0.5">+91 70420 87962</a>
                   </div>
                 </div>
 

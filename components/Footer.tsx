@@ -85,7 +85,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="text-white block font-serif">Direct Appointment Line:</span>
-                PH: 011 4605 2234 / +91 70420 87962
+                PH: 011 4605 2234
               </div>
               <div>
                 <span className="text-white block font-serif">Operating Hours:</span>

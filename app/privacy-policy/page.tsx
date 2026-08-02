@@ -98,7 +98,7 @@ export default function PrivacyPolicy() {
               <strong>Centre For Skin — Dr. Gaurav Nakra Clinic</strong><br />
               178, Basement, Saini Enclave, Near Karkardooma Metro, Anand Vihar, East Delhi, Delhi 110092<br />
               Email: info@centreforskin.in<br />
-              Phone: 011 4605 2234 / +91 70420 87962
+              Phone: 011 4605 2234
             </p>
           </div>
         </div>

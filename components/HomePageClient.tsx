@@ -1417,12 +1417,6 @@ export default function HomePageClient() {
                     >
                       011 4605 2234
                     </a>
-                    <a 
-                      href="tel:+917042087962" 
-                      className="font-sans text-xs font-semibold text-[#94A3B8] hover:text-white transition-colors mt-0.5 block"
-                    >
-                      Mob: +91 70420 87962
-                    </a>
                   </div>
                 </div>
 
@@ -1784,7 +1778,7 @@ export default function HomePageClient() {
 
       {/* FLOATING WHATSAPP */}
       <a 
-        href="https://wa.me/917042087962"
+        href="tel:01146052234"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 left-6 z-[99999] group animate-bounce"

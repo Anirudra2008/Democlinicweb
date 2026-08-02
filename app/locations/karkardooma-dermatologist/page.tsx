@@ -38,7 +38,7 @@ export default function KarkardoomaDermatologist() {
         "name": "Can I book a same-day dermatology consultation in Saini Enclave?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We strongly recommend booking in advance by calling 011 4605 2234 or +91 70420 87962 to minimize wait times, as Dr. Gaurav Nakra personally attends to each patient. However, emergency clinical dermatology cases are evaluated with priority."
+          "text": "We strongly recommend booking in advance by calling 011 4605 2234 to minimize wait times, as Dr. Gaurav Nakra personally attends to each patient. However, emergency clinical dermatology cases are evaluated with priority."
         }
       },
       {
@@ -208,7 +208,7 @@ export default function KarkardoomaDermatologist() {
                     },
                     {
                       q: 'Can I book a same-day dermatology consultation in Saini Enclave?',
-                      a: 'We strongly recommend booking in advance by calling 011 4605 2234 or +91 70420 87962 to minimize wait times, as Dr. Gaurav Nakra personally attends to each patient. However, emergency clinical dermatology cases are evaluated with priority.'
+                      a: 'We strongly recommend booking in advance by calling 011 4605 2234 to minimize wait times, as Dr. Gaurav Nakra personally attends to each patient. However, emergency clinical dermatology cases are evaluated with priority.'
                     },
                     {
                       q: 'What landmarks are near the Centre For Skin Karkardooma branch?',
@@ -243,7 +243,6 @@ export default function KarkardoomaDermatologist() {
                   <Phone className="w-4 h-4 text-[#C1E8FF] shrink-0 mt-0.5" />
                   <div className="font-sans text-xs text-[#7DA0CA] font-bold">
                     <a href="tel:01146052234" className="text-white hover:underline block">011 4605 2234</a>
-                    <a href="tel:+917042087962" className="text-white hover:underline block mt-0.5">+91 70420 87962</a>
                   </div>
                 </div>
 
