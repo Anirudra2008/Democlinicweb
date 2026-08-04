@@ -813,10 +813,9 @@ export default function HomePageClient() {
             <source src="/vid/Video Project 5.mp4" type="video/mp4" />
           </video>
           
-          {/* High-visibility contrast overlays: Soft vignette for crisp text reading while video remains vibrant */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/85 via-[#FAF8F5]/45 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-32 bottom-0" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/60 via-transparent to-transparent h-20 top-0" />
+          {/* Smooth & Seamless Video Backdrop Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/85 via-[#FAF8F5]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-24 bottom-0" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
