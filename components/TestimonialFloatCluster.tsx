@@ -93,33 +93,22 @@ export default function TestimonialFloatCluster() {
     <div
       ref={containerRef}
       aria-label="Patient testimonials"
-      className="relative w-full h-full min-h-[540px] md:min-h-[580px] lg:min-h-[620px] rounded-[32px] overflow-hidden shadow-2xl bg-gradient-to-br from-[#1E64EC] via-[#154ec2] to-[#121316] p-6 flex flex-col justify-between select-none"
+      className="relative w-full h-full min-h-[540px] md:min-h-[580px] lg:min-h-[620px] p-2 sm:p-4 flex flex-col justify-between select-none"
     >
-      {/* Noise grain overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.05] mix-blend-overlay pointer-events-none z-0" 
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-        }}
-      />
-
-      {/* Ambient top-right radial glow */}
-      <div className="absolute -top-16 -right-16 w-72 h-72 bg-[#60A5FA] rounded-full blur-3xl opacity-30 pointer-events-none z-0" />
-
       {/* Header section: Eyebrow + Headline */}
       <div className="relative z-20 text-left">
-        <div className="inline-flex items-center gap-1.5 bg-white text-[#121316] text-[11px] font-extrabold tracking-wider px-3.5 py-1.5 rounded-full shadow-md mb-4 border border-white/20">
+        <div className="inline-flex items-center gap-1.5 bg-white text-[#121316] text-[11px] font-extrabold tracking-wider px-3.5 py-1.5 rounded-full shadow-md mb-4 border border-gray-200/80">
           <span className="text-amber-500">★</span> 500+ VERIFIED PATIENT REVIEWS
         </div>
 
-        <h3 className="text-white text-2xl md:text-3xl font-serif font-black leading-tight max-w-[240px]">
+        <h3 className="text-[#121316] text-2xl md:text-3xl font-serif font-black leading-tight max-w-[240px]">
           Real{' '}
-          <span className="inline-block bg-white text-[#121316] px-2 py-0.5 rounded-md shadow-sm">
+          <span className="inline-block bg-[#1E64EC] text-white px-2 py-0.5 rounded-md shadow-sm">
             Patients.
           </span>
           <br />
           Real{' '}
-          <span className="inline-block bg-white text-[#121316] px-2 py-0.5 rounded-md shadow-sm">
+          <span className="inline-block bg-[#1E64EC] text-white px-2 py-0.5 rounded-md shadow-sm">
             Results.
           </span>
         </h3>
@@ -145,9 +134,9 @@ export default function TestimonialFloatCluster() {
                 position: 'absolute',
                 transform: initialTransform,
               }}
-              className="w-[270px] lg:w-[290px] bg-white rounded-2xl shadow-2xl p-4.5 border border-gray-100 transition-all duration-300 hover:!rotate-0 hover:-translate-y-2 hover:shadow-2xl hover:z-40 cursor-default group"
+              className="w-[270px] lg:w-[290px] bg-white rounded-2xl shadow-2xl p-4.5 border border-gray-200/80 transition-all duration-300 hover:!rotate-0 hover:-translate-y-2 hover:shadow-2xl hover:z-40 cursor-default group"
             >
-              {/* Decorative quotation mark mark */}
+              {/* Decorative quotation mark */}
               <div className="absolute top-2 right-4 text-5xl font-serif text-[#1E64EC]/10 pointer-events-none select-none">
                 &ldquo;
               </div>
@@ -182,7 +171,7 @@ export default function TestimonialFloatCluster() {
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className="w-[85vw] max-w-[280px] shrink-0 snap-center bg-white rounded-2xl shadow-xl p-4 border border-gray-100 text-left relative"
+            className="w-[85vw] max-w-[280px] shrink-0 snap-center bg-white rounded-2xl shadow-xl p-4 border border-gray-200/80 text-left relative"
           >
             <div className="absolute top-2 right-3 text-4xl font-serif text-[#1E64EC]/10 pointer-events-none">
               &ldquo;
@@ -205,13 +194,13 @@ export default function TestimonialFloatCluster() {
       </div>
 
       {/* Bottom Trust Strip */}
-      <div className="relative z-20 pt-4 border-t border-white/15 flex items-center justify-between text-white text-xs font-sans font-bold">
-        <span className="flex items-center gap-1.5 text-white/90">
+      <div className="relative z-20 pt-3 flex items-center justify-between text-[#121316] text-xs font-sans font-bold bg-white/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/60 shadow-sm">
+        <span className="flex items-center gap-1.5 text-[#121316]">
           <GoogleIcon /> 4.5★ &bull; 508+ Google Reviews
         </span>
         <a 
           href="#reviews" 
-          className="underline underline-offset-4 text-white hover:text-[#93C5FD] transition-colors"
+          className="underline underline-offset-4 text-[#1E64EC] hover:text-[#154ec2] transition-colors"
         >
           See all reviews &rarr;
         </a>
@@ -271,7 +260,7 @@ function GoogleIcon() {
   return (
     <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24">
       <path
-        fill="currentColor"
+        fill="#4285F4"
         d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12s3.36-7.27 7.19-7.27c3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.19 2C6.42 2 2.03 6.8 2.03 12s4.39 10 10.16 10c5.52 0 9.48-3.9 9.48-9.62 0-.9-.13-1.63-.32-2.28z"
       />
     </svg>
