@@ -254,7 +254,53 @@ export default function HomePageClient() {
   // Refs
   const bgCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const heroCanvasRef = useRef<HTMLCanvasElement | null>(null);
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
   const scrollRef = useRef<number>(0);
+
+  // Hero Background Video Controls
+  const [isVideoMuted, setIsVideoMuted] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const heroSection = document.getElementById('home');
+    if (!heroSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+          setIsVideoPlaying(true);
+        } else {
+          video.pause();
+          setIsVideoPlaying(false);
+        }
+      },
+      { threshold: 0.05 }
+    );
+
+    observer.observe(heroSection);
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleVideoPlay = () => {
+    if (!heroVideoRef.current) return;
+    if (isVideoPlaying) {
+      heroVideoRef.current.pause();
+      setIsVideoPlaying(false);
+    } else {
+      heroVideoRef.current.play().catch(() => {});
+      setIsVideoPlaying(true);
+    }
+  };
+
+  const toggleVideoMute = () => {
+    if (!heroVideoRef.current) return;
+    heroVideoRef.current.muted = !isVideoMuted;
+    setIsVideoMuted(!isVideoMuted);
+  };
 
   // Simulated Loading sequence
   useEffect(() => {
@@ -744,11 +790,30 @@ export default function HomePageClient() {
 
       <Navbar isHindi={isHindi} setIsHindi={setIsHindi} setIsCursorHovering={setIsCursorHovering} />
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION WITH BACKGROUND VIDEO */}
       <section 
         id="home"
         className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden bg-[#FAF8F5]"
       >
+        {/* Full-Bleed Background Video Layer */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <video
+            ref={heroVideoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-40 scale-105 transition-opacity duration-1000"
+          >
+            <source src="/vid/video-project.mp4" type="video/mp4" />
+          </video>
+          
+          {/* Subtle gradient overlays to guarantee 100% crisp text contrast & luxury depth */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/95 via-[#FAF8F5]/85 to-[#FAF8F5]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-40 bottom-0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/70 via-transparent to-transparent h-28 top-0" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           
           <div className="lg:col-span-7 flex flex-col justify-center text-left hero-parallax">
@@ -829,6 +894,26 @@ export default function HomePageClient() {
             <TestimonialFloatCluster />
           </div>
 
+        </div>
+
+        {/* Cinematic Video Control Badge */}
+        <div className="absolute bottom-3 left-4 md:bottom-4 md:left-8 z-20 flex items-center gap-2 bg-white/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gray-200/90 shadow-md text-[11px] font-sans font-bold text-[#121316]">
+          <span className="w-2 h-2 rounded-full bg-[#1E64EC] animate-pulse" />
+          <span className="hidden sm:inline font-mono tracking-wider text-[10px] text-[#64748B]">CINEMATIC TOUR</span>
+          <button 
+            onClick={toggleVideoPlay}
+            className="px-2 py-0.5 bg-[#1E64EC]/10 hover:bg-[#1E64EC]/20 text-[#1E64EC] rounded-md transition-colors font-extrabold cursor-pointer"
+            title={isVideoPlaying ? 'Pause Video' : 'Play Video'}
+          >
+            {isVideoPlaying ? 'Pause' : 'Play'}
+          </button>
+          <button 
+            onClick={toggleVideoMute}
+            className="px-2 py-0.5 bg-[#1E64EC]/10 hover:bg-[#1E64EC]/20 text-[#1E64EC] rounded-md transition-colors font-extrabold cursor-pointer"
+            title={isVideoMuted ? 'Unmute Audio' : 'Mute Audio'}
+          >
+            {isVideoMuted ? 'Sound On' : 'Muted'}
+          </button>
         </div>
       </section>
 
