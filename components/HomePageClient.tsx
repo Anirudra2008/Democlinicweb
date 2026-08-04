@@ -813,9 +813,10 @@ export default function HomePageClient() {
             <source src="/vid/Video Project 5.mp4" type="video/mp4" />
           </video>
           
-          {/* Smooth & Seamless Video Backdrop Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/85 via-[#FAF8F5]/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-24 bottom-0" />
+          {/* Smooth Video Backdrop Overlays: Touches the navbar seamlessly with zero white gap */}
+          <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#121316]/30 via-[#121316]/10 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/90 via-[#FAF8F5]/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-24 bottom-0 pointer-events-none" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
