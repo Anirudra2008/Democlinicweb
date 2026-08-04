@@ -265,6 +265,9 @@ export default function HomePageClient() {
     const video = heroVideoRef.current;
     if (!video) return;
 
+    video.muted = true;
+    video.play().catch(() => {});
+
     const heroSection = document.getElementById('home');
     if (!heroSection) return;
 
@@ -803,15 +806,17 @@ export default function HomePageClient() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-40 scale-105 transition-opacity duration-1000"
+            preload="auto"
+            className="w-full h-full object-cover opacity-90 scale-105 transition-opacity duration-700"
           >
             <source src="/vid/video-project.mp4" type="video/mp4" />
+            <source src="/vid/Video Project 5.mp4" type="video/mp4" />
           </video>
           
-          {/* Subtle gradient overlays to guarantee 100% crisp text contrast & luxury depth */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/95 via-[#FAF8F5]/85 to-[#FAF8F5]/65" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-40 bottom-0" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/70 via-transparent to-transparent h-28 top-0" />
+          {/* High-visibility contrast overlays: Soft vignette for crisp text reading while video remains vibrant */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/85 via-[#FAF8F5]/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-32 bottom-0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F5]/60 via-transparent to-transparent h-20 top-0" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
