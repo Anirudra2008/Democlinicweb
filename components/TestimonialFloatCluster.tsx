@@ -93,27 +93,8 @@ export default function TestimonialFloatCluster() {
     <div
       ref={containerRef}
       aria-label="Patient testimonials"
-      className="relative w-full h-full min-h-[540px] md:min-h-[580px] lg:min-h-[620px] p-2 sm:p-4 flex flex-col justify-between select-none"
+      className="relative w-full h-full min-h-[450px] md:min-h-[480px] lg:min-h-[500px] p-2 sm:p-4 flex flex-col justify-center select-none"
     >
-      {/* Header section: Eyebrow + Headline */}
-      <div className="relative z-20 text-left">
-        <div className="inline-flex items-center gap-1.5 bg-white text-[#121316] text-[11px] font-extrabold tracking-wider px-3.5 py-1.5 rounded-full shadow-md mb-4 border border-gray-200/80">
-          <span className="text-amber-500">★</span> 500+ VERIFIED PATIENT REVIEWS
-        </div>
-
-        <h3 className="text-[#121316] text-2xl md:text-3xl font-serif font-black leading-tight max-w-[240px]">
-          Real{' '}
-          <span className="inline-block bg-[#1E64EC] text-white px-2 py-0.5 rounded-md shadow-sm">
-            Patients.
-          </span>
-          <br />
-          Real{' '}
-          <span className="inline-block bg-[#1E64EC] text-white px-2 py-0.5 rounded-md shadow-sm">
-            Results.
-          </span>
-        </h3>
-      </div>
-
       {/* Floating Testimonial Cards Layer */}
       {/* Desktop / Tablet absolute cluster layout */}
       <div className="hidden md:block relative w-full h-[400px] z-20 my-auto">
