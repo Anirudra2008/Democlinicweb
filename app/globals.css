@@ -86,3 +86,32 @@
     will-change: transform;
   }
 }
+
+/* GPU HARDWARE ACCELERATED FLOATING ANIMATIONS */
+@keyframes float-card {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+.animate-gpu-float-1 {
+  will-change: transform;
+  transform: translateZ(0);
+  animation: float-card 3.8s ease-in-out infinite;
+}
+
+.animate-gpu-float-2 {
+  will-change: transform;
+  transform: translateZ(0);
+  animation: float-card 4.4s ease-in-out infinite 0.4s;
+}
+
+.animate-gpu-float-3 {
+  will-change: transform;
+  transform: translateZ(0);
+  animation: float-card 4.0s ease-in-out infinite 0.8s;
+}
+

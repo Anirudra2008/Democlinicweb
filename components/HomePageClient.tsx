@@ -433,9 +433,9 @@ export default function HomePageClient() {
         heroCamera.position.set(0, 10, 25);
         heroCamera.lookAt(0, 0, 0);
 
-        heroRenderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true, antialias: true });
+        heroRenderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
         heroRenderer.setSize(containerWidth, containerHeight);
-        heroRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+        heroRenderer.setPixelRatio(1.0);
 
         const cols = 25;
         const rows = 25;
@@ -616,19 +616,7 @@ export default function HomePageClient() {
           );
         }
 
-        const parallaxHero = document.querySelector('.hero-parallax');
-        if (parallaxHero) {
-          gsap.to(parallaxHero, {
-            yPercent: 15,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: '#home',
-              start: 'top top',
-              end: 'bottom top',
-              scrub: true
-            }
-          });
-        }
+        // Clean GSAP trigger bindings without heavy scroll scrub listeners
       }
     }, 150);
 
@@ -798,8 +786,8 @@ export default function HomePageClient() {
         id="home"
         className="min-h-screen pt-24 md:pt-32 pb-16 flex items-center relative overflow-hidden bg-[#FAF8F5]"
       >
-        {/* Full-Bleed Background Video Layer */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* Full-Bleed Background Video Layer with GPU Hardware Layer Promotion */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu translate-z-0">
           <video
             ref={heroVideoRef}
             autoPlay
@@ -807,13 +795,13 @@ export default function HomePageClient() {
             muted
             playsInline
             preload="auto"
-            className="w-full h-full object-cover opacity-90 scale-105 transition-opacity duration-700"
+            className="w-full h-full object-cover opacity-90 scale-105 transition-opacity duration-700 transform-gpu translate-z-0 will-change-transform"
           >
             <source src="/vid/video-project.mp4" type="video/mp4" />
             <source src="/vid/Video Project 5.mp4" type="video/mp4" />
           </video>
           
-          {/* Smooth Video Backdrop Overlays: Touches the navbar seamlessly with zero white gap */}
+          {/* Smooth Video Backdrop Overlays */}
           <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#121316]/30 via-[#121316]/10 to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5]/90 via-[#FAF8F5]/40 to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent h-24 bottom-0 pointer-events-none" />
@@ -821,7 +809,7 @@ export default function HomePageClient() {
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           
-          <div className="lg:col-span-7 flex flex-col justify-center text-left hero-parallax">
+          <div className="lg:col-span-7 flex flex-col justify-center text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-[#121316] leading-tight mb-3">
               <span className="bg-gradient-to-r from-[#121316] via-[#1E64EC] to-[#121316] bg-clip-text text-transparent">
                 Centre For Skin
@@ -1852,18 +1840,18 @@ export default function HomePageClient() {
         </div>
       </a>
 
-      {/* BACK TO TOP */}
-      {showBackToTop && (
-        <button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-5 right-5 z-[50] p-3.5 bg-[#1E64EC] text-white hover:bg-[#154ec2] rounded-full shadow-2xl transition-all border-2 border-white/20 select-none hover:scale-105 active:scale-95 cursor-pointer"
-          aria-label="Scroll Back To Top Viewport"
-          onMouseEnter={() => setIsCursorHovering(true)}
-          onMouseLeave={() => setIsCursorHovering(false)}
-        >
-          <ArrowUp className="w-5 h-5" />
-        </button>
-      )}
+      {/* BACK TO TOP — Permanent DOM node with smooth opacity transition */}
+      <button 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`fixed bottom-5 right-5 z-[50] p-3.5 bg-[#1E64EC] text-white hover:bg-[#154ec2] rounded-full shadow-2xl transition-all duration-300 border-2 border-white/20 select-none hover:scale-105 active:scale-95 cursor-pointer transform-gpu ${
+          showBackToTop ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
+        }`}
+        aria-label="Scroll Back To Top Viewport"
+        onMouseEnter={() => setIsCursorHovering(true)}
+        onMouseLeave={() => setIsCursorHovering(false)}
+      >
+        <ArrowUp className="w-5 h-5" />
+      </button>
     </>
   );
 }

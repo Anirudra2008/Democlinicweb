@@ -58,34 +58,27 @@ export default function TestimonialFloatCluster() {
     if (window.gsap && isDesktop) {
       const gsap = window.gsap;
 
-      // Entrance animation
+      // Single-shot Entrance animation
       gsap.fromTo(
         cards,
-        { opacity: 0, y: 40, rotate: 0 },
+        { opacity: 0, y: 30, rotate: 0 },
         {
           opacity: 1,
           y: 0,
           rotate: (i: number) => rotations[i],
-          duration: 0.7,
-          ease: 'power3.out',
-          stagger: 0.15,
-          delay: 0.3,
+          duration: 0.6,
+          ease: 'power2.out',
+          stagger: 0.12,
+          delay: 0.2,
+          onComplete: () => {
+            if (!reduceMotion) {
+              cards.forEach((card, i) => {
+                card.classList.add(`animate-gpu-float-${i + 1}`);
+              });
+            }
+          }
         }
       );
-
-      // Idle float (skip if user prefers reduced motion)
-      if (!reduceMotion) {
-        cards.forEach((card, i) => {
-          gsap.to(card, {
-            y: '+=6',
-            duration: 3 + i * 0.4,
-            ease: 'sine.inOut',
-            yoyo: true,
-            repeat: -1,
-            delay: i * 0.3,
-          });
-        });
-      }
     }
   }, []);
 
@@ -93,7 +86,7 @@ export default function TestimonialFloatCluster() {
     <div
       ref={containerRef}
       aria-label="Patient testimonials"
-      className="relative w-full h-full min-h-[450px] md:min-h-[480px] lg:min-h-[500px] p-2 sm:p-4 flex flex-col justify-center select-none"
+      className="relative w-full h-full min-h-[450px] md:min-h-[480px] lg:min-h-[500px] p-2 sm:p-4 flex flex-col justify-center select-none transform-gpu translate-z-0"
     >
       {/* Floating Testimonial Cards Layer */}
       {/* Desktop / Tablet absolute cluster layout */}
@@ -115,7 +108,7 @@ export default function TestimonialFloatCluster() {
                 position: 'absolute',
                 transform: initialTransform,
               }}
-              className="w-[270px] lg:w-[290px] bg-white rounded-2xl shadow-2xl p-4.5 border border-gray-200/80 transition-all duration-300 hover:!rotate-0 hover:-translate-y-2 hover:shadow-2xl hover:z-40 cursor-default group"
+              className="w-[270px] lg:w-[290px] bg-white rounded-2xl shadow-xl p-4.5 border border-gray-200/80 transition-transform duration-300 hover:!rotate-0 hover:-translate-y-2 hover:shadow-2xl hover:z-40 cursor-default group transform-gpu will-change-transform"
             >
               {/* Decorative quotation mark */}
               <div className="absolute top-2 right-4 text-5xl font-serif text-[#1E64EC]/10 pointer-events-none select-none">
