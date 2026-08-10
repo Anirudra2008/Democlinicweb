@@ -129,7 +129,7 @@ export default function LaxmiNagarDermatologist() {
                     Are you searching for a highly recommended <strong>dermatologist near Laxmi Nagar, Delhi</strong>? <strong>Centre For Skin</strong> is a premier clinical facility directed by senior dermatologist <strong>Dr. Gaurav Nakra</strong> (MD Gold Medalist). Located in Saini Enclave, Karkardooma, we are just a short 3.2 km distance from Laxmi Nagar.
                   </p>
                   <p>
-                    We offer advanced dermatological science, specializing in permanent laser hair reduction, deep acne scar laser resurfacing (CO2 Fractional), chemical peels for hyperpigmentation, pediatric skin consultations, and certified DHI hair transplants. 
+                    We offer advanced dermatological science, specializing in permanent laser hair reduction, deep acne scar laser resurfacing (CO2 Fractional), chemical peels for hyperpigmentation, pediatric skin consultations, and certified hair transplants. 
                   </p>
                   <p>
                     Dr. Nakra brings over 18 years of clinical experience, ensuring precise diagnostics of chronic skin conditions such as eczema, psoriasis, vitiligo, and dermatosurgical excision of moles, cysts, and warts in a sterile, safe operatory room.

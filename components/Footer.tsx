@@ -35,7 +35,7 @@ export default function Footer() {
                 IMA MEMBER
               </span>
               <span className="px-2.5 py-1 bg-white/5 border border-white/10 text-[#CBD5E1] font-mono text-[9px] font-bold rounded-md">
-                DHI HAIR REG
+                HAIR RESTORATION
               </span>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5 text-xs text-[#94A3B8] font-bold font-sans">
               <a href="/services/laser-hair-reduction-delhi" className="hover:text-white transition-colors">Laser Hair Reduction</a>
               <a href="/services/acne-scar-treatment-delhi" className="hover:text-white transition-colors">Acne Scar Treatment</a>
-              <a href="/services/hair-transplant-delhi" className="hover:text-white transition-colors">Hair Transplant / DHI / PRP</a>
+              <a href="/services/hair-transplant-delhi" className="hover:text-white transition-colors">Hair Transplant & PRP</a>
               <a href="/services/vitiligo-treatment-delhi" className="hover:text-white transition-colors">Vitiligo Treatment</a>
               <a href="/services/chemical-peels-delhi" className="hover:text-white transition-colors">Chemical Peels & Resurfacing</a>
               <a href="/services/pediatric-dermatology-delhi" className="hover:text-white transition-colors">Pediatric Dermatology</a>

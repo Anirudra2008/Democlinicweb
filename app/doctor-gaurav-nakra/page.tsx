@@ -274,7 +274,7 @@ export default function DoctorProfile() {
                   Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
                 </p>
                 <p>
-                  With 20 years of clinical experience, Dr. Nakra has served in key positions across prominent institutions including Dr. BSA Hospital in Rohini (2009–2012), New Look Laser Clinics (2010–2012), DHI Safdarjung Enclave (2012–2014), GM Hospital (2009–2014), and as founder of Nakra Dermatology Centre in Vivek Vihar (2009–2014).
+                  With 20 years of clinical experience, Dr. Nakra has served in key positions across prominent institutions including Dr. BSA Hospital in Rohini (2009–2012), New Look Laser Clinics (2010–2012), Safdarjung Enclave Clinic (2012–2014), GM Hospital (2009–2014), and as founder of Nakra Dermatology Centre in Vivek Vihar (2009–2014).
                 </p>
                 <p>
                   He offers comprehensive diagnosis and treatment across clinical dermatology (Acne, Psoriasis, Lichen Planus, Fungal Infections, STIs, Skin Grafting), aesthetic procedures (Botox, Fillers, Facelift, Buttock Lift, Liposuction, Stretch Marks, Salicylic Peels, Skin Polishing), and hair restorations (Hair Transplantation, Mezotherapy, PRP, Stem Cell Therapy).
@@ -290,7 +290,7 @@ export default function DoctorProfile() {
                 {[
                   { year: '2016 – Present', title: 'Founder & Senior Consultant — Centre For Skin', desc: 'Founder and Lead Consultant at Centre For Skin in Saini Enclave, Karkardooma, East Delhi.' },
                   { year: '2015', title: 'Awarded Most Promising Dermatologist In Delhi NCR', desc: 'Recognized for clinical excellence and patient care in Delhi NCR.' },
-                  { year: '2012 – 2014', title: 'Consultant Dermatologist & Trichologist — DHI Safdarjung Enclave', desc: 'Consultant specialist delivering DHI hair transplants and PRP therapies (2 Years).' },
+                  { year: '2012 – 2014', title: 'Consultant Dermatologist & Trichologist — Safdarjung Enclave', desc: 'Consultant specialist delivering hair restoration and PRP therapies (2 Years).' },
                   { year: '2010 – 2012', title: 'Laser Surgeon & Aesthetic Dermatologist — New Look Laser Clinics', desc: 'Specialized laser surgeon and aesthetic dermatologist (2 Years).' },
                   { year: '2009 – 2014', title: 'Founder — Nakra Dermatology Centre, Vivek Vihar', desc: 'Founded and managed Nakra Dermatology Centre in Vivek Vihar (5 Years).' },
                   { year: '2009 – 2014', title: 'Dermatosurgeon — GM Hospital', desc: 'Served as Dermatosurgeon performing surgical skin procedures (5 Years).' },

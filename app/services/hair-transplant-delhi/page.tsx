@@ -5,8 +5,8 @@ import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Hair Transplant, DHI & PRP Treatment in Delhi | Centre For Skin',
-  description: 'Searching for certified DHI hair transplant or PRP hair therapy in Delhi? Dr. Gaurav Nakra is a certified specialist offering safe hair restorations.',
+  title: 'Hair Transplant & PRP Treatment in Delhi | Centre For Skin',
+  description: 'Searching for certified hair transplant or PRP hair therapy in Delhi? Dr. Gaurav Nakra is a certified specialist offering safe hair restorations.',
   alternates: {
     canonical: 'https://centreforskin.in/services/hair-transplant-delhi',
   },
@@ -19,10 +19,10 @@ export default function HairTransplant() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the difference between DHI and traditional FUE?",
+        "name": "What is the difference between Direct Hair Restoration and traditional FUE?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Direct Hair Implantation (DHI) utilizes a specialized patented tool (the DHI Implanter) to control the depth, angle, and direction of each follicle placement without creating pre-made slits, resulting in higher graft survival rates and a more natural-looking hairline compared to traditional FUE."
+          "text": "Direct Hair Restoration utilizes specialized micro-graft placement tools to control the depth, angle, and direction of each follicle placement without creating pre-made slits, resulting in higher graft survival rates and a more natural-looking hairline compared to traditional FUE."
         }
       },
       {
@@ -100,10 +100,10 @@ export default function HairTransplant() {
                 Hair Restoration Clinic
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black leading-tight mb-4">
-                Hair Transplant, DHI & PRP Hair Treatment — Dr. Gaurav Nakra
+                Hair Transplant & PRP Hair Treatment — Dr. Gaurav Nakra
               </h1>
-              <p className="text-sm md:text-base text-[#C1E8FF] font-medium leading-relaxed mb-6">
-                Scientifically backed hair restoration protocols combining elite DHI techniques and premium Platelet-Rich Plasma (PRP) therapies under a certified specialist.
+              <p className="font-sans text-sm md:text-base text-[#1E64EC] font-bold max-w-2xl">
+                Scientifically backed hair restoration protocols combining elite follicular techniques and premium Platelet-Rich Plasma (PRP) therapies under a certified specialist.
               </p>
             </div>
           </div>
@@ -116,17 +116,17 @@ export default function HairTransplant() {
               {/* Understanding the Treatment */}
               <div className="bg-white/80 backdrop-blur-md border border-white p-6 md:p-8 rounded-[28px] shadow-xl">
                 <h2 className="font-serif text-2xl font-black text-[#021024] mb-4 pb-2 border-b border-[#7DA0CA]/25">
-                  Scientific Hair Restoration: DHI & PRP In Detail
+                  Scientific Hair Restoration & PRP In Detail
                 </h2>
-                <div className="text-sm text-[#052659]/80 leading-relaxed font-medium flex flex-col gap-4">
+                <div className="prose max-w-none text-xs md:text-sm text-[#121316]/80 leading-relaxed font-sans flex flex-col gap-4">
                   <p>
-                    Hair loss, thinning, and male/female pattern alopecia can impact confidence and comfort. At <strong>Centre For Skin</strong>, we address hair thinning with medically verified, customized clinical workflows. We do not support exaggerated claims or false guarantees; rather, we provide honest assessments of graft viability and realistic regrowth expectations.
+                    At <strong>Centre For Skin</strong>, hair loss evaluation goes beyond surface-level symptoms. We conduct dermoscopic scalp analysis to grade androgenetic alopecia (male/female pattern baldness), telogen effluvium, or alopecia areata before curating a treatment path.
                   </p>
                   <p>
-                    <strong>Dr. Gaurav Nakra</strong> is a <strong>DHI Certified Specialist</strong>, holding official training credentials in hair transplantation design and extraction. We offer two primary modalities:
+                    <strong>Dr. Gaurav Nakra</strong> is a <strong>Certified Hair Restoration Specialist</strong>, holding official training credentials in hair transplantation design and extraction. We offer two primary modalities:
                   </p>
                   <ul className="list-disc pl-5 flex flex-col gap-2">
-                    <li><strong>Direct Hair Implantation (DHI):</strong> A refined hair transplant method where individual hair follicles are extracted from the donor zone (back of the scalp) and immediately implanted into the balding area using a single-use implanter tool. This minimizes handling, protects graft structure, and guarantees precise placement angles.</li>
+                    <li><strong>Direct Follicular Implantation:</strong> A refined hair transplant method where individual hair follicles are extracted from the donor zone (back of the scalp) and immediately implanted into the balding area using a single-use implanter tool. This minimizes handling, protects graft structure, and guarantees precise placement angles.</li>
                     <li><strong>PRP (Platelet-Rich Plasma) Therapy:</strong> A non-surgical clinical procedure that extracts active platelets from the patient&apos;s own blood, concentrates them using a clinical centrifuge, and injects them back into the scalp. These platelets release growth factors that stimulate dormant hair follicles, increase blood supply to the roots, and reverse hair thinning.</li>
                   </ul>
                 </div>
@@ -158,7 +158,7 @@ export default function HairTransplant() {
                   Clinical Steps & Post-Procedure Recovery
                 </h2>
                 <div className="text-sm text-[#052659]/80 leading-relaxed font-medium flex flex-col gap-4">
-                  <h3 className="font-serif text-base font-black text-[#021024]">DHI Procedure Workflow:</h3>
+                  <h3 className="font-serif text-base font-black text-[#021024]">Hair Restoration Procedure Workflow:</h3>
                   <ol className="list-decimal pl-5 flex flex-col gap-2">
                     <li><strong>Design & Mapping:</strong> The recipient hairline is designed and mapped out according to natural facial symmetry.</li>
                     <li><strong>Extraction:</strong> Follicular units are extracted one-by-one from the donor area under local anesthesia.</li>
@@ -186,8 +186,8 @@ export default function HairTransplant() {
                 <div className="flex flex-col gap-4">
                   {[
                     {
-                      q: 'What is the difference between DHI and traditional FUE?',
-                      a: 'Direct Hair Implantation (DHI) utilizes a specialized patented tool (the DHI Implanter) to control the depth, angle, and direction of each follicle placement without creating pre-made slits, resulting in higher graft survival rates and a more natural-looking hairline compared to traditional FUE.'
+                      q: 'What is the difference between Direct Hair Restoration and traditional FUE?',
+                      a: 'Direct Hair Restoration utilizes specialized micro-graft placement tools to control the depth, angle, and direction of each follicle placement without creating pre-made slits, resulting in higher graft survival rates and a more natural-looking hairline compared to traditional FUE.'
                     },
                     {
                       q: 'How many PRP sessions are required to control hair fall?',
@@ -251,12 +251,12 @@ export default function HairTransplant() {
               <div className="bg-white/80 backdrop-blur-md border border-white p-6 rounded-[24px] shadow-lg text-left">
                 <h4 className="font-serif text-sm font-black text-[#021024] mb-3 flex items-center gap-2">
                   <ShieldCheck className="w-5 h-5 text-[#5483B3]" />
-                  <span>DHI Certified Center</span>
+                  <span>Certified Hair Restoration Center</span>
                 </h4>
                 <ul className="flex flex-col gap-2.5 text-xs text-[#052659]/80 font-sans font-bold leading-normal">
                   <li className="flex gap-2">
                     <Check className="w-3.5 h-3.5 text-[#4ADE80] shrink-0" />
-                    <span>DHI Certified Surgeon</span>
+                    <span>Certified Hair Restoration Surgeon</span>
                   </li>
                   <li className="flex gap-2">
                     <Check className="w-3.5 h-3.5 text-[#4ADE80] shrink-0" />

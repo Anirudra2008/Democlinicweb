@@ -3,13 +3,13 @@ import HomePageClient from '../components/HomePageClient';
 
 export const metadata: Metadata = {
   title: 'Centre For Skin — Dr. Gaurav Nakra | Best Dermatologist in East Delhi',
-  description: 'Gold Medalist Dermatologist Dr. Gaurav Nakra offers advanced skin, hair, laser, chemical peels, pediatric dermatology, and DHI hair transplants at Centre For Skin in Saini Enclave near Karkardooma Metro, East Delhi.',
+  description: 'Gold Medalist Dermatologist Dr. Gaurav Nakra offers advanced skin, hair, laser, chemical peels, pediatric dermatology, and hair transplants at Centre For Skin in Saini Enclave near Karkardooma Metro, East Delhi.',
   alternates: {
     canonical: 'https://centreforskin.in/',
   },
   openGraph: {
     title: 'Centre For Skin — Dr. Gaurav Nakra | Best Dermatologist in East Delhi',
-    description: 'Gold Medalist Dermatologist Dr. Gaurav Nakra offers advanced skin, hair, laser, chemical peels, pediatric dermatology, and DHI hair transplants at Centre For Skin in Saini Enclave near Karkardooma Metro, East Delhi.',
+    description: 'Gold Medalist Dermatologist Dr. Gaurav Nakra offers advanced skin, hair, laser, chemical peels, pediatric dermatology, and hair transplants at Centre For Skin in Saini Enclave near Karkardooma Metro, East Delhi.',
     url: 'https://centreforskin.in/',
     siteName: 'Centre For Skin',
     locale: 'en_IN',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Centre For Skin — Dr. Gaurav Nakra | Best Dermatologist in East Delhi',
-    description: 'Gold Medalist Dermatologist Dr. Gaurav Nakra offers advanced skin, hair, laser, chemical peels, pediatric dermatology, and DHI hair transplants at Centre For Skin in Saini Enclave near Karkardooma Metro, East Delhi.',
+    description: 'Gold Medalist Dermatologist Dr. Gaurav Nakra offers advanced skin, hair, laser, chemical peels, pediatric dermatology, and hair transplants at Centre For Skin in Saini Enclave near Karkardooma Metro, East Delhi.',
     images: ['https://centreforskin.in/logo.png'],
   },
 };

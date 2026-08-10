@@ -50,7 +50,7 @@ const TIMELINE = [
   { year: '2009 – 2012', title: 'Consultant Dermatologist — Dr. BSA Hospital, Rohini', desc: 'Served as Consultant Dermatologist (3 Years) & Dermatosurgeon at GM Hospital (5 Years).' },
   { year: '2009 – 2014', title: 'Founder — Nakra Dermatology Centre, Vivek Vihar', desc: 'Founded and managed Nakra Dermatology Centre in Vivek Vihar for 5 years.' },
   { year: '2010 – 2012', title: 'Laser Surgeon — New Look Laser Clinics', desc: 'Laser Surgeon & Aesthetic Dermatologist delivering specialized laser therapies.' },
-  { year: '2012 – 2014', title: 'Consultant Dermatologist — DHI Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in DHI Hair Implantation & Hair Restoration.' },
+  { year: '2012 – 2014', title: 'Consultant Dermatologist — Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in Hair Restoration & PRP Therapies.' },
   { year: '2015', title: 'Awarded Most Promising Dermatologist', desc: 'Honored with the "Most Promising Dermatologist In Delhi NCR" award.' },
   { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20 years of clinical expertise.' },
 ];
@@ -102,8 +102,8 @@ const SERVICES = [
     image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1000',
     subImage: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&q=80&w=600',
     thirdImage: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600',
-    benefits: ['DHI Certified Hair Transplant', 'High Follicular Survival Rate', 'Autologous PRP Therapy', 'Natural Dense Hair Line'],
-    treatments: ['DHI Certified Hair Transplantation', 'Mezotherapy Hair Booster Injections', 'Platelet-Rich Plasma (PRP) Therapy', 'Stem Cell Therapy & Micro-graft activation', 'Follicular Laser Stimulation', 'Trichology & Scalp Rejuvenation']
+    benefits: ['Certified Hair Restoration', 'High Follicular Survival Rate', 'Autologous PRP Therapy', 'Natural Dense Hair Line'],
+    treatments: ['Certified Hair Restoration', 'Mezotherapy Hair Booster Injections', 'Platelet-Rich Plasma (PRP) Therapy', 'Stem Cell Therapy & Micro-graft activation', 'Follicular Laser Stimulation', 'Trichology & Scalp Rejuvenation']
   },
   {
     id: 'peels',
@@ -153,7 +153,7 @@ const TESTIMONIALS = [
   },
   {
     name: 'Priyanka Sharma',
-    treatment: 'Hair PRP & DHI Hair Transplant',
+    treatment: 'Hair PRP & Hair Restoration',
     rating: 5,
     text: 'Highly recommend Centre For Skin for hair issues! My brother did a hair transplant and I did 4 sessions of PRP with amazing follicle density improvement. Dr. Gaurav is certified, listens to all concerns patiently, and never pushes unneeded treatments. Excellent team and transparent pricing.'
   },
@@ -176,8 +176,8 @@ const FAQS = [
     a: 'The costs are tailored depending on clinical severity, starting from very competitive clinical consultation fees. Clinical chemical peels range between ₹1,500 - ₹3,500, while advanced customized laser resurfacing or PRP combination packages are structured in cycles based on your direct scarring depth. We guarantee strict pricing transparency without hidden console charges.'
   },
   {
-    q: 'How many sessions are required for the DHI Hair Transplant and PRP Therapy?',
-    a: 'PRP therapy generally yields visible improvement in hair density and reduction in hair-fall across 4 to 6 monthly sessions. For advanced Grade 3-7 alopecia, a single-day DHI Hair Transplant is designed which safely implants active grafts one-by-one with natural angling. Dr. Nakra is a DHI Certified Specialist, ensuring high graft survival rates.'
+    q: 'How many sessions are required for Hair Restoration and PRP Therapy?',
+    a: 'PRP therapy generally yields visible improvement in hair density and reduction in hair-fall across 4 to 6 monthly sessions. For advanced Grade 3-7 alopecia, a single-day Hair Restoration is designed which safely implants active grafts one-by-one with natural angling. Dr. Nakra is a Certified Hair Specialist, ensuring high graft survival rates.'
   },
   {
     q: 'Do I need to book an appointment in advance or accept walk-in patients?',
@@ -834,7 +834,7 @@ export default function HomePageClient() {
             <p className="text-base sm:text-lg text-[#121316]/80 max-w-2xl font-normal leading-relaxed mb-8">
               {isHindi ? 
                 'पूर्वी दिल्ली में कड़कड़डूमा मेट्रो के पास 20 वर्षों के विशिष्ट अनुभव के साथ त्वचा, बाल, और लेज़र उपचार का सबसे विश्वसनीय केंद्र। स्वर्ण पदक विजेता विशेषज्ञ द्वारा उत्तम देखभाल।' : 
-                'Highly specialized, award-winning dermatological science in East Delhi near Karkardooma Metro. Providing gold-standard lasers, certified hair restorations (DHI/PRP), chemical peels, and pediatric dermatology by Gold Medalist Dr. Gaurav Nakra.'}
+                'Highly specialized, award-winning dermatological science in East Delhi near Karkardooma Metro. Providing gold-standard lasers, certified hair restorations (PRP/Hair Care), chemical peels, and pediatric dermatology by Gold Medalist Dr. Gaurav Nakra.'}
             </p>
 
             <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-xl mb-6">
@@ -889,7 +889,6 @@ export default function HomePageClient() {
               <div className="flex flex-wrap items-center gap-4">
                 <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">IADVL MEMBER</span>
                 <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">IMA FEDERATION</span>
-                <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">DHI CLINICAL HAIR SPL</span>
               </div>
             </div>
           </div>
@@ -929,7 +928,7 @@ export default function HomePageClient() {
             {[
               { title: 'IADVL Accredited', desc: 'Dermatologists Association' },
               { title: 'IMA Approved', desc: 'Indian Medical Association' },
-              { title: 'DHI Certified', desc: 'Elite Hair Specialist' },
+              { title: 'Hair Specialist', desc: 'Elite Hair Restoration' },
               { title: 'DMC Licensed', desc: 'Delhi Medical Council 44068' },
               { title: '20 Years Expert', desc: 'Dermatological Trust' }
             ].map((logo, i) => (
@@ -1010,7 +1009,7 @@ export default function HomePageClient() {
                 <span className="font-sans text-[10px] uppercase font-bold text-[#1E64EC] tracking-widest block w-full mb-1">
                   Active specialties area:
                 </span>
-                {['#LaserExpert', '#CustomPeels', '#DHIHairTransplant', '#AntiAgingLifts', '#PediatricDermatology', '#PlateletRichPlasma', '#Dermatosurgery'].map((tag, idx) => (
+                {['#LaserExpert', '#CustomPeels', '#HairRestoration', '#AntiAgingLifts', '#PediatricDermatology', '#PlateletRichPlasma', '#Dermatosurgery'].map((tag, idx) => (
                   <span 
                     key={idx} 
                     className="px-2.5 py-1 bg-[#EBF2FF] text-[#1E64EC] hover:bg-[#1E64EC] hover:text-white font-sans text-[10px] uppercase tracking-wider font-extrabold rounded-lg border border-[#1E64EC]/15 select-none transition-all"
@@ -1034,7 +1033,7 @@ export default function HomePageClient() {
                 </p>
 
                 <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-6">
-                  With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI (Safdarjung Enclave), New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
+                  With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
@@ -1075,7 +1074,7 @@ export default function HomePageClient() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
-                    <span>Consultant — DHI Safdarjung Enclave (2012–2014)</span>
+                    <span>Consultant — Safdarjung Enclave Clinic (2012–2014)</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />

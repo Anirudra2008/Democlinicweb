@@ -129,7 +129,7 @@ export default function PreetViharDermatologist() {
                     Are you looking for a certified <strong>dermatologist near Preet Vihar, East Delhi</strong>? <strong>Centre For Skin</strong> is a state-of-the-art clinic situated in Saini Enclave, just 1.8 km away from the Preet Vihar residential colony. Directed by Gold Medalist Dermatologist <strong>Dr. Gaurav Nakra</strong>, we provide trust-based, medically safe skin and hair therapies.
                   </p>
                   <p>
-                    Our facility offers advanced, US-FDA approved technologies. Residents of Preet Vihar visit our clinic for permanent laser hair reduction (using triple-wavelength diode systems), fractional CO2 lasers for acne scar correction, clinical-grade chemical peels for pigmentation, certified DHI hair transplants, and pediatric skin care.
+                    Our facility offers advanced, US-FDA approved technologies. Residents of Preet Vihar visit our clinic for permanent laser hair reduction (using triple-wavelength diode systems), fractional CO2 lasers for acne scar correction, clinical-grade chemical peels for pigmentation, certified hair transplants, and pediatric skin care.
                   </p>
                   <p>
                     Dr. Nakra has over 18 years of clinical experience, ensuring precise diagnosis of underlying contact allergies, eczema, psoriasis, or chronic skin rashes. All procedures are conducted in a clean, highly sterile environment to guarantee patient safety.
