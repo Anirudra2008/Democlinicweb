@@ -44,7 +44,7 @@ declare global {
 
 // TIMELINE DATA
 const TIMELINE = [
-  { year: '2004 – 2006', title: 'MBBS Graduation', desc: 'Completed MBBS medical degree from Motilal Nehru Medical College with top academic standing.' },
+  { year: '2000 – 2006', title: 'MBBS Graduation', desc: 'Completed MBBS medical degree from Motilal Nehru Medical College with top academic standing.' },
   { year: '2008', title: 'International Publications', desc: 'Published research in the International Journal of Clinical Research.' },
   { year: '2009', title: 'MD — Dermatology, Venereology & Leprosy', desc: 'Completed MD specialization from D.D.U University, Gorakhpur with distinguished academic honors.' },
   { year: '2009 – 2012', title: 'Consultant Dermatologist — Dr. BSA Hospital, Rohini', desc: 'Served as Consultant Dermatologist (3 Years) & Dermatosurgeon at GM Hospital (5 Years).' },
@@ -1031,7 +1031,7 @@ export default function HomePageClient() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
                   {[
-                    { title: 'MBBS Graduation (2004–2006)', desc: 'Motilal Nehru Medical College, Allahabad' },
+                    { title: 'MBBS Graduation (2000–2006)', desc: 'Motilal Nehru Medical College, Allahabad' },
                     { title: 'MD Dermatology (2009)', desc: 'D.D.U University, Gorakhpur — Academic Honors' },
                     { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
                     { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },

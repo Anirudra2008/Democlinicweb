@@ -303,7 +303,7 @@ export default function DoctorProfile() {
                   { year: '2009 – 2012', title: 'Consultant Dermatologist — Dr. BSA Hospital, Rohini', desc: 'Served as Consultant Dermatologist in public healthcare (3 Years).' },
                   { year: '2009', title: 'MD — Dermatology, Venereology & Leprosy', desc: 'Completed MD specialization from D.D.U University, Gorakhpur with distinguished academic record.' },
                   { year: '2008', title: 'International Publications', desc: 'Published research paper in the International Journal of Clinical Research.' },
-                  { year: '2004 – 2006', title: 'MBBS Medical Graduation', desc: 'Graduated from Motilal Nehru Medical College, Allahabad.' }
+                  { year: '2000 – 2006', title: 'MBBS Medical Graduation', desc: 'Graduated from Motilal Nehru Medical College, Allahabad.' }
                 ].map((t, idx) => (
                   <div key={idx} className="relative group">
                     <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-[#1E64EC] border-2 border-white group-hover:scale-125 transition-transform" />
