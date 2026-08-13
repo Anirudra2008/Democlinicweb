@@ -50,7 +50,7 @@ const TIMELINE = [
   { year: '2009 – 2012', title: 'Consultant Dermatologist — Dr. BSA Hospital, Rohini', desc: 'Served as Consultant Dermatologist (3 Years) & Dermatosurgeon at GM Hospital (5 Years).' },
   { year: '2009 – 2014', title: 'Founder — Nakra Dermatology Centre, Vivek Vihar', desc: 'Founded and managed Nakra Dermatology Centre in Vivek Vihar for 5 years.' },
   { year: '2010 – 2012', title: 'Laser Surgeon — New Look Laser Clinics', desc: 'Laser Surgeon & Aesthetic Dermatologist delivering specialized laser therapies.' },
-  { year: '2012 – 2014', title: 'Consultant Dermatologist — Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in Hair Restoration & PRP Therapies.' },
+  { year: '2012 – 2014', title: 'Consultant Dermatologist — DHI Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in Hair Restoration & PRP Therapies.' },
   { year: '2015', title: 'Awarded Most Promising Dermatologist', desc: 'Honored with the "Most Promising Dermatologist In Delhi NCR" award.' },
   { year: '2025', title: 'Awarded Excellence in Dermatology — Economic Times', desc: 'Honored with the "Excellence in Dermatology" award by Economic Times in 2025.' },
   { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20+ years of clinical expertise.' },
@@ -1026,7 +1026,7 @@ export default function HomePageClient() {
                 </p>
 
                 <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-6">
-                  With 20+ years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008), was awarded "Most Promising Dermatologist In Delhi NCR" in 2015, and awarded for Excellence in Dermatology by Economic Times in 2025.
+                  With 20+ years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008), was awarded "Most Promising Dermatologist In Delhi NCR" in 2015, and awarded for Excellence in Dermatology by Economic Times in 2025.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
@@ -1068,7 +1068,7 @@ export default function HomePageClient() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
-                    <span>Consultant — Safdarjung Enclave Clinic (2012–2014)</span>
+                    <span>Consultant — DHI Safdarjung Enclave Clinic (2012–2014)</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Building className="w-4 h-4 text-[#1E64EC] shrink-0 mt-0.5" />
