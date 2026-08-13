@@ -1373,7 +1373,7 @@ export default function HomePageClient() {
           
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.2em] uppercase block mb-3">
-              {isHindi ? 'मरीजों के वास्तविक विचार' : 'Patient Portrayals'}
+              {isHindi ? 'मरीजों के वास्तविक विचार' : 'Patient Testimonials'}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-white leading-tight gsap-reveal">
               {isHindi ? 'संतुष्ट मरीजों के अभिप्राय' : 'Verified Google Reviews Trust'}
