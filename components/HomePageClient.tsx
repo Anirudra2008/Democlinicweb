@@ -1026,7 +1026,7 @@ export default function HomePageClient() {
                 </p>
 
                 <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-6">
-                  With 20+ years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008), was awarded "Most Promising Dermatologist In Delhi NCR" in 2015, and awarded for Excellence in Dermatology by Economic Times in 2025.
+                  With 20+ years of clinical experience, Dr. Nakra holds a prestigious Fellowship in Laser Medicine from Toulouse, France. He has served across major hospital networks including Dr. BSA Hospital (Rohini), DHI Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008), was awarded "Most Promising Dermatologist In Delhi NCR" in 2015, and awarded for Excellence in Dermatology by Economic Times in 2025.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
@@ -1035,6 +1035,7 @@ export default function HomePageClient() {
                     { title: 'MD Dermatology (2009)', desc: 'D.D.U University, Gorakhpur — Academic Honors' },
                     { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
                     { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },
+                    { title: 'Fellowship in Laser Medicine', desc: 'Toulouse, France' },
                     { title: 'Excellence in Dermatology (2025)', desc: 'Awarded by Economic Times' },
                     { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
                     { title: '20+ Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
