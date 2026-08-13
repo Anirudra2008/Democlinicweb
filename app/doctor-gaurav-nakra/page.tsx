@@ -45,7 +45,8 @@ export default function DoctorProfile() {
     "knowsAbout": ["Dermatology", "Cosmetology", "Hair Transplantation", "Laser Treatments", "Pediatric Dermatology", "Dermatosurgery", "Acne", "Psoriasis", "Lichen Planus"],
     "award": [
       "International Publications - International Journal of Clinical Research (2008)",
-      "Most Promising Dermatologist In Delhi NCR (2015)"
+      "Most Promising Dermatologist In Delhi NCR (2015)",
+      "Awarded for Excellence in Dermatology: Economic Times 2025"
     ],
     "memberOf": [
       {
@@ -223,6 +224,10 @@ export default function DoctorProfile() {
                     <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
                     <span>Most Promising Dermatologist In Delhi NCR (2015)</span>
                   </li>
+                  <li className="flex gap-2.5 items-start">
+                    <Check className="w-4 h-4 text-[#4ADE80] shrink-0 mt-0.5" />
+                    <span>Awarded for Excellence in Dermatology — Economic Times (2025)</span>
+                  </li>
                 </ul>
               </div>
 
@@ -288,6 +293,7 @@ export default function DoctorProfile() {
 
               <div className="border-l-2 border-gray-200 pl-5 flex flex-col gap-6 text-left">
                 {[
+                  { year: '2025', title: 'Awarded for Excellence in Dermatology — Economic Times', desc: 'Honored with the "Excellence in Dermatology" award by Economic Times in 2025.' },
                   { year: '2016 – Present', title: 'Founder & Senior Consultant — Centre For Skin', desc: 'Founder and Lead Consultant at Centre For Skin in Saini Enclave, Karkardooma, East Delhi.' },
                   { year: '2015', title: 'Awarded Most Promising Dermatologist In Delhi NCR', desc: 'Recognized for clinical excellence and patient care in Delhi NCR.' },
                   { year: '2012 – 2014', title: 'Consultant Dermatologist & Trichologist — Safdarjung Enclave', desc: 'Consultant specialist delivering hair restoration and PRP therapies (2 Years).' },

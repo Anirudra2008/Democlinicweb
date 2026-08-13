@@ -52,6 +52,7 @@ const TIMELINE = [
   { year: '2010 – 2012', title: 'Laser Surgeon — New Look Laser Clinics', desc: 'Laser Surgeon & Aesthetic Dermatologist delivering specialized laser therapies.' },
   { year: '2012 – 2014', title: 'Consultant Dermatologist — Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in Hair Restoration & PRP Therapies.' },
   { year: '2015', title: 'Awarded Most Promising Dermatologist', desc: 'Honored with the "Most Promising Dermatologist In Delhi NCR" award.' },
+  { year: '2025', title: 'Awarded Excellence in Dermatology — Economic Times', desc: 'Honored with the "Excellence in Dermatology" award by Economic Times in 2025.' },
   { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20+ years of clinical expertise.' },
 ];
 
@@ -1025,7 +1026,7 @@ export default function HomePageClient() {
                 </p>
 
                 <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-6">
-                  With 20+ years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
+                  With 20+ years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008), was awarded "Most Promising Dermatologist In Delhi NCR" in 2015, and awarded for Excellence in Dermatology by Economic Times in 2025.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
@@ -1034,6 +1035,7 @@ export default function HomePageClient() {
                     { title: 'MD Dermatology (2009)', desc: 'D.D.U University, Gorakhpur — Academic Honors' },
                     { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
                     { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },
+                    { title: 'Excellence in Dermatology (2025)', desc: 'Awarded by Economic Times' },
                     { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
                     { title: '20+ Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
                   ].map((q, idx) => (
