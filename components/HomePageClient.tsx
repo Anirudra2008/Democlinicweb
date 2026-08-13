@@ -327,9 +327,6 @@ export default function HomePageClient() {
   // Window Scroll & Event logic
   useEffect(() => {
     let tickingScroll = false;
-    let tickingMouse = false;
-    let lastX = -100;
-    let lastY = -100;
 
     const updateDOMScroll = () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -342,22 +339,10 @@ export default function HomePageClient() {
       }
 
       const shouldShowBackToTop = winScroll > 400;
-      setShowBackToTop((prev) => {
-        if (prev !== shouldShowBackToTop) return shouldShowBackToTop;
-        return prev;
-      });
+      setShowBackToTop((prev) => (prev !== shouldShowBackToTop ? shouldShowBackToTop : prev));
 
       scrollRef.current = winScroll;
       tickingScroll = false;
-    };
-
-    const updateDOMMouse = () => {
-      const cursor = document.getElementById('custom-cursor');
-      if (cursor) {
-        cursor.style.left = lastX + 'px';
-        cursor.style.top = lastY + 'px';
-      }
-      tickingMouse = false;
     };
 
     const handleScroll = () => {
@@ -367,22 +352,7 @@ export default function HomePageClient() {
       }
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      lastX = e.clientX;
-      lastY = e.clientY;
-      if (!tickingMouse) {
-        requestAnimationFrame(updateDOMMouse);
-        tickingMouse = true;
-      }
-    };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Only listen for mousemove on desktop fine pointers to protect mobile battery & scroll performance
-    const isFinePointer = window.matchMedia('(pointer: fine)').matches;
-    if (isFinePointer) {
-      window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    }
 
     // Initial positioning
     const initialProgressBar = document.getElementById('scroll-progress-bar');
@@ -395,9 +365,6 @@ export default function HomePageClient() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (isFinePointer) {
-        window.removeEventListener('mousemove', handleMouseMove);
-      }
     };
   }, []);
 
@@ -550,16 +517,20 @@ export default function HomePageClient() {
       }
     };
 
+    let attempts = 0;
     const timer = setInterval(() => {
+      attempts++;
       if (window.THREE) {
         clearInterval(timer);
         initThree();
+      } else if (attempts >= 15) {
+        clearInterval(timer);
       }
     }, 150);
 
     return () => {
       clearInterval(timer);
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
       if (resizeObserver) resizeObserver.disconnect();
       if (bgRenderer) bgRenderer.dispose();
       if (heroRenderer) heroRenderer.dispose();
@@ -570,29 +541,30 @@ export default function HomePageClient() {
   useEffect(() => {
     if (loading) return;
 
+    let attempts = 0;
     const timer = setInterval(() => {
+      attempts++;
       if (window.gsap && window.ScrollTrigger) {
         clearInterval(timer);
 
         const gsap = window.gsap;
         const ScrollTrigger = window.ScrollTrigger;
         gsap.registerPlugin(ScrollTrigger);
-
         gsap.config({ nullTargetWarn: false });
 
         const headings = document.querySelectorAll('.gsap-reveal');
         if (headings && headings.length > 0) {
           headings.forEach((heading) => {
             gsap.fromTo(heading, 
-              { opacity: 0, y: 50 },
+              { opacity: 0, y: 30 },
               { 
                 opacity: 1, 
                 y: 0, 
-                duration: 1,
-                ease: 'power3.out',
+                duration: 0.8,
+                ease: 'power2.out',
                 scrollTrigger: {
                   trigger: heading,
-                  start: 'top 85%',
+                  start: 'top 88%',
                   toggleActions: 'play none none none',
                 }
               }
@@ -603,22 +575,22 @@ export default function HomePageClient() {
         const cards = document.querySelectorAll('.gsap-card');
         if (cards && cards.length > 0) {
           gsap.fromTo(cards,
-            { opacity: 0, y: 60 },
+            { opacity: 0, y: 40 },
             {
               opacity: 1,
               y: 0,
-              duration: 0.8,
-              stagger: 0.15,
-              ease: 'back.out(1.2)',
+              duration: 0.7,
+              stagger: 0.1,
+              ease: 'power2.out',
               scrollTrigger: {
                 trigger: cards[0],
-                start: 'top 85%',
+                start: 'top 88%',
               }
             }
           );
         }
-
-        // Clean GSAP trigger bindings without heavy scroll scrub listeners
+      } else if (attempts >= 15) {
+        clearInterval(timer);
       }
     }, 150);
 

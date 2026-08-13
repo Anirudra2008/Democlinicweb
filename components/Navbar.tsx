@@ -31,7 +31,7 @@ export default function Navbar({ isHindi: propIsHindi, setIsHindi: propSetIsHind
   return (
     <header 
       id="clinic-header"
-      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-gray-200/60 shadow-sm transform-gpu translate-z-0"
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#FAF8F5]/98 border-b border-gray-200/80 shadow-sm transform-gpu translate-z-0"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex justify-between items-center">
         {/* Brand Logo & Name */}
