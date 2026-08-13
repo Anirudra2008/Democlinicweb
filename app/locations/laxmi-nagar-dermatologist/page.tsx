@@ -132,7 +132,7 @@ export default function LaxmiNagarDermatologist() {
                     We offer advanced dermatological science, specializing in permanent laser hair reduction, deep acne scar laser resurfacing (CO2 Fractional), chemical peels for hyperpigmentation, pediatric skin consultations, and certified hair transplants. 
                   </p>
                   <p>
-                    Dr. Nakra brings over 18 years of clinical experience, ensuring precise diagnostics of chronic skin conditions such as eczema, psoriasis, vitiligo, and dermatosurgical excision of moles, cysts, and warts in a sterile, safe operatory room.
+                    Dr. Nakra brings over 20+ years of clinical experience, ensuring precise diagnostics of chronic skin conditions such as eczema, psoriasis, vitiligo, and dermatosurgical excision of moles, cysts, and warts in a sterile, safe operatory room.
                   </p>
                 </div>
               </div>

@@ -129,7 +129,7 @@ export default function KarkardoomaDermatologist() {
                     Are you searching for a certified, expert <strong>dermatologist in Karkardooma</strong> or near Anand Vihar, Delhi? <strong>Centre For Skin</strong>, directed by the senior board-certified dermatologist and MD Gold Medalist <strong>Dr. Gaurav Nakra</strong>, is the premium clinical facility located in the heart of Saini Enclave, East Delhi.
                   </p>
                   <p>
-                    With over 18 years of clinical expertise, Dr. Nakra maps high-fidelity diagnostics to highly customized therapies. Our Karkardooma clinic is fully equipped with US-FDA approved technologies to deliver permanent laser hair reduction, fractional CO2 laser resurfacing for deep acne scars, certified hair transplants, chemical peels, and pediatric dermatology.
+                    With over 20+ years of clinical expertise, Dr. Nakra maps high-fidelity diagnostics to highly customized therapies. Our Karkardooma clinic is fully equipped with US-FDA approved technologies to deliver permanent laser hair reduction, fractional CO2 laser resurfacing for deep acne scars, certified hair transplants, chemical peels, and pediatric dermatology.
                   </p>
                   <p>
                     We maintain sterile procedure rooms and follow international safety guidelines, ensuring zero infection risk and clinical excellence. Whether you require treatment for chronic skin conditions like eczema, psoriasis, and vitiligo, or aesthetic enhancements like Botox, fillers, and carbon photofacials, you can expect patient-first, medically guided care.

@@ -52,7 +52,7 @@ const TIMELINE = [
   { year: '2010 – 2012', title: 'Laser Surgeon — New Look Laser Clinics', desc: 'Laser Surgeon & Aesthetic Dermatologist delivering specialized laser therapies.' },
   { year: '2012 – 2014', title: 'Consultant Dermatologist — Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in Hair Restoration & PRP Therapies.' },
   { year: '2015', title: 'Awarded Most Promising Dermatologist', desc: 'Honored with the "Most Promising Dermatologist In Delhi NCR" award.' },
-  { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20 years of clinical expertise.' },
+  { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20+ years of clinical expertise.' },
 ];
 
 // DEPARTMENTS / SERVICES
@@ -827,8 +827,8 @@ export default function HomePageClient() {
 
             <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-xl mb-6">
               {[
-                { label: 'MD Gold Medalist', desc: isHindi ? 'शीर्ष सम्मानित' : 'Top Credentialed' },
-                { label: '20 Years', desc: isHindi ? 'विशिष्ट अनुभव' : 'Clinical Expertise' },
+                { label: 'MD Gold Medalist', desc: isHindi ? 'शीर्ष सम्मानित' : 'Top Credentials' },
+                { label: '20+ Years', desc: isHindi ? 'विशिष्ट अनुभव' : 'Clinical Expertise' },
                 { label: '4.5★ (508+ Reviews)', desc: isHindi ? 'संतुष्ट मरीज अभिप्राय' : 'Google Rating' }
               ].map((stat, i) => (
                 <div key={i} className="bg-white rounded-2xl p-4 border border-gray-200/80 hover:translate-y-[-2px] hover:shadow-xl transition-all shadow-sm">
@@ -870,15 +870,7 @@ export default function HomePageClient() {
               </a>
             </div>
 
-            <div className="mt-12 pt-6 border-t border-gray-200">
-              <span className="font-sans text-[10px] uppercase font-bold text-[#64748B] tracking-[0.2em] block mb-3">
-                {isHindi ? 'राष्ट्रीय और अंतरराष्ट्रीय मान्यता प्राप्त' : 'Accredited Member & Certified Federation'}
-              </span>
-              <div className="flex flex-wrap items-center gap-4">
-                <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">IADVL MEMBER</span>
-                <span className="text-xs font-extrabold text-[#1E64EC] bg-white px-3.5 py-1.5 rounded-lg shadow-sm border border-gray-200/60">IMA FEDERATION</span>
-              </div>
-            </div>
+
           </div>
 
           {/* Right Column: Signature Patient Voice Testimonial Floating Cluster */}
@@ -909,16 +901,16 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
+      {/* TRUST BAR & CLINICAL SPECIALTIES */}
       <div className="w-full bg-[#121316] py-8 border-y border-white/10 relative z-10 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 items-center text-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-6">
+          {/* 4 Medical Association Columns */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center text-center">
             {[
               { title: 'IADVL Accredited', desc: 'Dermatologists Association' },
               { title: 'IMA Approved', desc: 'Indian Medical Association' },
-              { title: 'Hair Specialist', desc: 'Elite Hair Restoration' },
-              { title: 'DMC Licensed', desc: 'Delhi Medical Council 44068' },
-              { title: '20 Years Expert', desc: 'Dermatological Trust' }
+              { title: 'ISPD Member', desc: 'Pediatric Dermatology' },
+              { title: 'EADV Fellow', desc: 'European Academy' }
             ].map((logo, i) => (
               <div 
                 key={i} 
@@ -933,6 +925,18 @@ export default function HomePageClient() {
                   {logo.desc}
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Screenshot 3 Details: Core Clinical Specialties */}
+          <div className="pt-4 border-t border-white/10 flex flex-wrap justify-center items-center gap-2.5 sm:gap-3">
+            {['Dermatology', 'Aesthetics', 'Lasers', 'Hair', 'Dermatosurgery'].map((spec, idx) => (
+              <span 
+                key={idx} 
+                className="px-4 py-1.5 bg-white/5 border border-white/15 text-[#93C5FD] font-serif text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-[#1E64EC] hover:text-white hover:border-[#1E64EC] transition-all duration-300 shadow-sm"
+              >
+                {spec}
+              </span>
             ))}
           </div>
         </div>
@@ -954,7 +958,7 @@ export default function HomePageClient() {
               Dr. Gaurav Nakra
             </h2>
             <p className="font-sans text-xs md:text-sm text-[#1E64EC] tracking-[0.1em] uppercase font-bold mt-1.5">
-              MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 20 Years Experience
+              MD (Dermatology, Venereology & Leprosy) | Gold Medalist | 20+ Years Experience
             </p>
           </div>
 
@@ -1021,7 +1025,7 @@ export default function HomePageClient() {
                 </p>
 
                 <p className="text-sm md:text-base text-[#121316]/80 leading-relaxed mb-6">
-                  With 20 years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
+                  With 20+ years of clinical experience, Dr. Nakra has served across major hospital networks including Dr. BSA Hospital (Rohini), Safdarjung Enclave, New Look Laser Clinics, GM Hospital, and Nakra Dermatology Centre (Vivek Vihar). He has published research in the International Journal of Clinical Research (2008) and was awarded "Most Promising Dermatologist In Delhi NCR" in 2015.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
@@ -1031,7 +1035,7 @@ export default function HomePageClient() {
                     { title: 'International Publications (2008)', desc: 'International Journal of Clinical Research' },
                     { title: 'Most Promising Dermatologist (2015)', desc: 'Recognized in Delhi NCR' },
                     { title: 'Delhi Medical Council', desc: 'Registered DMC Practitioner: 44068' },
-                    { title: '20 Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
+                    { title: '20+ Years Experience', desc: 'Clinical & Aesthetic Dermatology' }
                   ].map((q, idx) => (
                     <div key={idx} className="flex gap-2.5 items-start text-left bg-[#FAF8F5] p-3 rounded-xl border border-gray-200/80">
                       <div className="p-1 rounded-lg bg-[#1E64EC]/10 text-[#1E64EC] border border-[#1E64EC]/20 mt-0.5 shrink-0">

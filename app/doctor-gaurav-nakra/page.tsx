@@ -5,14 +5,14 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
-  description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
+  title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20+ Yrs Exp)',
+  description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20+ years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
   alternates: {
     canonical: 'https://centreforskin.in/doctor-gaurav-nakra',
   },
   openGraph: {
-    title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
-    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
+    title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20+ Yrs Exp)',
+    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20+ years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
     url: 'https://centreforskin.in/doctor-gaurav-nakra',
     siteName: 'Centre For Skin',
     locale: 'en_IN',
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20 Yrs Exp)',
-    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20 years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
+    title: 'Dr. Gaurav Nakra — Senior Dermatologist & Cosmetologist (20+ Yrs Exp)',
+    description: 'Meet Dr. Gaurav Nakra, senior dermatologist & cosmetologist with 20+ years experience. MBBS, MD (D.D.U University, Gorakhpur), DMC No. 44068. Read biography, clinical affiliations, and awards.',
     images: ['https://democlinicweb-sigma.vercel.app/dr-gaurav-nakra.jpg'],
   },
 };
@@ -125,7 +125,7 @@ export default function DoctorProfile() {
                 
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/60 shadow flex items-center gap-2">
                   <Award className="w-4 h-4 text-amber-500" />
-                  <span className="font-serif text-[10px] font-bold text-[#121316]">20 Years Experience</span>
+                  <span className="font-serif text-[10px] font-bold text-[#121316]">20+ Years Experience</span>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function DoctorProfile() {
                 Dr. Gaurav Nakra
               </h1>
               <p className="font-sans text-sm md:text-base text-[#1E64EC] font-bold tracking-wide mb-6">
-                MBBS, MD (Dermatology, Venereology & Leprosy) | 20 Years Experience
+                MBBS, MD (Dermatology, Venereology & Leprosy) | 20+ Years Experience
               </p>
 
               <hr className="border-gray-200 my-4" />
@@ -161,7 +161,7 @@ export default function DoctorProfile() {
                   </div>
                   <div>
                     <div className="font-serif font-bold text-[#121316] uppercase tracking-wider">Total Experience</div>
-                    <div className="font-sans text-[#1E64EC] font-semibold mt-0.5">20 Years Clinical Practice</div>
+                    <div className="font-sans text-[#1E64EC] font-semibold mt-0.5">20+ Years Clinical Practice</div>
                   </div>
                 </div>
 
@@ -274,7 +274,7 @@ export default function DoctorProfile() {
                   Dr. Gaurav Nakra specialized in all skin problems. He has done MD Dermatology, Venereology & Leprosy with a distinguished academic record and inquisitive approach constantly strive to keep abreast of the recent advances in Dermatology and Cosmetology and provide skin care on a patient friendly and informative basis.
                 </p>
                 <p>
-                  With 20 years of clinical experience, Dr. Nakra has served in key positions across prominent institutions including Dr. BSA Hospital in Rohini (2009–2012), New Look Laser Clinics (2010–2012), Safdarjung Enclave Clinic (2012–2014), GM Hospital (2009–2014), and as founder of Nakra Dermatology Centre in Vivek Vihar (2009–2014).
+                  With 20+ years of clinical experience, Dr. Nakra has served in key positions across prominent institutions including Dr. BSA Hospital in Rohini (2009–2012), New Look Laser Clinics (2010–2012), Safdarjung Enclave Clinic (2012–2014), GM Hospital (2009–2014), and as founder of Nakra Dermatology Centre in Vivek Vihar (2009–2014).
                 </p>
                 <p>
                   He offers comprehensive diagnosis and treatment across clinical dermatology (Acne, Psoriasis, Lichen Planus, Fungal Infections, STIs, Skin Grafting), aesthetic procedures (Botox, Fillers, Facelift, Buttock Lift, Liposuction, Stretch Marks, Salicylic Peels, Skin Polishing), and hair restorations (Hair Transplantation, Mezotherapy, PRP, Stem Cell Therapy).

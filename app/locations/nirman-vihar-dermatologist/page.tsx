@@ -129,7 +129,7 @@ export default function NirmanViharDermatologist() {
                     Are you searching for a certified, expert <strong>dermatologist near Nirman Vihar, Delhi</strong>? <strong>Centre For Skin</strong>, directed by senior MD Gold Medalist dermatologist <strong>Dr. Gaurav Nakra</strong>, offers gold-standard clinical, aesthetic, and laser treatments in Saini Enclave, Karkardooma—located just a 5-minute drive from the Nirman Vihar commercial hubs and V3S Mall.
                   </p>
                   <p>
-                    With more than 18 years of specialized dermatology practice, Dr. Nakra maps direct clinical diagnoses to certified medical solutions. We treat chronic inflammatory diseases like atopic eczema, psoriasis, rosacea, and vitiligo. We also specialize in aesthetic skin boosters, dermal fillers, Botox lifts, chemical peels, and pediatric dermatology.
+                    With more than 20+ years of specialized dermatology practice, Dr. Nakra maps direct clinical diagnoses to certified medical solutions. We treat chronic inflammatory diseases like atopic eczema, psoriasis, rosacea, and vitiligo. We also specialize in aesthetic skin boosters, dermal fillers, Botox lifts, chemical peels, and pediatric dermatology.
                   </p>
                   <p>
                     All procedural rooms are kept highly sterile to ensure absolute patient safety and zero risk of infection. Our local residents from Nirman Vihar trust us for honest billing, transparent expectations, and FDA-approved laser treatments.

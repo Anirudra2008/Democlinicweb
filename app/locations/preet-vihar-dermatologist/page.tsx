@@ -132,7 +132,7 @@ export default function PreetViharDermatologist() {
                     Our facility offers advanced, US-FDA approved technologies. Residents of Preet Vihar visit our clinic for permanent laser hair reduction (using triple-wavelength diode systems), fractional CO2 lasers for acne scar correction, clinical-grade chemical peels for pigmentation, certified hair transplants, and pediatric skin care.
                   </p>
                   <p>
-                    Dr. Nakra has over 18 years of clinical experience, ensuring precise diagnosis of underlying contact allergies, eczema, psoriasis, or chronic skin rashes. All procedures are conducted in a clean, highly sterile environment to guarantee patient safety.
+                    Dr. Nakra has over 20+ years of clinical experience, ensuring precise diagnosis of underlying contact allergies, eczema, psoriasis, or chronic skin rashes. All procedures are conducted in a clean, highly sterile environment to guarantee patient safety.
                   </p>
                 </div>
               </div>
