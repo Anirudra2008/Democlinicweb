@@ -952,7 +952,7 @@ export default function HomePageClient() {
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="font-sans text-xs md:text-sm font-black text-[#1E64EC] tracking-[0.25em] uppercase block mb-3">
-              {isHindi ? 'वरिष्ठ चिकित्सक प्रोफाइल' : 'Senior Consulting Dermatologist'}
+              {isHindi ? 'वरिष्ठ चिकित्सक प्रोफाइल' : 'Senior Consultant Dermatologist'}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#121316] leading-tight gsap-reveal">
               Dr. Gaurav Nakra
@@ -970,7 +970,7 @@ export default function HomePageClient() {
               <div className="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white group h-full min-h-[420px]">
                 <img 
                   src="/dr-gaurav-nakra.jpg" 
-                  alt="Dr. Gaurav Nakra — Senior Consulting Dermatologist" 
+                  alt="Dr. Gaurav Nakra — Senior Consultant Dermatologist" 
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   width={400}
                   height={550}
