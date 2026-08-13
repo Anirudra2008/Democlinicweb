@@ -821,8 +821,8 @@ export default function HomePageClient() {
 
             <p className="text-base sm:text-lg text-[#121316]/80 max-w-2xl font-normal leading-relaxed mb-8">
               {isHindi ? 
-                'पूर्वी दिल्ली में कड़कड़डूमा मेट्रो के पास 20 वर्षों के विशिष्ट अनुभव के साथ त्वचा, बाल, और लेज़र उपचार का सबसे विश्वसनीय केंद्र। स्वर्ण पदक विजेता विशेषज्ञ द्वारा उत्तम देखभाल।' : 
-                'Highly specialized, award-winning dermatological science in East Delhi near Karkardooma Metro. Providing gold-standard lasers, certified hair restorations (PRP/Hair Care), chemical peels, and pediatric dermatology by Gold Medalist Dr. Gaurav Nakra.'}
+                'पूर्वी दिल्ली में 20 वर्षों के विशिष्ट अनुभव के साथ त्वचा, बाल, और लेज़र उपचार का सबसे विश्वसनीय केंद्र। उत्तम देखभाल।' : 
+                'Highly specialized, award-winning dermatologist in East Delhi. Providing gold-standard lasers, certified hair restorations (PRP/GFC/Exosomes/Hair Transplant), chemical peels, and pediatric dermatology by dermatology services.'}
             </p>
 
             <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-xl mb-6">
