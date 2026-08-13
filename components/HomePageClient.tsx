@@ -1052,10 +1052,10 @@ export default function HomePageClient() {
                 </div>
               </div>
 
-              {/* Current & Past Medical Associations */}
+              {/* Current & Past Affiliations */}
               <div className="bg-[#EBF2FF]/60 border border-[#1E64EC]/20 rounded-[24px] p-5 shadow-sm text-left">
                 <span className="font-sans text-[10px] uppercase font-bold text-[#1E64EC] tracking-widest block mb-3">
-                  {isHindi ? 'वर्तमान और पूर्व चिकित्सा संघ:' : 'Current & Past Medical Associations:'}
+                  {isHindi ? 'वर्तमान और पूर्व चिकित्सा संबंध:' : 'Current & Past Affiliations:'}
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-[#121316] font-bold leading-normal font-sans">
                   <div className="flex items-start gap-2">
