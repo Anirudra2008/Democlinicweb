@@ -52,8 +52,9 @@ const TIMELINE = [
   { year: '2010 – 2012', title: 'Laser Surgeon — New Look Laser Clinics', desc: 'Laser Surgeon & Aesthetic Dermatologist delivering specialized laser therapies.' },
   { year: '2012 – 2014', title: 'Consultant Dermatologist — DHI Safdarjung Enclave', desc: 'Consultant Dermatologist & Trichologist specializing in Hair Restoration & PRP Therapies.' },
   { year: '2015', title: 'Awarded Most Promising Dermatologist', desc: 'Honored with the "Most Promising Dermatologist In Delhi NCR" award.' },
-  { year: '2025', title: 'Awarded Excellence in Dermatology — Economic Times', desc: 'Honored with the "Excellence in Dermatology" award by Economic Times in 2025.' },
+  { year: 'Fellowship', title: 'Fellowship in Laser Medicine — Toulouse, France', desc: 'Specialized international fellowship training in advanced laser medicine and devices in Toulouse, France.' },
   { year: '2016 – Present', title: 'Founder — Centre For Skin, Karkardooma', desc: 'Established Centre For Skin in Saini Enclave near Karkardooma Metro, serving East Delhi with 20+ years of clinical expertise.' },
+  { year: '2025', title: 'Awarded for Excellence in Dermatology — Economic Times 2025', desc: 'Honored with the "Excellence in Dermatology" award by Economic Times in 2025.' },
 ];
 
 // DEPARTMENTS / SERVICES
