@@ -14,8 +14,8 @@ export default function Footer() {
           {/* Logo and accreditation column */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3 bg-transparent">
-              <div className="w-9 h-9 rounded-xl overflow-hidden bg-white p-0.5 border border-white/20 flex items-center justify-center">
-                <img src="/logo.png" alt="Centre For Skin Logo" className="w-full h-full object-contain" width={36} height={36} />
+              <div className="w-9 h-9 rounded-xl overflow-hidden bg-black p-0.5 border border-white/20 flex items-center justify-center">
+                <img src="/logo.png?v=2" alt="Centre For Skin Logo" className="w-full h-full object-contain" width={36} height={36} />
               </div>
               <div className="font-serif text-lg font-black tracking-widest text-white">
                 Centre For Skin

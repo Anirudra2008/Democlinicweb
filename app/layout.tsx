@@ -18,7 +18,15 @@ export const metadata: Metadata = {
   title: 'Centre For Skin — Dr. Gaurav Nakra',
   description: 'Advanced Dermatology & Hair Restoration in East Delhi by Dr. Gaurav Nakra, Gold Medalist Dermatologist & Cosmetologist.',
   icons: {
-    icon: '/logo.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
   },
 };
 

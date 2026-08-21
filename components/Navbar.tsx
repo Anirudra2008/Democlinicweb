@@ -42,8 +42,8 @@ export default function Navbar({ isHindi: propIsHindi, setIsHindi: propSetIsHind
           onMouseEnter={hoverEnter}
           onMouseLeave={hoverLeave}
         >
-          <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl overflow-hidden bg-white p-0.5 border border-gray-200 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
-            <img src="/logo.png" alt="Centre For Skin Logo" className="w-full h-full object-contain" width={44} height={44} />
+          <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl overflow-hidden bg-black p-0.5 border border-gray-800/80 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+            <img src="/logo.png?v=2" alt="Centre For Skin Logo" className="w-full h-full object-contain" width={44} height={44} />
           </div>
           <div>
             <div className="font-serif text-base md:text-xl font-extrabold text-[#121316] leading-tight flex items-center gap-1">
